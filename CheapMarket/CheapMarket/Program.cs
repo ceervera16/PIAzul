@@ -16,7 +16,7 @@ namespace CheapMarket
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Registro());
+            Application.Run(new Categorias());
         }
     }
 }
