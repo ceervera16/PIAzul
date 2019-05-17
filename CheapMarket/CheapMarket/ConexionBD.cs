@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+
 namespace CheapMarket
 {
     class ConexionBD
@@ -19,11 +20,11 @@ namespace CheapMarket
 
         public ConexionBD()
         {
-            string server = "server=;";
+            string server = "server=cheapmarket.c4szol6geym3.us-east-1.rds.amazonaws.com;";
             string oldguids = "oldguids=true;";
             string database = "database=CheapMarket;";
-            string usuario = "uid=;";
-            string password = "pwd=;";
+            string usuario = "uid=admin;";
+            string password = "pwd=cheapmarket;";
             string conversor = "Convert Zero Datetime=True;";
             string connectionstring = server + oldguids + database + usuario + password + conversor;
 
