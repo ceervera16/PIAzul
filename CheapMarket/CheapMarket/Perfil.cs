@@ -17,19 +17,24 @@ namespace CheapMarket
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Perfil_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Categorias categorias = new Categorias();
+            categorias.Show();
         }
     }
 }

@@ -79,14 +79,15 @@
             this.btnHogar.ForeColor = System.Drawing.Color.White;
             this.btnHogar.Image = ((System.Drawing.Image)(resources.GetObject("btnHogar.Image")));
             this.btnHogar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHogar.Location = new System.Drawing.Point(18, 983);
-            this.btnHogar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnHogar.Location = new System.Drawing.Point(16, 786);
+            this.btnHogar.Margin = new System.Windows.Forms.Padding(4);
             this.btnHogar.Name = "btnHogar";
-            this.btnHogar.Size = new System.Drawing.Size(296, 83);
+            this.btnHogar.Size = new System.Drawing.Size(263, 66);
             this.btnHogar.TabIndex = 5;
             this.btnHogar.Text = "       HOGAR";
             this.btnHogar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHogar.UseVisualStyleBackColor = true;
+            this.btnHogar.Click += new System.EventHandler(this.btnHogar_Click);
             // 
             // btnSnacks
             // 
@@ -96,14 +97,15 @@
             this.btnSnacks.ForeColor = System.Drawing.Color.White;
             this.btnSnacks.Image = ((System.Drawing.Image)(resources.GetObject("btnSnacks.Image")));
             this.btnSnacks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSnacks.Location = new System.Drawing.Point(16, 826);
-            this.btnSnacks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSnacks.Location = new System.Drawing.Point(14, 661);
+            this.btnSnacks.Margin = new System.Windows.Forms.Padding(4);
             this.btnSnacks.Name = "btnSnacks";
-            this.btnSnacks.Size = new System.Drawing.Size(296, 83);
+            this.btnSnacks.Size = new System.Drawing.Size(263, 66);
             this.btnSnacks.TabIndex = 7;
             this.btnSnacks.Text = "       SNACKS";
             this.btnSnacks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSnacks.UseVisualStyleBackColor = true;
+            this.btnSnacks.Click += new System.EventHandler(this.btnSnacks_Click);
             // 
             // btnPanaderia
             // 
@@ -113,41 +115,46 @@
             this.btnPanaderia.ForeColor = System.Drawing.Color.White;
             this.btnPanaderia.Image = ((System.Drawing.Image)(resources.GetObject("btnPanaderia.Image")));
             this.btnPanaderia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPanaderia.Location = new System.Drawing.Point(18, 733);
-            this.btnPanaderia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnPanaderia.Location = new System.Drawing.Point(16, 586);
+            this.btnPanaderia.Margin = new System.Windows.Forms.Padding(4);
             this.btnPanaderia.Name = "btnPanaderia";
-            this.btnPanaderia.Size = new System.Drawing.Size(296, 83);
+            this.btnPanaderia.Size = new System.Drawing.Size(263, 66);
             this.btnPanaderia.TabIndex = 8;
             this.btnPanaderia.Text = "       PANADERÍA";
             this.btnPanaderia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPanaderia.UseVisualStyleBackColor = true;
+            this.btnPanaderia.Click += new System.EventHandler(this.btnPanaderia_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1043, 12);
+            this.label1.Location = new System.Drawing.Point(927, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 59);
+            this.label1.Size = new System.Drawing.Size(130, 52);
             this.label1.TabIndex = 18;
             this.label1.Text = "Hola!";
+            this.label1.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnPerfil
             // 
             this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
-            this.btnPerfil.Location = new System.Drawing.Point(972, 9);
+            this.btnPerfil.Location = new System.Drawing.Point(864, 7);
+            this.btnPerfil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(65, 65);
+            this.btnPerfil.Size = new System.Drawing.Size(58, 52);
             this.btnPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnPerfil.TabIndex = 17;
             this.btnPerfil.TabStop = false;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(1427, 9);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(1268, 7);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(65, 65);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(58, 52);
             this.btnCerrarSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnCerrarSesion.TabIndex = 16;
             this.btnCerrarSesion.TabStop = false;
@@ -155,9 +162,10 @@
             // btnCarrito
             // 
             this.btnCarrito.Image = ((System.Drawing.Image)(resources.GetObject("btnCarrito.Image")));
-            this.btnCarrito.Location = new System.Drawing.Point(1327, 9);
+            this.btnCarrito.Location = new System.Drawing.Point(1180, 7);
+            this.btnCarrito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCarrito.Name = "btnCarrito";
-            this.btnCarrito.Size = new System.Drawing.Size(65, 65);
+            this.btnCarrito.Size = new System.Drawing.Size(58, 52);
             this.btnCarrito.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnCarrito.TabIndex = 15;
             this.btnCarrito.TabStop = false;
@@ -165,29 +173,34 @@
             // btnCategorias
             // 
             this.btnCategorias.Image = ((System.Drawing.Image)(resources.GetObject("btnCategorias.Image")));
-            this.btnCategorias.Location = new System.Drawing.Point(1227, 9);
+            this.btnCategorias.Location = new System.Drawing.Point(1091, 7);
+            this.btnCategorias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCategorias.Name = "btnCategorias";
-            this.btnCategorias.Size = new System.Drawing.Size(65, 65);
+            this.btnCategorias.Size = new System.Drawing.Size(58, 52);
             this.btnCategorias.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnCategorias.TabIndex = 14;
             this.btnCategorias.TabStop = false;
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
             // 
             // btnSalir
             // 
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.Location = new System.Drawing.Point(1527, 9);
+            this.btnSalir.Location = new System.Drawing.Point(1357, 7);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(65, 65);
+            this.btnSalir.Size = new System.Drawing.Size(58, 52);
             this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSalir.TabIndex = 13;
             this.btnSalir.TabStop = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnTwitter
             // 
             this.btnTwitter.Image = ((System.Drawing.Image)(resources.GetObject("btnTwitter.Image")));
-            this.btnTwitter.Location = new System.Drawing.Point(410, 9);
+            this.btnTwitter.Location = new System.Drawing.Point(364, 7);
+            this.btnTwitter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTwitter.Name = "btnTwitter";
-            this.btnTwitter.Size = new System.Drawing.Size(65, 65);
+            this.btnTwitter.Size = new System.Drawing.Size(58, 52);
             this.btnTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnTwitter.TabIndex = 12;
             this.btnTwitter.TabStop = false;
@@ -195,9 +208,10 @@
             // btnInstagram
             // 
             this.btnInstagram.Image = ((System.Drawing.Image)(resources.GetObject("btnInstagram.Image")));
-            this.btnInstagram.Location = new System.Drawing.Point(504, 9);
+            this.btnInstagram.Location = new System.Drawing.Point(448, 7);
+            this.btnInstagram.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInstagram.Name = "btnInstagram";
-            this.btnInstagram.Size = new System.Drawing.Size(65, 65);
+            this.btnInstagram.Size = new System.Drawing.Size(58, 52);
             this.btnInstagram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnInstagram.TabIndex = 11;
             this.btnInstagram.TabStop = false;
@@ -205,9 +219,10 @@
             // btnPagina
             // 
             this.btnPagina.Image = ((System.Drawing.Image)(resources.GetObject("btnPagina.Image")));
-            this.btnPagina.Location = new System.Drawing.Point(316, 9);
+            this.btnPagina.Location = new System.Drawing.Point(281, 7);
+            this.btnPagina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPagina.Name = "btnPagina";
-            this.btnPagina.Size = new System.Drawing.Size(65, 65);
+            this.btnPagina.Size = new System.Drawing.Size(58, 52);
             this.btnPagina.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnPagina.TabIndex = 10;
             this.btnPagina.TabStop = false;
@@ -220,10 +235,10 @@
             this.btnHigiene.ForeColor = System.Drawing.Color.White;
             this.btnHigiene.Image = ((System.Drawing.Image)(resources.GetObject("btnHigiene.Image")));
             this.btnHigiene.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHigiene.Location = new System.Drawing.Point(13, 904);
-            this.btnHigiene.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnHigiene.Location = new System.Drawing.Point(12, 723);
+            this.btnHigiene.Margin = new System.Windows.Forms.Padding(4);
             this.btnHigiene.Name = "btnHigiene";
-            this.btnHigiene.Size = new System.Drawing.Size(296, 83);
+            this.btnHigiene.Size = new System.Drawing.Size(263, 66);
             this.btnHigiene.TabIndex = 6;
             this.btnHigiene.Text = "       HIGIENE";
             this.btnHigiene.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -235,10 +250,10 @@
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.pcbLogo);
-            this.panel3.Location = new System.Drawing.Point(314, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel3.Location = new System.Drawing.Point(279, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(285, 321);
+            this.panel3.Size = new System.Drawing.Size(253, 257);
             this.panel3.TabIndex = 10;
             // 
             // label3
@@ -246,10 +261,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(66, 279);
+            this.label3.Location = new System.Drawing.Point(59, 223);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 21);
+            this.label3.Size = new System.Drawing.Size(118, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "Supermercado";
             // 
@@ -258,19 +273,20 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(49, 239);
+            this.label2.Location = new System.Drawing.Point(44, 191);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 28);
+            this.label2.Size = new System.Drawing.Size(157, 23);
             this.label2.TabIndex = 3;
             this.label2.Text = "CheapMarket";
             // 
             // pcbLogo
             // 
             this.pcbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogo.Image")));
-            this.pcbLogo.Location = new System.Drawing.Point(19, -28);
+            this.pcbLogo.Location = new System.Drawing.Point(17, -22);
+            this.pcbLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcbLogo.Name = "pcbLogo";
-            this.pcbLogo.Size = new System.Drawing.Size(249, 264);
+            this.pcbLogo.Size = new System.Drawing.Size(221, 211);
             this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbLogo.TabIndex = 8;
             this.pcbLogo.TabStop = false;
@@ -288,10 +304,10 @@
             this.panel2.Controls.Add(this.btnInstagram);
             this.panel2.Controls.Add(this.btnPagina);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(314, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Location = new System.Drawing.Point(279, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1606, 83);
+            this.panel2.Size = new System.Drawing.Size(1428, 66);
             this.panel2.TabIndex = 9;
             // 
             // btnBebidas
@@ -302,14 +318,15 @@
             this.btnBebidas.ForeColor = System.Drawing.Color.White;
             this.btnBebidas.Image = ((System.Drawing.Image)(resources.GetObject("btnBebidas.Image")));
             this.btnBebidas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBebidas.Location = new System.Drawing.Point(18, 651);
-            this.btnBebidas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBebidas.Location = new System.Drawing.Point(16, 521);
+            this.btnBebidas.Margin = new System.Windows.Forms.Padding(4);
             this.btnBebidas.Name = "btnBebidas";
-            this.btnBebidas.Size = new System.Drawing.Size(296, 83);
+            this.btnBebidas.Size = new System.Drawing.Size(263, 66);
             this.btnBebidas.TabIndex = 9;
             this.btnBebidas.Text = "       BEBIDAS";
             this.btnBebidas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBebidas.UseVisualStyleBackColor = true;
+            this.btnBebidas.Click += new System.EventHandler(this.btnBebidas_Click);
             // 
             // btnComidaPrep
             // 
@@ -319,22 +336,23 @@
             this.btnComidaPrep.ForeColor = System.Drawing.Color.White;
             this.btnComidaPrep.Image = ((System.Drawing.Image)(resources.GetObject("btnComidaPrep.Image")));
             this.btnComidaPrep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnComidaPrep.Location = new System.Drawing.Point(13, 558);
-            this.btnComidaPrep.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnComidaPrep.Location = new System.Drawing.Point(12, 446);
+            this.btnComidaPrep.Margin = new System.Windows.Forms.Padding(4);
             this.btnComidaPrep.Name = "btnComidaPrep";
-            this.btnComidaPrep.Size = new System.Drawing.Size(296, 83);
+            this.btnComidaPrep.Size = new System.Drawing.Size(263, 66);
             this.btnComidaPrep.TabIndex = 10;
             this.btnComidaPrep.Text = "       COMIDAD PREP.";
             this.btnComidaPrep.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnComidaPrep.UseVisualStyleBackColor = true;
+            this.btnComidaPrep.Click += new System.EventHandler(this.btnComidaPrep_Click);
             // 
             // pnlSelector
             // 
             this.pnlSelector.BackColor = System.Drawing.Color.Azure;
-            this.pnlSelector.Location = new System.Drawing.Point(2, 904);
-            this.pnlSelector.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlSelector.Location = new System.Drawing.Point(2, 723);
+            this.pnlSelector.Margin = new System.Windows.Forms.Padding(4);
             this.pnlSelector.Name = "pnlSelector";
-            this.pnlSelector.Size = new System.Drawing.Size(15, 83);
+            this.pnlSelector.Size = new System.Drawing.Size(13, 66);
             this.pnlSelector.TabIndex = 4;
             // 
             // btnHelados
@@ -345,14 +363,15 @@
             this.btnHelados.ForeColor = System.Drawing.Color.White;
             this.btnHelados.Image = ((System.Drawing.Image)(resources.GetObject("btnHelados.Image")));
             this.btnHelados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHelados.Location = new System.Drawing.Point(16, 465);
-            this.btnHelados.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnHelados.Location = new System.Drawing.Point(14, 372);
+            this.btnHelados.Margin = new System.Windows.Forms.Padding(4);
             this.btnHelados.Name = "btnHelados";
-            this.btnHelados.Size = new System.Drawing.Size(296, 83);
+            this.btnHelados.Size = new System.Drawing.Size(263, 66);
             this.btnHelados.TabIndex = 4;
             this.btnHelados.Text = "       HELADOS";
             this.btnHelados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHelados.UseVisualStyleBackColor = true;
+            this.btnHelados.Click += new System.EventHandler(this.btnHelados_Click);
             // 
             // btnFiambres
             // 
@@ -362,14 +381,15 @@
             this.btnFiambres.ForeColor = System.Drawing.Color.White;
             this.btnFiambres.Image = ((System.Drawing.Image)(resources.GetObject("btnFiambres.Image")));
             this.btnFiambres.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFiambres.Location = new System.Drawing.Point(16, 372);
-            this.btnFiambres.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnFiambres.Location = new System.Drawing.Point(14, 298);
+            this.btnFiambres.Margin = new System.Windows.Forms.Padding(4);
             this.btnFiambres.Name = "btnFiambres";
-            this.btnFiambres.Size = new System.Drawing.Size(296, 83);
+            this.btnFiambres.Size = new System.Drawing.Size(263, 66);
             this.btnFiambres.TabIndex = 4;
             this.btnFiambres.Text = "       FIAMBRES";
             this.btnFiambres.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFiambres.UseVisualStyleBackColor = true;
+            this.btnFiambres.Click += new System.EventHandler(this.btnFiambres_Click);
             // 
             // btnVerduleria
             // 
@@ -379,14 +399,15 @@
             this.btnVerduleria.ForeColor = System.Drawing.Color.White;
             this.btnVerduleria.Image = ((System.Drawing.Image)(resources.GetObject("btnVerduleria.Image")));
             this.btnVerduleria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVerduleria.Location = new System.Drawing.Point(13, 279);
-            this.btnVerduleria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnVerduleria.Location = new System.Drawing.Point(12, 223);
+            this.btnVerduleria.Margin = new System.Windows.Forms.Padding(4);
             this.btnVerduleria.Name = "btnVerduleria";
-            this.btnVerduleria.Size = new System.Drawing.Size(296, 83);
+            this.btnVerduleria.Size = new System.Drawing.Size(263, 66);
             this.btnVerduleria.TabIndex = 4;
             this.btnVerduleria.Text = "       VERDULERÍA";
             this.btnVerduleria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVerduleria.UseVisualStyleBackColor = true;
+            this.btnVerduleria.Click += new System.EventHandler(this.btnVerduleria_Click);
             // 
             // btnFruteria
             // 
@@ -396,14 +417,15 @@
             this.btnFruteria.ForeColor = System.Drawing.Color.White;
             this.btnFruteria.Image = ((System.Drawing.Image)(resources.GetObject("btnFruteria.Image")));
             this.btnFruteria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFruteria.Location = new System.Drawing.Point(18, 186);
-            this.btnFruteria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnFruteria.Location = new System.Drawing.Point(16, 149);
+            this.btnFruteria.Margin = new System.Windows.Forms.Padding(4);
             this.btnFruteria.Name = "btnFruteria";
-            this.btnFruteria.Size = new System.Drawing.Size(296, 83);
+            this.btnFruteria.Size = new System.Drawing.Size(263, 66);
             this.btnFruteria.TabIndex = 4;
             this.btnFruteria.Text = "       FRUTERÍA";
             this.btnFruteria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFruteria.UseVisualStyleBackColor = true;
+            this.btnFruteria.Click += new System.EventHandler(this.btnFruteria_Click);
             // 
             // btnPescaderia
             // 
@@ -413,14 +435,15 @@
             this.btnPescaderia.ForeColor = System.Drawing.Color.White;
             this.btnPescaderia.Image = ((System.Drawing.Image)(resources.GetObject("btnPescaderia.Image")));
             this.btnPescaderia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPescaderia.Location = new System.Drawing.Point(16, 93);
-            this.btnPescaderia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnPescaderia.Location = new System.Drawing.Point(14, 74);
+            this.btnPescaderia.Margin = new System.Windows.Forms.Padding(4);
             this.btnPescaderia.Name = "btnPescaderia";
-            this.btnPescaderia.Size = new System.Drawing.Size(294, 83);
+            this.btnPescaderia.Size = new System.Drawing.Size(261, 66);
             this.btnPescaderia.TabIndex = 4;
             this.btnPescaderia.Text = "       PESCADERÍA";
             this.btnPescaderia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPescaderia.UseVisualStyleBackColor = true;
+            this.btnPescaderia.Click += new System.EventHandler(this.btnPescaderia_Click);
             // 
             // panel1
             // 
@@ -440,9 +463,9 @@
             this.panel1.Controls.Add(this.btnCarniceria);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(314, 1080);
+            this.panel1.Size = new System.Drawing.Size(279, 864);
             this.panel1.TabIndex = 8;
             // 
             // btnCarniceria
@@ -453,25 +476,27 @@
             this.btnCarniceria.ForeColor = System.Drawing.Color.White;
             this.btnCarniceria.Image = ((System.Drawing.Image)(resources.GetObject("btnCarniceria.Image")));
             this.btnCarniceria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCarniceria.Location = new System.Drawing.Point(18, 0);
-            this.btnCarniceria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCarniceria.Location = new System.Drawing.Point(16, 0);
+            this.btnCarniceria.Margin = new System.Windows.Forms.Padding(4);
             this.btnCarniceria.Name = "btnCarniceria";
-            this.btnCarniceria.Size = new System.Drawing.Size(292, 83);
+            this.btnCarniceria.Size = new System.Drawing.Size(260, 66);
             this.btnCarniceria.TabIndex = 4;
             this.btnCarniceria.Text = "       CARNICERÍA";
             this.btnCarniceria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCarniceria.UseVisualStyleBackColor = true;
+            this.btnCarniceria.Click += new System.EventHandler(this.btnCarniceria_Click);
             // 
             // Higiene
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1707, 864);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Higiene";
             this.Text = "Higiene";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
