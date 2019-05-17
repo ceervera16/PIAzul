@@ -106,6 +106,7 @@
     <Compile Include="Hogar.designer.cs">
       <DependentUpon>Hogar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Invitado.cs" />
     <Compile Include="Panaderia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +131,7 @@
     <Compile Include="Preparadas.designer.cs">
       <DependentUpon>Preparadas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Productos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Promociones.cs">
       <SubType>Form</SubType>
