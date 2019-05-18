@@ -62,6 +62,7 @@
             // comboBoxIdioma
             // 
             this.comboBoxIdioma.BackColor = System.Drawing.SystemColors.Control;
+            this.comboBoxIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
             this.comboBoxIdioma.FormattingEnabled = true;
             this.comboBoxIdioma.Items.AddRange(new object[] {
@@ -72,7 +73,6 @@
             this.comboBoxIdioma.Name = "comboBoxIdioma";
             this.comboBoxIdioma.Size = new System.Drawing.Size(180, 36);
             this.comboBoxIdioma.TabIndex = 5;
-            this.comboBoxIdioma.Text = "¡Bienvenido!";
             // 
             // lblCorreo
             // 
@@ -104,6 +104,7 @@
             this.txtContraseña.Location = new System.Drawing.Point(393, 360);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(424, 52);
             this.txtContraseña.TabIndex = 9;
             // 
@@ -117,6 +118,7 @@
             this.btnEntrar.TabIndex = 10;
             this.btnEntrar.Text = "ENTRAR";
             this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // btnRegistar
             // 
@@ -272,6 +274,7 @@
             this.btnPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnPassword.TabIndex = 21;
             this.btnPassword.TabStop = false;
+            this.btnPassword.Click += new System.EventHandler(this.btnPassword_Click);
             // 
             // label1
             // 
@@ -323,6 +326,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
