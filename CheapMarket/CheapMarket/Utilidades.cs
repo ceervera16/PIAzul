@@ -1,6 +1,9 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Net.Mail;
+using System.Text.RegularExpressions;
 
 namespace CheapMarket
 {
@@ -82,10 +85,74 @@ namespace CheapMarket
         public static int EliminarUsuario(MySqlConnection conexion, string nif)
         {
             int retorno;
-            string consulta = string.Format("DELETE FROM cliente WHERE dni={0}", nif);
+            string consulta = string.Format("DELETE FROM cliente WHERE DNI={0}", nif);
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             retorno = comando.ExecuteNonQuery();
             return retorno;
+        }
+
+        public static bool ComprobarCorreo(string correo)
+        {
+            if (correo.Length == 0)
+            {
+                return false;
+            }
+
+            string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
+            @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
+            @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
+
+            Regex re = new Regex(strRegex);
+            if (re.IsMatch(correo))
+                return (true);
+            else
+                return (false);
+
+            /*try
+            {
+                new MailAddress(correo);
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }*/
+        }
+
+
+        public static bool IniciarSesion(MySqlConnection conexion, string correo, string pass)
+        {
+            string consulta = String.Format($"SELECT DNI, Password FROM cliente WHERE correo LIKE '{correo}' AND Password LIKE '{pass}'");
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static bool ExisteUsuario(MySqlConnection conexion, string correo)
+        {
+            string consulta = String.Format($"SELECT * FROM cliente WHERE correo LIKE '{correo}'");
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
     }
 }
