@@ -87,5 +87,12 @@ namespace CheapMarket
                 }
             }
         }
+
+        private void lblInvitado_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Categorias categorias = new Categorias();
+            categorias.Show();
+        }
     }
 }
