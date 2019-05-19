@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,7 +62,6 @@
             this.chkCorreo = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnVolver = new System.Windows.Forms.PictureBox();
-            this.comboBoxIdioma = new System.Windows.Forms.ComboBox();
             this.btnRegistar = new System.Windows.Forms.Button();
             this.lblMensaje = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -72,6 +72,8 @@
             this.btnTwitter = new System.Windows.Forms.PictureBox();
             this.btnInstagram = new System.Windows.Forms.PictureBox();
             this.btnPagina = new System.Windows.Forms.PictureBox();
+            this.comboBoxIdioma = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.gBoxDatos.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
@@ -81,6 +83,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnTwitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInstagram)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPagina)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -442,21 +445,6 @@
             this.btnVolver.TabIndex = 27;
             this.btnVolver.TabStop = false;
             // 
-            // comboBoxIdioma
-            // 
-            this.comboBoxIdioma.BackColor = System.Drawing.SystemColors.Control;
-            this.comboBoxIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.comboBoxIdioma.FormattingEnabled = true;
-            this.comboBoxIdioma.Items.AddRange(new object[] {
-            "¡Welcome!",
-            "¡Bienvenido!"});
-            this.comboBoxIdioma.Location = new System.Drawing.Point(942, 100);
-            this.comboBoxIdioma.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBoxIdioma.Name = "comboBoxIdioma";
-            this.comboBoxIdioma.Size = new System.Drawing.Size(180, 36);
-            this.comboBoxIdioma.TabIndex = 33;
-            this.comboBoxIdioma.Text = "¡Bienvenido!";
-            // 
             // btnRegistar
             // 
             this.btnRegistar.Font = new System.Drawing.Font("Century Gothic", 20F);
@@ -468,6 +456,7 @@
             this.btnRegistar.TabIndex = 34;
             this.btnRegistar.Text = "REGÍSTRATE";
             this.btnRegistar.UseVisualStyleBackColor = true;
+            this.btnRegistar.Click += new System.EventHandler(this.btnRegistar_Click);
             // 
             // lblMensaje
             // 
@@ -573,6 +562,25 @@
             this.btnPagina.TabIndex = 37;
             this.btnPagina.TabStop = false;
             // 
+            // comboBoxIdioma
+            // 
+            this.comboBoxIdioma.BackColor = System.Drawing.SystemColors.Control;
+            this.comboBoxIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
+            this.comboBoxIdioma.FormattingEnabled = true;
+            this.comboBoxIdioma.Items.AddRange(new object[] {
+            "¡Welcome!",
+            "¡Bienvenido!"});
+            this.comboBoxIdioma.Location = new System.Drawing.Point(947, 105);
+            this.comboBoxIdioma.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBoxIdioma.Name = "comboBoxIdioma";
+            this.comboBoxIdioma.Size = new System.Drawing.Size(180, 36);
+            this.comboBoxIdioma.TabIndex = 40;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -580,10 +588,10 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(1140, 818);
+            this.Controls.Add(this.comboBoxIdioma);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnRegistar);
-            this.Controls.Add(this.comboBoxIdioma);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.chkCorreo);
             this.Controls.Add(this.groupBox1);
@@ -594,6 +602,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "Registro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
@@ -610,6 +619,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnTwitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInstagram)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPagina)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -646,7 +656,6 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label lblTelefono;
-        private System.Windows.Forms.ComboBox comboBoxIdioma;
         private System.Windows.Forms.Button btnRegistar;
         private System.Windows.Forms.Label lblMensaje;
         private System.Windows.Forms.Panel panel3;
@@ -659,5 +668,7 @@
         private System.Windows.Forms.PictureBox btnPagina;
         private System.Windows.Forms.TextBox txtPuerta;
         private System.Windows.Forms.TextBox txtPiso;
+        private System.Windows.Forms.ComboBox comboBoxIdioma;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
