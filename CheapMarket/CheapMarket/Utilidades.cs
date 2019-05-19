@@ -59,7 +59,7 @@ namespace CheapMarket
 
             string consulta = String.Format("INSERT INTO cliente (DNI,Nombre,Apellidos,Correo,Password,Telefono,Puntos,Provincia,Localidad," +
                 "Calle,CodigoPostal,Patio,Piso,Puerta) VALUES " +
-                "('{0}','{1}','{2}',{3},'{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}')", usu.Dni, usu.Nombre, usu.Apellidos,
+                "('{0}','{1}','{2}','{3}','{4}',{5},{6},'{7}','{8}','{9}',{10},{11},{12},{13})", usu.Dni, usu.Nombre, usu.Apellidos,
                 usu.Correo, usu.Password, usu.Telefono, usu.Puntos, usu.Provincia, usu.Localidad, usu.Calle, usu.CodigoPostal, usu.Portal, usu.Piso, usu.Puerta);
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
@@ -140,6 +140,24 @@ namespace CheapMarket
         public static bool ExisteUsuario(MySqlConnection conexion, string correo)
         {
             string consulta = String.Format($"SELECT * FROM cliente WHERE correo LIKE '{correo}'");
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        public static bool ExisteUsuario2(MySqlConnection conexion, string nif)
+        {
+            string consulta = String.Format($"SELECT * FROM cliente WHERE DNI LIKE '{nif}'");
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             MySqlDataReader reader = comando.ExecuteReader();

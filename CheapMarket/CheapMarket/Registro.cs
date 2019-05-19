@@ -19,7 +19,7 @@ namespace CheapMarket
             comboBoxIdioma.SelectedIndex = 1;
         }
 
-        public bool ErrorProvider()
+        public bool ValidarDatos()
         {
             bool ok = true;
 
@@ -43,7 +43,17 @@ namespace CheapMarket
                 errorProvider1.SetError(txtApellidos, null);
             }
 
-            if (txtCorreo.Text.Length == 0)
+            if (!Utilidades.NifCorrecto(txtDNI.Text))
+            {
+                ok = false;
+                errorProvider1.SetError(txtDNI, "El DNI no es valido");
+            }
+            else
+            {
+                errorProvider1.SetError(txtDNI, null);
+            }
+
+            if (Utilidades.ComprobarCorreo(txtCorreo.Text) == false)
             {
                 ok = false;
                 errorProvider1.SetError(txtCorreo, "Correo incorrecto");
@@ -118,7 +128,7 @@ namespace CheapMarket
             if (!int.TryParse(txtTelefono.Text, out cantidad) || txtTelefono.Text.Length != 9)
             {
                 ok = false;
-                errorProvider1.SetError(txtTelefono, "El telefono no es correcto");
+                errorProvider1.SetError(txtTelefono, "El teléfono no es correcto");
             }
             else
             {
@@ -128,7 +138,7 @@ namespace CheapMarket
             if (!int.TryParse(txtNum.Text, out cantidad) || txtNum.Text.Length > 3)
             {
                 ok = false;
-                errorProvider1.SetError(txtNum, "El numero de portal no es correcto");
+                errorProvider1.SetError(txtNum, "El número de portal no es correcto");
             }
             else
             {
@@ -138,7 +148,7 @@ namespace CheapMarket
             if (!int.TryParse(txtPiso.Text, out cantidad) || txtPiso.Text.Length > 2)
             {
                 ok = false;
-                errorProvider1.SetError(txtPiso, "El numero de piso no es correcto");
+                errorProvider1.SetError(txtPiso, "El número de piso no es correcto");
             }
             else
             {
@@ -148,11 +158,21 @@ namespace CheapMarket
             if (!int.TryParse(txtPuerta.Text, out cantidad) || txtPuerta.Text.Length > 3)
             {
                 ok = false;
-                errorProvider1.SetError(txtPuerta, "El numero de puerta no es correcto");
+                errorProvider1.SetError(txtPuerta, "El número de puerta no es correcto");
             }
             else
             {
                 errorProvider1.SetError(txtPuerta, null);
+            }
+
+            if (chkTerminos.Checked == false)
+            {
+                ok = false;
+                errorProvider1.SetError(chkTerminos, "Acepta los términos.");
+            }
+            else
+            {
+                errorProvider1.SetError(chkTerminos, null);
             }
 
             return ok;
@@ -160,11 +180,52 @@ namespace CheapMarket
 
         private void btnRegistar_Click(object sender, EventArgs e)
         {
-            if (ErrorProvider())
+            if (ValidarDatos())
             {
-                this.Hide();
-                Form1 inicio = new Form1();
-                inicio.Show();
+                if (txtPass1.Text == txtPass2.Text)
+                {
+                    ConexionBD.AbrirConexion();
+
+                    if (Utilidades.ExisteUsuario(ConexionBD.Conexion, txtCorreo.Text))
+                    {
+                        MessageBox.Show("Ya existe un usuario con ese correo.");
+                        ConexionBD.CerrarConexion();
+                    }
+                    else
+                    {
+                        ConexionBD.CerrarConexion();
+                        ConexionBD.AbrirConexion();
+
+                        if (Utilidades.ExisteUsuario2(ConexionBD.Conexion, txtDNI.Text))
+                        {
+                            MessageBox.Show("Ya existe un usuario con ese DNI.");
+                            ConexionBD.CerrarConexion();
+                        }
+                        else
+                        {
+                            //Creo el usuario
+                            Usuario usu = new Usuario(txtDNI.Text, txtNombre.Text, txtApellidos.Text, txtCorreo.Text, txtPass1.Text,
+                                int.Parse(txtTelefono.Text), txtProvincia.Text, txtLocalidad.Text, txtDireccion.Text, int.Parse(txtCodigoPostal.Text),
+                                int.Parse(txtNum.Text), int.Parse(txtPiso.Text), int.Parse(txtPuerta.Text));
+
+                            //Añado el usuario a la BD
+                            ConexionBD.CerrarConexion();
+                            ConexionBD.AbrirConexion();
+
+                            Utilidades.AgregarUsuario(ConexionBD.Conexion, usu);
+                            MessageBox.Show("Usuario creado correctamente.");
+                            ConexionBD.CerrarConexion();
+
+                            this.Hide();
+                            Form1 inicio = new Form1();
+                            inicio.Show();
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Las contraseñas no coinciden.");
+                }
             }
         }
     }
