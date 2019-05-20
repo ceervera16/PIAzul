@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,10 +59,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.chkCorreo = new System.Windows.Forms.CheckBox();
+            this.chkTerminos = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnVolver = new System.Windows.Forms.PictureBox();
-            this.comboBoxIdioma = new System.Windows.Forms.ComboBox();
             this.btnRegistar = new System.Windows.Forms.Button();
             this.lblMensaje = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -72,6 +72,10 @@
             this.btnTwitter = new System.Windows.Forms.PictureBox();
             this.btnInstagram = new System.Windows.Forms.PictureBox();
             this.btnPagina = new System.Windows.Forms.PictureBox();
+            this.comboBoxIdioma = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtDNI = new System.Windows.Forms.TextBox();
+            this.lblDNI = new System.Windows.Forms.Label();
             this.gBoxDatos.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
@@ -81,6 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnTwitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInstagram)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPagina)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -107,6 +112,8 @@
             // 
             // gBoxDatos
             // 
+            this.gBoxDatos.Controls.Add(this.txtDNI);
+            this.gBoxDatos.Controls.Add(this.lblDNI);
             this.gBoxDatos.Controls.Add(this.txtPass2);
             this.gBoxDatos.Controls.Add(this.txtPass1);
             this.gBoxDatos.Controls.Add(this.txtCorreo);
@@ -123,14 +130,14 @@
             this.gBoxDatos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gBoxDatos.Name = "gBoxDatos";
             this.gBoxDatos.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gBoxDatos.Size = new System.Drawing.Size(380, 448);
+            this.gBoxDatos.Size = new System.Drawing.Size(380, 529);
             this.gBoxDatos.TabIndex = 26;
             this.gBoxDatos.TabStop = false;
             // 
             // txtPass2
             // 
             this.txtPass2.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass2.Location = new System.Drawing.Point(9, 400);
+            this.txtPass2.Location = new System.Drawing.Point(9, 478);
             this.txtPass2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPass2.Multiline = true;
             this.txtPass2.Name = "txtPass2";
@@ -140,7 +147,7 @@
             // txtPass1
             // 
             this.txtPass1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass1.Location = new System.Drawing.Point(9, 318);
+            this.txtPass1.Location = new System.Drawing.Point(9, 400);
             this.txtPass1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPass1.Multiline = true;
             this.txtPass1.Name = "txtPass1";
@@ -150,7 +157,7 @@
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(9, 238);
+            this.txtCorreo.Location = new System.Drawing.Point(9, 318);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCorreo.Multiline = true;
             this.txtCorreo.Name = "txtCorreo";
@@ -180,7 +187,7 @@
             // lblRepetirContraseña
             // 
             this.lblRepetirContraseña.AutoSize = true;
-            this.lblRepetirContraseña.Location = new System.Drawing.Point(9, 364);
+            this.lblRepetirContraseña.Location = new System.Drawing.Point(9, 442);
             this.lblRepetirContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRepetirContraseña.Name = "lblRepetirContraseña";
             this.lblRepetirContraseña.Size = new System.Drawing.Size(216, 31);
@@ -190,7 +197,7 @@
             // lblContraseña
             // 
             this.lblContraseña.AutoSize = true;
-            this.lblContraseña.Location = new System.Drawing.Point(9, 282);
+            this.lblContraseña.Location = new System.Drawing.Point(9, 364);
             this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(132, 31);
@@ -200,7 +207,7 @@
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Location = new System.Drawing.Point(9, 202);
+            this.lblCorreo.Location = new System.Drawing.Point(9, 282);
             this.lblCorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(211, 31);
@@ -405,25 +412,25 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Dirección";
             // 
-            // chkCorreo
+            // chkTerminos
             // 
-            this.chkCorreo.AutoSize = true;
-            this.chkCorreo.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkCorreo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.chkCorreo.Location = new System.Drawing.Point(18, 708);
-            this.chkCorreo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.chkCorreo.Name = "chkCorreo";
-            this.chkCorreo.Size = new System.Drawing.Size(566, 34);
-            this.chkCorreo.TabIndex = 31;
-            this.chkCorreo.Text = "He leído y acepto los términos y condiciones de uso";
-            this.chkCorreo.UseVisualStyleBackColor = true;
+            this.chkTerminos.AutoSize = true;
+            this.chkTerminos.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTerminos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.chkTerminos.Location = new System.Drawing.Point(18, 734);
+            this.chkTerminos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.chkTerminos.Name = "chkTerminos";
+            this.chkTerminos.Size = new System.Drawing.Size(566, 34);
+            this.chkTerminos.TabIndex = 31;
+            this.chkTerminos.Text = "He leído y acepto los términos y condiciones de uso";
+            this.chkTerminos.UseVisualStyleBackColor = true;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.checkBox1.Location = new System.Drawing.Point(18, 748);
+            this.checkBox1.Location = new System.Drawing.Point(18, 774);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(613, 34);
@@ -442,21 +449,6 @@
             this.btnVolver.TabIndex = 27;
             this.btnVolver.TabStop = false;
             // 
-            // comboBoxIdioma
-            // 
-            this.comboBoxIdioma.BackColor = System.Drawing.SystemColors.Control;
-            this.comboBoxIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.comboBoxIdioma.FormattingEnabled = true;
-            this.comboBoxIdioma.Items.AddRange(new object[] {
-            "¡Welcome!",
-            "¡Bienvenido!"});
-            this.comboBoxIdioma.Location = new System.Drawing.Point(942, 100);
-            this.comboBoxIdioma.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBoxIdioma.Name = "comboBoxIdioma";
-            this.comboBoxIdioma.Size = new System.Drawing.Size(180, 36);
-            this.comboBoxIdioma.TabIndex = 33;
-            this.comboBoxIdioma.Text = "¡Bienvenido!";
-            // 
             // btnRegistar
             // 
             this.btnRegistar.Font = new System.Drawing.Font("Century Gothic", 20F);
@@ -468,6 +460,7 @@
             this.btnRegistar.TabIndex = 34;
             this.btnRegistar.Text = "REGÍSTRATE";
             this.btnRegistar.UseVisualStyleBackColor = true;
+            this.btnRegistar.Click += new System.EventHandler(this.btnRegistar_Click);
             // 
             // lblMensaje
             // 
@@ -573,6 +566,45 @@
             this.btnPagina.TabIndex = 37;
             this.btnPagina.TabStop = false;
             // 
+            // comboBoxIdioma
+            // 
+            this.comboBoxIdioma.BackColor = System.Drawing.SystemColors.Control;
+            this.comboBoxIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
+            this.comboBoxIdioma.FormattingEnabled = true;
+            this.comboBoxIdioma.Items.AddRange(new object[] {
+            "¡Welcome!",
+            "¡Bienvenido!"});
+            this.comboBoxIdioma.Location = new System.Drawing.Point(947, 105);
+            this.comboBoxIdioma.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBoxIdioma.Name = "comboBoxIdioma";
+            this.comboBoxIdioma.Size = new System.Drawing.Size(180, 36);
+            this.comboBoxIdioma.TabIndex = 40;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // txtDNI
+            // 
+            this.txtDNI.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDNI.Location = new System.Drawing.Point(9, 238);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDNI.Multiline = true;
+            this.txtDNI.Name = "txtDNI";
+            this.txtDNI.Size = new System.Drawing.Size(340, 34);
+            this.txtDNI.TabIndex = 15;
+            // 
+            // lblDNI
+            // 
+            this.lblDNI.AutoSize = true;
+            this.lblDNI.Location = new System.Drawing.Point(9, 202);
+            this.lblDNI.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDNI.Name = "lblDNI";
+            this.lblDNI.Size = new System.Drawing.Size(60, 31);
+            this.lblDNI.TabIndex = 14;
+            this.lblDNI.Text = "DNI";
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -580,12 +612,12 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(1140, 818);
+            this.Controls.Add(this.comboBoxIdioma);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnRegistar);
-            this.Controls.Add(this.comboBoxIdioma);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.chkCorreo);
+            this.Controls.Add(this.chkTerminos);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gBoxDatos);
             this.Controls.Add(this.label1);
@@ -594,6 +626,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "Registro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
@@ -610,6 +643,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnTwitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInstagram)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPagina)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -642,11 +676,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox chkCorreo;
+        private System.Windows.Forms.CheckBox chkTerminos;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label lblTelefono;
-        private System.Windows.Forms.ComboBox comboBoxIdioma;
         private System.Windows.Forms.Button btnRegistar;
         private System.Windows.Forms.Label lblMensaje;
         private System.Windows.Forms.Panel panel3;
@@ -659,5 +692,9 @@
         private System.Windows.Forms.PictureBox btnPagina;
         private System.Windows.Forms.TextBox txtPuerta;
         private System.Windows.Forms.TextBox txtPiso;
+        private System.Windows.Forms.ComboBox comboBoxIdioma;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.TextBox txtDNI;
+        private System.Windows.Forms.Label lblDNI;
     }
 }

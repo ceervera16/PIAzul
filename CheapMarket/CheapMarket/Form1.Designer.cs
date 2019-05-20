@@ -50,6 +50,8 @@
             this.btnPassword = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnAdministracion = new System.Windows.Forms.Button();
+            this.lblInvitado = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnContacto)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
@@ -62,6 +64,7 @@
             // comboBoxIdioma
             // 
             this.comboBoxIdioma.BackColor = System.Drawing.SystemColors.Control;
+            this.comboBoxIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
             this.comboBoxIdioma.FormattingEnabled = true;
             this.comboBoxIdioma.Items.AddRange(new object[] {
@@ -72,14 +75,13 @@
             this.comboBoxIdioma.Name = "comboBoxIdioma";
             this.comboBoxIdioma.Size = new System.Drawing.Size(180, 36);
             this.comboBoxIdioma.TabIndex = 5;
-            this.comboBoxIdioma.Text = "¡Bienvenido!";
             // 
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreo.ForeColor = System.Drawing.Color.Black;
-            this.lblCorreo.Location = new System.Drawing.Point(393, 182);
+            this.lblCorreo.Location = new System.Drawing.Point(393, 173);
             this.lblCorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(289, 37);
@@ -91,7 +93,7 @@
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraseña.ForeColor = System.Drawing.Color.Black;
-            this.lblContraseña.Location = new System.Drawing.Point(393, 307);
+            this.lblContraseña.Location = new System.Drawing.Point(393, 302);
             this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(178, 37);
@@ -101,22 +103,24 @@
             // txtContraseña
             // 
             this.txtContraseña.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.Location = new System.Drawing.Point(393, 360);
+            this.txtContraseña.Location = new System.Drawing.Point(393, 346);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(424, 52);
             this.txtContraseña.TabIndex = 9;
             // 
             // btnEntrar
             // 
             this.btnEntrar.Font = new System.Drawing.Font("Century Gothic", 20F);
-            this.btnEntrar.Location = new System.Drawing.Point(393, 445);
+            this.btnEntrar.Location = new System.Drawing.Point(393, 418);
             this.btnEntrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(178, 62);
             this.btnEntrar.TabIndex = 10;
             this.btnEntrar.Text = "ENTRAR";
             this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // btnRegistar
             // 
@@ -256,7 +260,7 @@
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(393, 238);
+            this.txtCorreo.Location = new System.Drawing.Point(393, 229);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(483, 52);
@@ -266,12 +270,13 @@
             // 
             this.btnPassword.BackColor = System.Drawing.Color.SeaShell;
             this.btnPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnPassword.Image")));
-            this.btnPassword.Location = new System.Drawing.Point(824, 360);
+            this.btnPassword.Location = new System.Drawing.Point(824, 346);
             this.btnPassword.Name = "btnPassword";
             this.btnPassword.Size = new System.Drawing.Size(52, 52);
             this.btnPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnPassword.TabIndex = 21;
             this.btnPassword.TabStop = false;
+            this.btnPassword.Click += new System.EventHandler(this.btnPassword_Click);
             // 
             // label1
             // 
@@ -297,12 +302,38 @@
             this.label4.TabIndex = 23;
             this.label4.Text = "Idioma:";
             // 
+            // btnAdministracion
+            // 
+            this.btnAdministracion.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdministracion.Location = new System.Drawing.Point(13, 598);
+            this.btnAdministracion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAdministracion.Name = "btnAdministracion";
+            this.btnAdministracion.Size = new System.Drawing.Size(193, 62);
+            this.btnAdministracion.TabIndex = 24;
+            this.btnAdministracion.Text = "ADMIN";
+            this.btnAdministracion.UseVisualStyleBackColor = true;
+            // 
+            // lblInvitado
+            // 
+            this.lblInvitado.AutoSize = true;
+            this.lblInvitado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInvitado.ForeColor = System.Drawing.Color.Black;
+            this.lblInvitado.Location = new System.Drawing.Point(613, 434);
+            this.lblInvitado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInvitado.Name = "lblInvitado";
+            this.lblInvitado.Size = new System.Drawing.Size(263, 30);
+            this.lblInvitado.TabIndex = 25;
+            this.lblInvitado.Text = "Entrar como invitado";
+            this.lblInvitado.Click += new System.EventHandler(this.lblInvitado_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(1112, 674);
+            this.Controls.Add(this.lblInvitado);
+            this.Controls.Add(this.btnAdministracion);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnPassword);
@@ -323,6 +354,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -361,6 +393,8 @@
         private System.Windows.Forms.PictureBox btnPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnAdministracion;
+        private System.Windows.Forms.Label lblInvitado;
     }
 }
 
