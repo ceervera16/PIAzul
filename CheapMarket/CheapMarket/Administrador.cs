@@ -85,7 +85,7 @@ namespace CheapMarket
         public int EditarProducto(MySqlConnection conexion, string codigo, string nombre, double precio, string descripcion, string categoria, string informacionNutritiva)
         {
             string consulta;
-            consulta = string.Format("ALTER TABLE productos SET Nombre='{0}',Precio='{1}',Descripcion='{2}',Categoria='{3}',InformacionNutritiva='{4}'", nombre,
+            consulta = string.Format("UPDATE productos SET Nombre='{0}',Precio='{1}',Descripcion='{2}',Categoria='{3}',InformacionNutritiva='{4}'", nombre,
                 precio, descripcion, categoria, informacionNutritiva);
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             return comando.ExecuteNonQuery();
