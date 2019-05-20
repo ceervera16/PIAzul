@@ -33,6 +33,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gBoxDatos = new System.Windows.Forms.GroupBox();
+            this.txtDNI = new System.Windows.Forms.TextBox();
+            this.lblDNI = new System.Windows.Forms.Label();
             this.txtPass2 = new System.Windows.Forms.TextBox();
             this.txtPass1 = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
@@ -74,8 +76,6 @@
             this.btnPagina = new System.Windows.Forms.PictureBox();
             this.comboBoxIdioma = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtDNI = new System.Windows.Forms.TextBox();
-            this.lblDNI = new System.Windows.Forms.Label();
             this.gBoxDatos.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
@@ -133,6 +133,26 @@
             this.gBoxDatos.Size = new System.Drawing.Size(380, 529);
             this.gBoxDatos.TabIndex = 26;
             this.gBoxDatos.TabStop = false;
+            // 
+            // txtDNI
+            // 
+            this.txtDNI.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDNI.Location = new System.Drawing.Point(9, 238);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDNI.Multiline = true;
+            this.txtDNI.Name = "txtDNI";
+            this.txtDNI.Size = new System.Drawing.Size(340, 34);
+            this.txtDNI.TabIndex = 15;
+            // 
+            // lblDNI
+            // 
+            this.lblDNI.AutoSize = true;
+            this.lblDNI.Location = new System.Drawing.Point(9, 202);
+            this.lblDNI.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDNI.Name = "lblDNI";
+            this.lblDNI.Size = new System.Drawing.Size(60, 31);
+            this.lblDNI.TabIndex = 14;
+            this.lblDNI.Text = "DNI";
             // 
             // txtPass2
             // 
@@ -448,6 +468,7 @@
             this.btnVolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnVolver.TabIndex = 27;
             this.btnVolver.TabStop = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnRegistar
             // 
@@ -584,26 +605,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // txtDNI
-            // 
-            this.txtDNI.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDNI.Location = new System.Drawing.Point(9, 238);
-            this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtDNI.Multiline = true;
-            this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(340, 34);
-            this.txtDNI.TabIndex = 15;
-            // 
-            // lblDNI
-            // 
-            this.lblDNI.AutoSize = true;
-            this.lblDNI.Location = new System.Drawing.Point(9, 202);
-            this.lblDNI.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDNI.Name = "lblDNI";
-            this.lblDNI.Size = new System.Drawing.Size(60, 31);
-            this.lblDNI.TabIndex = 14;
-            this.lblDNI.Text = "DNI";
             // 
             // Registro
             // 

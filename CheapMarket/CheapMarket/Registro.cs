@@ -228,5 +228,12 @@ namespace CheapMarket
                 }
             }
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 inicio = new Form1();
+            inicio.Show();
+        }
     }
 }
