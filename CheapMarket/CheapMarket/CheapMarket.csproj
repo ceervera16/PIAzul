@@ -51,7 +51,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion.Designer.cs">
+      <DependentUpon>Administracion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrador.cs" />
+    <Compile Include="AñadirProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AñadirProducto.Designer.cs">
+      <DependentUpon>AñadirProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bebidas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +90,18 @@
       <DependentUpon>Categorias.cs</DependentUpon>
     </Compile>
     <Compile Include="ConexionBD.cs" />
+    <Compile Include="EditarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarProducto.Designer.cs">
+      <DependentUpon>EditarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarProducto.Designer.cs">
+      <DependentUpon>EliminarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fiambre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +192,12 @@
     <Compile Include="Verduleria.designer.cs">
       <DependentUpon>Verduleria.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Administracion.resx">
+      <DependentUpon>Administracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AñadirProducto.resx">
+      <DependentUpon>AñadirProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Bebidas.resx">
       <DependentUpon>Bebidas.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +209,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Categorias.resx">
       <DependentUpon>Categorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarProducto.resx">
+      <DependentUpon>EditarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarProducto.resx">
+      <DependentUpon>EliminarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fiambre.resx">
       <DependentUpon>Fiambre.cs</DependentUpon>
