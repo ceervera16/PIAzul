@@ -72,6 +72,7 @@
     <Compile Include="Categorias.Designer.cs">
       <DependentUpon>Categorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConexionBD.cs" />
     <Compile Include="Fiambre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +155,7 @@
     <Compile Include="Snacks.designer.cs">
       <DependentUpon>Snacks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuario.cs" />
     <Compile Include="Verduleria.cs">
       <SubType>Form</SubType>
     </Compile>
