@@ -12,6 +12,9 @@ namespace CheapMarket
 {
     public partial class Promociones : Form
     {
+        private string comentario;
+        public string Comentario { set { comentario = value; label1.Text = comentario; } }
+
         public Promociones()
         {
             InitializeComponent();
@@ -29,6 +32,20 @@ namespace CheapMarket
             this.Hide();
             CheapMarket.Perfil perfil = new CheapMarket.Perfil();
             perfil.Show();
+        }
+
+        private void btnCarrito_Click(object sender, EventArgs e)
+        {
+            if (comentario == "Invitado")
+            {
+                MessageBox.Show("Eres usuario invitado. No puedes realizar esta acción.");
+            }
+            else
+            {
+                this.Hide();
+                Carrito carrito = new Carrito();
+                carrito.Show();
+            }
         }
     }
 }

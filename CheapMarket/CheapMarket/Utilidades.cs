@@ -172,5 +172,22 @@ namespace CheapMarket
             }
 
         }
+
+        public static string NombreUsuario(MySqlConnection conexion, string correo)
+        {
+            string consulta = String.Format($"SELECT Nombre FROM cliente WHERE correo LIKE '{correo}'");
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            string nombre = "Nombre";
+
+            while (reader.Read())
+            {
+                nombre = reader.GetString(0);
+            }
+
+            return nombre;
+        }
     }
 }

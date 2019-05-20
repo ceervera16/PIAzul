@@ -57,6 +57,7 @@ namespace CheapMarket
                             {
                                 this.Hide();
                                 Categorias categorias = new Categorias();
+                                categorias.Correo = txtCorreo.Text;
                                 categorias.Show();
                             }
                             else
@@ -91,7 +92,8 @@ namespace CheapMarket
         private void lblInvitado_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Categorias categorias = new Categorias();
+            Categorias categorias = new Categorias();          
+            categorias.Comentario = "Invitado";
             categorias.Show();
         }
     }
