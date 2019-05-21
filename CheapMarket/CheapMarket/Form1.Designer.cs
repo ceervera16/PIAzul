@@ -70,10 +70,9 @@
             this.comboBoxIdioma.Items.AddRange(new object[] {
             "¡Welcome!",
             "¡Bienvenido!"});
-            this.comboBoxIdioma.Location = new System.Drawing.Point(919, 145);
-            this.comboBoxIdioma.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBoxIdioma.Location = new System.Drawing.Point(613, 94);
             this.comboBoxIdioma.Name = "comboBoxIdioma";
-            this.comboBoxIdioma.Size = new System.Drawing.Size(180, 36);
+            this.comboBoxIdioma.Size = new System.Drawing.Size(121, 25);
             this.comboBoxIdioma.TabIndex = 5;
             // 
             // lblCorreo
@@ -81,10 +80,9 @@
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreo.ForeColor = System.Drawing.Color.Black;
-            this.lblCorreo.Location = new System.Drawing.Point(393, 173);
-            this.lblCorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCorreo.Location = new System.Drawing.Point(262, 112);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(289, 37);
+            this.lblCorreo.Size = new System.Drawing.Size(192, 23);
             this.lblCorreo.TabIndex = 6;
             this.lblCorreo.Text = "Correo Electrónico";
             // 
@@ -93,30 +91,27 @@
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraseña.ForeColor = System.Drawing.Color.Black;
-            this.lblContraseña.Location = new System.Drawing.Point(393, 302);
-            this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblContraseña.Location = new System.Drawing.Point(262, 196);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(178, 37);
+            this.lblContraseña.Size = new System.Drawing.Size(119, 23);
             this.lblContraseña.TabIndex = 8;
             this.lblContraseña.Text = "Contaseña";
             // 
             // txtContraseña
             // 
             this.txtContraseña.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.Location = new System.Drawing.Point(393, 346);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtContraseña.Location = new System.Drawing.Point(262, 225);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(424, 52);
+            this.txtContraseña.Size = new System.Drawing.Size(284, 37);
             this.txtContraseña.TabIndex = 9;
             // 
             // btnEntrar
             // 
             this.btnEntrar.Font = new System.Drawing.Font("Century Gothic", 20F);
-            this.btnEntrar.Location = new System.Drawing.Point(393, 418);
-            this.btnEntrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEntrar.Location = new System.Drawing.Point(262, 272);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(178, 62);
+            this.btnEntrar.Size = new System.Drawing.Size(119, 40);
             this.btnEntrar.TabIndex = 10;
             this.btnEntrar.Text = "ENTRAR";
             this.btnEntrar.UseVisualStyleBackColor = true;
@@ -125,10 +120,9 @@
             // btnRegistar
             // 
             this.btnRegistar.Font = new System.Drawing.Font("Century Gothic", 20F);
-            this.btnRegistar.Location = new System.Drawing.Point(480, 587);
-            this.btnRegistar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRegistar.Location = new System.Drawing.Point(320, 382);
             this.btnRegistar.Name = "btnRegistar";
-            this.btnRegistar.Size = new System.Drawing.Size(262, 62);
+            this.btnRegistar.Size = new System.Drawing.Size(175, 40);
             this.btnRegistar.TabIndex = 11;
             this.btnRegistar.Text = "REGÍSTRATE";
             this.btnRegistar.UseVisualStyleBackColor = true;
@@ -139,10 +133,9 @@
             this.lblNuevo.AutoSize = true;
             this.lblNuevo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNuevo.ForeColor = System.Drawing.Color.Black;
-            this.lblNuevo.Location = new System.Drawing.Point(524, 541);
-            this.lblNuevo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNuevo.Location = new System.Drawing.Point(349, 352);
             this.lblNuevo.Name = "lblNuevo";
-            this.lblNuevo.Size = new System.Drawing.Size(171, 30);
+            this.lblNuevo.Size = new System.Drawing.Size(112, 21);
             this.lblNuevo.TabIndex = 12;
             this.lblNuevo.Text = "¿Eres nuevo?";
             // 
@@ -151,10 +144,9 @@
             this.lblPregunta.AutoSize = true;
             this.lblPregunta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.lblPregunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPregunta.Location = new System.Drawing.Point(799, 26);
-            this.lblPregunta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPregunta.Location = new System.Drawing.Point(533, 17);
             this.lblPregunta.Name = "lblPregunta";
-            this.lblPregunta.Size = new System.Drawing.Size(306, 29);
+            this.lblPregunta.Size = new System.Drawing.Size(203, 20);
             this.lblPregunta.TabIndex = 15;
             this.lblPregunta.Text = "¿Tienes dudas? ¡Llámanos!";
             // 
@@ -162,10 +154,9 @@
             // 
             this.btnContacto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnContacto.Image = global::CheapMarket.Properties.Resources.speech_bubble;
-            this.btnContacto.Location = new System.Drawing.Point(726, 8);
-            this.btnContacto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnContacto.Location = new System.Drawing.Point(484, 5);
             this.btnContacto.Name = "btnContacto";
-            this.btnContacto.Size = new System.Drawing.Size(65, 65);
+            this.btnContacto.Size = new System.Drawing.Size(43, 42);
             this.btnContacto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnContacto.TabIndex = 14;
             this.btnContacto.TabStop = false;
@@ -177,9 +168,8 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.pcbLogo);
             this.panel3.Location = new System.Drawing.Point(-1, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(285, 321);
+            this.panel3.Size = new System.Drawing.Size(190, 209);
             this.panel3.TabIndex = 16;
             // 
             // label3
@@ -187,10 +177,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(66, 279);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(44, 181);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 21);
+            this.label3.Size = new System.Drawing.Size(97, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Supermercado";
             // 
@@ -199,19 +188,19 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(49, 239);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(33, 155);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 28);
+            this.label2.Size = new System.Drawing.Size(116, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "CheapMarket";
             // 
             // pcbLogo
             // 
             this.pcbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogo.Image")));
-            this.pcbLogo.Location = new System.Drawing.Point(19, -28);
+            this.pcbLogo.Location = new System.Drawing.Point(13, -18);
+            this.pcbLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pcbLogo.Name = "pcbLogo";
-            this.pcbLogo.Size = new System.Drawing.Size(249, 264);
+            this.pcbLogo.Size = new System.Drawing.Size(166, 172);
             this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbLogo.TabIndex = 8;
             this.pcbLogo.TabStop = false;
@@ -220,9 +209,10 @@
             // 
             this.btnTwitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnTwitter.Image = ((System.Drawing.Image)(resources.GetObject("btnTwitter.Image")));
-            this.btnTwitter.Location = new System.Drawing.Point(385, 8);
+            this.btnTwitter.Location = new System.Drawing.Point(257, 5);
+            this.btnTwitter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTwitter.Name = "btnTwitter";
-            this.btnTwitter.Size = new System.Drawing.Size(65, 65);
+            this.btnTwitter.Size = new System.Drawing.Size(43, 42);
             this.btnTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnTwitter.TabIndex = 19;
             this.btnTwitter.TabStop = false;
@@ -231,9 +221,10 @@
             // 
             this.btnInstagram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnInstagram.Image = ((System.Drawing.Image)(resources.GetObject("btnInstagram.Image")));
-            this.btnInstagram.Location = new System.Drawing.Point(479, 8);
+            this.btnInstagram.Location = new System.Drawing.Point(319, 5);
+            this.btnInstagram.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInstagram.Name = "btnInstagram";
-            this.btnInstagram.Size = new System.Drawing.Size(65, 65);
+            this.btnInstagram.Size = new System.Drawing.Size(43, 42);
             this.btnInstagram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnInstagram.TabIndex = 18;
             this.btnInstagram.TabStop = false;
@@ -242,9 +233,10 @@
             // 
             this.btnPagina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnPagina.Image = ((System.Drawing.Image)(resources.GetObject("btnPagina.Image")));
-            this.btnPagina.Location = new System.Drawing.Point(291, 8);
+            this.btnPagina.Location = new System.Drawing.Point(194, 5);
+            this.btnPagina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPagina.Name = "btnPagina";
-            this.btnPagina.Size = new System.Drawing.Size(65, 65);
+            this.btnPagina.Size = new System.Drawing.Size(43, 42);
             this.btnPagina.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnPagina.TabIndex = 17;
             this.btnPagina.TabStop = false;
@@ -252,27 +244,28 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.panel1.Location = new System.Drawing.Point(273, 1);
+            this.panel1.Location = new System.Drawing.Point(182, 1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(840, 83);
+            this.panel1.Size = new System.Drawing.Size(560, 54);
             this.panel1.TabIndex = 20;
             // 
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(393, 229);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCorreo.Location = new System.Drawing.Point(262, 149);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(483, 52);
+            this.txtCorreo.Size = new System.Drawing.Size(323, 37);
             this.txtCorreo.TabIndex = 7;
             // 
             // btnPassword
             // 
             this.btnPassword.BackColor = System.Drawing.Color.SeaShell;
             this.btnPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnPassword.Image")));
-            this.btnPassword.Location = new System.Drawing.Point(824, 346);
+            this.btnPassword.Location = new System.Drawing.Point(549, 225);
+            this.btnPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPassword.Name = "btnPassword";
-            this.btnPassword.Size = new System.Drawing.Size(52, 52);
+            this.btnPassword.Size = new System.Drawing.Size(35, 34);
             this.btnPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnPassword.TabIndex = 21;
             this.btnPassword.TabStop = false;
@@ -283,10 +276,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(307, 103);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(205, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(427, 37);
+            this.label1.Size = new System.Drawing.Size(285, 23);
             this.label1.TabIndex = 22;
             this.label1.Text = "Bienvenido a Cheap Market";
             // 
@@ -295,20 +287,18 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(912, 103);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(608, 67);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 37);
+            this.label4.Size = new System.Drawing.Size(83, 23);
             this.label4.TabIndex = 23;
             this.label4.Text = "Idioma:";
             // 
             // btnAdministracion
             // 
             this.btnAdministracion.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdministracion.Location = new System.Drawing.Point(13, 598);
-            this.btnAdministracion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAdministracion.Location = new System.Drawing.Point(9, 389);
             this.btnAdministracion.Name = "btnAdministracion";
-            this.btnAdministracion.Size = new System.Drawing.Size(193, 62);
+            this.btnAdministracion.Size = new System.Drawing.Size(129, 40);
             this.btnAdministracion.TabIndex = 24;
             this.btnAdministracion.Text = "ADMIN";
             this.btnAdministracion.UseVisualStyleBackColor = true;
@@ -318,20 +308,19 @@
             this.lblInvitado.AutoSize = true;
             this.lblInvitado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInvitado.ForeColor = System.Drawing.Color.Black;
-            this.lblInvitado.Location = new System.Drawing.Point(613, 434);
-            this.lblInvitado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInvitado.Location = new System.Drawing.Point(409, 282);
             this.lblInvitado.Name = "lblInvitado";
-            this.lblInvitado.Size = new System.Drawing.Size(263, 30);
+            this.lblInvitado.Size = new System.Drawing.Size(175, 21);
             this.lblInvitado.TabIndex = 25;
             this.lblInvitado.Text = "Entrar como invitado";
             this.lblInvitado.Click += new System.EventHandler(this.lblInvitado_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
-            this.ClientSize = new System.Drawing.Size(1112, 674);
+            this.ClientSize = new System.Drawing.Size(741, 438);
             this.Controls.Add(this.lblInvitado);
             this.Controls.Add(this.btnAdministracion);
             this.Controls.Add(this.label4);
@@ -353,7 +342,6 @@
             this.Controls.Add(this.comboBoxIdioma);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
