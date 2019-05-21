@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Perfil));
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -72,6 +73,7 @@
             this.lblApellidos = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.panel2.SuspendLayout();
@@ -83,6 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnPagina)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.gBoxDatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -131,6 +134,7 @@
             this.btnGuardarPedido.TabIndex = 32;
             this.btnGuardarPedido.Text = "GUARDAR CAMBIOS";
             this.btnGuardarPedido.UseVisualStyleBackColor = true;
+            this.btnGuardarPedido.Click += new System.EventHandler(this.btnGuardarPedido_Click);
             // 
             // button1
             // 
@@ -599,6 +603,10 @@
             this.lblUsuario.TabIndex = 38;
             this.lblUsuario.Text = "¡Hola @nombre!";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Perfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -636,6 +644,7 @@
             this.groupBox1.PerformLayout();
             this.gBoxDatos.ResumeLayout(false);
             this.gBoxDatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -685,5 +694,6 @@
         private System.Windows.Forms.Label lblApellidos;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
