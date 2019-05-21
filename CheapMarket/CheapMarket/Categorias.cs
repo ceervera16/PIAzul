@@ -14,30 +14,41 @@ namespace CheapMarket
     {
         ConexionBD bdatos = new ConexionBD();
 
-        private string comentario;
-        private string correo;
-        public string Comentario { set { comentario = value; label1.Text = comentario; } }
-        public string Correo
-        {
-            set {
-                correo = value;
-                if (ConexionBD.AbrirConexion())
-                {
-                    label1.Text = Utilidades.NombreUsuario(ConexionBD.Conexion, correo);
-
-                    ConexionBD.CerrarConexion();
-                }
-                else
-                {
-                    MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
-                    ConexionBD.CerrarConexion();
-                }
-            }
-        }
-
         public Categorias()
         {
             InitializeComponent();
+            label1.Text = Sesion.NombreUsu;
+        }
+
+        public Categorias(string correo)
+        {
+            InitializeComponent();
+
+            //Averiguo el nombre del usuario
+            if (ConexionBD.AbrirConexion())
+            {
+                Sesion.NombreUsu = Sesion.NombreUsuario(ConexionBD.Conexion, correo);
+
+                ConexionBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+            }
+
+            //Averiguo el nif del usuario
+            if (ConexionBD.AbrirConexion())
+            {
+                Sesion.NifUsu = Sesion.NifUsuario(ConexionBD.Conexion, correo);
+
+                ConexionBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+            }
+
+            label1.Text = Sesion.NombreUsu;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -52,7 +63,6 @@ namespace CheapMarket
         {
             this.Hide();
             Diseño.Carniceria carniceria = new Diseño.Carniceria();
-            carniceria.Comentario = label1.Text;
             carniceria.Show();
         }
 
@@ -60,7 +70,6 @@ namespace CheapMarket
         {
             this.Hide();
             Diseño.Pescaderia pescaderia = new Diseño.Pescaderia();
-            pescaderia.Comentario = label1.Text;
             pescaderia.Show();
         }
 
@@ -68,7 +77,6 @@ namespace CheapMarket
         {
             this.Hide();
             Diseño.Fruteria fruteria = new Diseño.Fruteria();
-            fruteria.Comentario = label1.Text;
             fruteria.Show();
         }
 
@@ -76,7 +84,6 @@ namespace CheapMarket
         {
             this.Hide();
             Diseño.Verduleria verduleria = new Diseño.Verduleria();
-            verduleria.Comentario = label1.Text;
             verduleria.Show();
         }
 
@@ -84,7 +91,6 @@ namespace CheapMarket
         {
             this.Hide();
             Diseño.Fiambre fiambre = new Diseño.Fiambre();
-            fiambre.Comentario = label1.Text;
             fiambre.Show();
         }
 
@@ -92,7 +98,6 @@ namespace CheapMarket
         {
             this.Hide();
             Diseño.Helados helados = new Diseño.Helados();
-            helados.Comentario = label1.Text;
             helados.Show();
         }
 
@@ -100,7 +105,6 @@ namespace CheapMarket
         {
             this.Hide();
             Diseño.Bebidas bebidas = new Diseño.Bebidas();
-            bebidas.Comentario = label1.Text;
             bebidas.Show();
         }
 
@@ -108,7 +112,6 @@ namespace CheapMarket
         {
             this.Hide();
             Diseño.Preparadas preparadas = new Diseño.Preparadas();
-            preparadas.Comentario = label1.Text;
             preparadas.Show();
         }
 
@@ -116,7 +119,6 @@ namespace CheapMarket
         {
             this.Hide();
             Diseño.Panaderia panaderia = new Diseño.Panaderia();
-            panaderia.Comentario = label1.Text;
             panaderia.Show();
         }
 
@@ -124,7 +126,6 @@ namespace CheapMarket
         {
             this.Hide();
             Diseño.Snacks snacks = new Diseño.Snacks();
-            snacks.Comentario = label1.Text;
             snacks.Show();
         }
 
@@ -132,7 +133,6 @@ namespace CheapMarket
         {
             this.Hide();
             Diseño.Higiene higiene = new Diseño.Higiene();
-            higiene.Comentario = label1.Text;
             higiene.Show();
         }
 
@@ -140,20 +140,18 @@ namespace CheapMarket
         {
             this.Hide();
             Diseño.Hogar hogar = new Diseño.Hogar();
-            hogar.Comentario = label1.Text;
             hogar.Show();
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-            if (comentario == "Invitado")
+            if (label1.Text == "Invitado")
             {
                 MessageBox.Show("Eres usuario invitado. No puedes realizar esta acción.");
             } else
             {
                 this.Hide();
                 Perfil perfil = new Perfil();
-                perfil.Comentario = label1.Text;
                 perfil.Show();
             }
 
@@ -161,7 +159,7 @@ namespace CheapMarket
 
         private void btnCarrito_Click(object sender, EventArgs e)
         {
-            if (comentario == "Invitado")
+            if (label1.Text == "Invitado")
             {
                 MessageBox.Show("Eres usuario invitado. No puedes realizar esta acción.");
             }
@@ -169,7 +167,6 @@ namespace CheapMarket
             {
                 this.Hide();
                 Carrito carrito = new Carrito();
-                carrito.Comentario = label1.Text;
                 carrito.Show();
             }
         }

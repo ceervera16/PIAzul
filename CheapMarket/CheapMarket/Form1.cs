@@ -56,8 +56,7 @@ namespace CheapMarket
                             if (Utilidades.IniciarSesion(ConexionBD.Conexion, txtCorreo.Text, txtContraseña.Text))
                             {
                                 this.Hide();
-                                Categorias categorias = new Categorias();
-                                categorias.Correo = txtCorreo.Text;
+                                Categorias categorias = new Categorias(txtCorreo.Text);
                                 categorias.Show();
                             }
                             else
@@ -93,7 +92,6 @@ namespace CheapMarket
         {
             this.Hide();
             Categorias categorias = new Categorias();          
-            categorias.Comentario = "Invitado";
             categorias.Show();
         }
     }

@@ -178,6 +178,7 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sesion.cs" />
     <Compile Include="Snacks.cs">
       <SubType>Form</SubType>
     </Compile>

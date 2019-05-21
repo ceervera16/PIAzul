@@ -12,12 +12,10 @@ namespace CheapMarket
 {
     public partial class Promociones : Form
     {
-        private string comentario;
-        public string Comentario { set { comentario = value; label1.Text = comentario; } }
-
         public Promociones()
         {
             InitializeComponent();
+            label1.Text = Sesion.NombreUsu;
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -36,7 +34,7 @@ namespace CheapMarket
 
         private void btnCarrito_Click(object sender, EventArgs e)
         {
-            if (comentario == "Invitado")
+            if (label1.Text == "Invitado")
             {
                 MessageBox.Show("Eres usuario invitado. No puedes realizar esta acción.");
             }

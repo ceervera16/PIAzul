@@ -13,13 +13,11 @@ namespace Diseño
 {
     public partial class Preparadas : Form
     {
-        private string comentario;
-        public string Comentario { set { comentario = value; label1.Text = comentario; } }
-
         public Preparadas()
         {
             InitializeComponent();
             CargarProductos();
+            label1.Text = Sesion.NombreUsu;
         }
 
         private void CargarProductos()
@@ -50,21 +48,18 @@ namespace Diseño
         {
             this.Hide();
             CheapMarket.Categorias categorias = new CheapMarket.Categorias();
-            categorias.Comentario = label1.Text;
             categorias.Show();
         }
         private void btnCarniceria_Click(object sender, EventArgs e)
         {
             this.Hide();
             Carniceria carniceria = new Carniceria();
-            carniceria.Comentario = label1.Text;
             carniceria.Show();
         }
         private void btnPescaderia_Click(object sender, EventArgs e)
         {
             this.Hide();
             Pescaderia pescaderia = new Pescaderia();
-            pescaderia.Comentario = label1.Text;
             pescaderia.Show();
         }
 
@@ -72,7 +67,6 @@ namespace Diseño
         {
             this.Hide();
             Fruteria fruteria = new Fruteria();
-            fruteria.Comentario = label1.Text;
             fruteria.Show();
         }
 
@@ -80,7 +74,6 @@ namespace Diseño
         {
             this.Hide();
             Verduleria verduleria = new Verduleria();
-            verduleria.Comentario = label1.Text;
             verduleria.Show();
         }
 
@@ -88,7 +81,6 @@ namespace Diseño
         {
             this.Hide();
             Fiambre fiambre = new Fiambre();
-            fiambre.Comentario = label1.Text;
             fiambre.Show();
         }
 
@@ -96,7 +88,6 @@ namespace Diseño
         {
             this.Hide();
             Helados helados = new Helados();
-            helados.Comentario = label1.Text;
             helados.Show();
         }
 
@@ -104,7 +95,6 @@ namespace Diseño
         {
             this.Hide();
             Preparadas preparadas = new Preparadas();
-            preparadas.Comentario = label1.Text;
             preparadas.Show();
         }
 
@@ -112,7 +102,6 @@ namespace Diseño
         {
             this.Hide();
             Bebidas bebidas = new Bebidas();
-            bebidas.Comentario = label1.Text;
             bebidas.Show();
         }
 
@@ -120,7 +109,6 @@ namespace Diseño
         {
             this.Hide();
             Panaderia panaderia = new Panaderia();
-            panaderia.Comentario = label1.Text;
             panaderia.Show();
         }
 
@@ -128,7 +116,6 @@ namespace Diseño
         {
             this.Hide();
             Snacks snacks = new Snacks();
-            snacks.Comentario = label1.Text;
             snacks.Show();
         }
 
@@ -136,7 +123,6 @@ namespace Diseño
         {
             this.Hide();
             Higiene higiene = new Higiene();
-            higiene.Comentario = label1.Text;
             higiene.Show();
         }
 
@@ -144,13 +130,12 @@ namespace Diseño
         {
             this.Hide();
             Hogar hogar = new Hogar();
-            hogar.Comentario = label1.Text;
             hogar.Show();
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-            if (comentario == "Invitado")
+            if (label1.Text == "Invitado")
             {
                 MessageBox.Show("Eres usuario invitado. No puedes realizar esta acción.");
             }
@@ -158,14 +143,13 @@ namespace Diseño
             {
                 this.Hide();
                 Perfil perfil = new Perfil();
-                perfil.Comentario = label1.Text;
                 perfil.Show();
             }
         }
 
         private void btnCarrito_Click(object sender, EventArgs e)
         {
-            if (comentario == "Invitado")
+            if (label1.Text == "Invitado")
             {
                 MessageBox.Show("Eres usuario invitado. No puedes realizar esta acción.");
             }
@@ -173,7 +157,6 @@ namespace Diseño
             {
                 this.Hide();
                 Carrito carrito = new Carrito();
-                carrito.Comentario = label1.Text;
                 carrito.Show();
             }
         }

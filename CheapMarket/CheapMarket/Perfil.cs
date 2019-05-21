@@ -12,12 +12,11 @@ namespace CheapMarket
 {
     public partial class Perfil : Form
     {
-        private string comentario;
-        public string Comentario { set { comentario = value; lblUsuario.Text = comentario; } }
 
         public Perfil()
         {
             InitializeComponent();
+            lblUsuario.Text = Sesion.NombreUsu;
         }
 
         private void Perfil_Load(object sender, EventArgs e)
@@ -176,7 +175,6 @@ namespace CheapMarket
         {
             this.Hide();
             Categorias categorias = new Categorias();
-            categorias.Comentario = lblUsuario.Text;
             categorias.Show();
         }
 
@@ -184,7 +182,6 @@ namespace CheapMarket
         {
             this.Hide();
             Promociones promociones = new Promociones();
-            promociones.Comentario = lblUsuario.Text;
             promociones.Show();
         }
 
