@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Carniceria));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnHelados = new System.Windows.Forms.Button();
             this.btnFiambres = new System.Windows.Forms.Button();
             this.btnVerduleria = new System.Windows.Forms.Button();
@@ -59,11 +59,17 @@
             this.btnComidaPrep = new System.Windows.Forms.Button();
             this.pnlSelector = new System.Windows.Forms.Panel();
             this.dgvCarniceria = new System.Windows.Forms.DataGridView();
+            this.pcbLupa = new System.Windows.Forms.PictureBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.pcbImagen = new System.Windows.Forms.PictureBox();
+            this.lblInstrucciones = new System.Windows.Forms.Label();
+            this.btnImagen = new System.Windows.Forms.PictureBox();
+            this.btnInfo = new System.Windows.Forms.PictureBox();
+            this.txtInfo = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.informacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrarSesion)).BeginInit();
@@ -77,6 +83,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarniceria)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLupa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnImagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHelados
@@ -497,33 +507,116 @@
             // 
             // dgvCarniceria
             // 
+            this.dgvCarniceria.AllowUserToAddRows = false;
+            this.dgvCarniceria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCarniceria.BackgroundColor = System.Drawing.Color.White;
             this.dgvCarniceria.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCarniceria.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCarniceria.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCarniceria.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCarniceria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCarniceria.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombre,
             this.precio,
-            this.descripcion,
-            this.informacion,
-            this.imagen});
+            this.descripcion});
             this.dgvCarniceria.EnableHeadersVisualStyles = false;
             this.dgvCarniceria.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvCarniceria.Location = new System.Drawing.Point(369, 347);
+            this.dgvCarniceria.Location = new System.Drawing.Point(369, 372);
             this.dgvCarniceria.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvCarniceria.Name = "dgvCarniceria";
             this.dgvCarniceria.ReadOnly = true;
             this.dgvCarniceria.RowTemplate.Height = 24;
-            this.dgvCarniceria.Size = new System.Drawing.Size(1155, 639);
+            this.dgvCarniceria.Size = new System.Drawing.Size(1155, 599);
             this.dgvCarniceria.TabIndex = 13;
+            // 
+            // pcbLupa
+            // 
+            this.pcbLupa.Image = ((System.Drawing.Image)(resources.GetObject("pcbLupa.Image")));
+            this.pcbLupa.Location = new System.Drawing.Point(1418, 117);
+            this.pcbLupa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pcbLupa.Name = "pcbLupa";
+            this.pcbLupa.Size = new System.Drawing.Size(74, 68);
+            this.pcbLupa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbLupa.TabIndex = 53;
+            this.pcbLupa.TabStop = false;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
+            this.txtBuscar.Location = new System.Drawing.Point(1501, 117);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBuscar.Multiline = true;
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(406, 66);
+            this.txtBuscar.TabIndex = 52;
+            // 
+            // pcbImagen
+            // 
+            this.pcbImagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pcbImagen.Location = new System.Drawing.Point(1629, 347);
+            this.pcbImagen.Name = "pcbImagen";
+            this.pcbImagen.Size = new System.Drawing.Size(190, 190);
+            this.pcbImagen.TabIndex = 55;
+            this.pcbImagen.TabStop = false;
+            // 
+            // lblInstrucciones
+            // 
+            this.lblInstrucciones.AutoSize = true;
+            this.lblInstrucciones.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstrucciones.ForeColor = System.Drawing.Color.Black;
+            this.lblInstrucciones.Location = new System.Drawing.Point(364, 1015);
+            this.lblInstrucciones.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInstrucciones.Name = "lblInstrucciones";
+            this.lblInstrucciones.Size = new System.Drawing.Size(486, 28);
+            this.lblInstrucciones.TabIndex = 9;
+            this.lblInstrucciones.Text = "Doble click en el producto para agregar";
+            // 
+            // btnImagen
+            // 
+            this.btnImagen.Image = ((System.Drawing.Image)(resources.GetObject("btnImagen.Image")));
+            this.btnImagen.Location = new System.Drawing.Point(1460, 993);
+            this.btnImagen.Name = "btnImagen";
+            this.btnImagen.Size = new System.Drawing.Size(64, 64);
+            this.btnImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnImagen.TabIndex = 56;
+            this.btnImagen.TabStop = false;
+            // 
+            // btnInfo
+            // 
+            this.btnInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnInfo.Image")));
+            this.btnInfo.Location = new System.Drawing.Point(1351, 993);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(64, 64);
+            this.btnInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnInfo.TabIndex = 57;
+            this.btnInfo.TabStop = false;
+            // 
+            // txtInfo
+            // 
+            this.txtInfo.Location = new System.Drawing.Point(1568, 612);
+            this.txtInfo.Multiline = true;
+            this.txtInfo.Name = "txtInfo";
+            this.txtInfo.ReadOnly = true;
+            this.txtInfo.Size = new System.Drawing.Size(312, 359);
+            this.txtInfo.TabIndex = 58;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(1557, 558);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(334, 34);
+            this.label4.TabIndex = 59;
+            this.label4.Text = "Información Nutricional";
             // 
             // nombre
             // 
@@ -543,24 +636,20 @@
             this.descripcion.Name = "descripcion";
             this.descripcion.ReadOnly = true;
             // 
-            // informacion
-            // 
-            this.informacion.HeaderText = "Información Nutricional";
-            this.informacion.Name = "informacion";
-            this.informacion.ReadOnly = true;
-            // 
-            // imagen
-            // 
-            this.imagen.HeaderText = "Imagen";
-            this.imagen.Name = "imagen";
-            this.imagen.ReadOnly = true;
-            // 
             // Carniceria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtInfo);
+            this.Controls.Add(this.btnInfo);
+            this.Controls.Add(this.btnImagen);
+            this.Controls.Add(this.lblInstrucciones);
+            this.Controls.Add(this.pcbImagen);
+            this.Controls.Add(this.pcbLupa);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dgvCarniceria);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -587,7 +676,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarniceria)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLupa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnImagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnInfo)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -621,11 +715,17 @@
         private System.Windows.Forms.PictureBox btnSalir;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvCarniceria;
+        private System.Windows.Forms.PictureBox pcbLupa;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.PictureBox pcbImagen;
+        private System.Windows.Forms.Label lblInstrucciones;
+        private System.Windows.Forms.PictureBox btnImagen;
+        private System.Windows.Forms.PictureBox btnInfo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn informacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imagen;
+        private System.Windows.Forms.TextBox txtInfo;
+        private System.Windows.Forms.Label label4;
     }
 }
 

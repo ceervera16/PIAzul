@@ -59,11 +59,17 @@
             this.btnPescaderia = new System.Windows.Forms.Button();
             this.btnCarniceria = new System.Windows.Forms.Button();
             this.dgvBebidas = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtInfo = new System.Windows.Forms.TextBox();
+            this.btnInfo = new System.Windows.Forms.PictureBox();
+            this.btnImagen = new System.Windows.Forms.PictureBox();
+            this.lblInstrucciones = new System.Windows.Forms.Label();
+            this.pcbImagen = new System.Windows.Forms.PictureBox();
+            this.pcbLupa = new System.Windows.Forms.PictureBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.informacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.panel2.SuspendLayout();
@@ -77,6 +83,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnPagina)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBebidas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnImagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLupa)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -502,6 +512,8 @@
             // 
             // dgvBebidas
             // 
+            this.dgvBebidas.AllowUserToAddRows = false;
+            this.dgvBebidas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBebidas.BackgroundColor = System.Drawing.Color.White;
             this.dgvBebidas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBebidas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
@@ -517,9 +529,7 @@
             this.dgvBebidas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombre,
             this.precio,
-            this.descripcion,
-            this.informacion,
-            this.imagen});
+            this.descripcion});
             this.dgvBebidas.EnableHeadersVisualStyles = false;
             this.dgvBebidas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvBebidas.Location = new System.Drawing.Point(384, 372);
@@ -527,8 +537,91 @@
             this.dgvBebidas.Name = "dgvBebidas";
             this.dgvBebidas.ReadOnly = true;
             this.dgvBebidas.RowTemplate.Height = 24;
-            this.dgvBebidas.Size = new System.Drawing.Size(1155, 639);
+            this.dgvBebidas.Size = new System.Drawing.Size(1155, 588);
             this.dgvBebidas.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(1550, 547);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(334, 34);
+            this.label4.TabIndex = 67;
+            this.label4.Text = "Información Nutricional";
+            // 
+            // txtInfo
+            // 
+            this.txtInfo.Location = new System.Drawing.Point(1561, 601);
+            this.txtInfo.Multiline = true;
+            this.txtInfo.Name = "txtInfo";
+            this.txtInfo.ReadOnly = true;
+            this.txtInfo.Size = new System.Drawing.Size(312, 359);
+            this.txtInfo.TabIndex = 66;
+            // 
+            // btnInfo
+            // 
+            this.btnInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnInfo.Image")));
+            this.btnInfo.Location = new System.Drawing.Point(1344, 982);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(64, 64);
+            this.btnInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnInfo.TabIndex = 65;
+            this.btnInfo.TabStop = false;
+            // 
+            // btnImagen
+            // 
+            this.btnImagen.Image = ((System.Drawing.Image)(resources.GetObject("btnImagen.Image")));
+            this.btnImagen.Location = new System.Drawing.Point(1453, 982);
+            this.btnImagen.Name = "btnImagen";
+            this.btnImagen.Size = new System.Drawing.Size(64, 64);
+            this.btnImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnImagen.TabIndex = 64;
+            this.btnImagen.TabStop = false;
+            // 
+            // lblInstrucciones
+            // 
+            this.lblInstrucciones.AutoSize = true;
+            this.lblInstrucciones.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstrucciones.ForeColor = System.Drawing.Color.Black;
+            this.lblInstrucciones.Location = new System.Drawing.Point(357, 1004);
+            this.lblInstrucciones.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInstrucciones.Name = "lblInstrucciones";
+            this.lblInstrucciones.Size = new System.Drawing.Size(486, 28);
+            this.lblInstrucciones.TabIndex = 60;
+            this.lblInstrucciones.Text = "Doble click en el producto para agregar";
+            // 
+            // pcbImagen
+            // 
+            this.pcbImagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pcbImagen.Location = new System.Drawing.Point(1622, 336);
+            this.pcbImagen.Name = "pcbImagen";
+            this.pcbImagen.Size = new System.Drawing.Size(190, 190);
+            this.pcbImagen.TabIndex = 63;
+            this.pcbImagen.TabStop = false;
+            // 
+            // pcbLupa
+            // 
+            this.pcbLupa.Image = ((System.Drawing.Image)(resources.GetObject("pcbLupa.Image")));
+            this.pcbLupa.Location = new System.Drawing.Point(1411, 106);
+            this.pcbLupa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pcbLupa.Name = "pcbLupa";
+            this.pcbLupa.Size = new System.Drawing.Size(74, 68);
+            this.pcbLupa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbLupa.TabIndex = 62;
+            this.pcbLupa.TabStop = false;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
+            this.txtBuscar.Location = new System.Drawing.Point(1494, 106);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBuscar.Multiline = true;
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(419, 66);
+            this.txtBuscar.TabIndex = 61;
             // 
             // nombre
             // 
@@ -548,24 +641,20 @@
             this.descripcion.Name = "descripcion";
             this.descripcion.ReadOnly = true;
             // 
-            // informacion
-            // 
-            this.informacion.HeaderText = "Información Nutricional";
-            this.informacion.Name = "informacion";
-            this.informacion.ReadOnly = true;
-            // 
-            // imagen
-            // 
-            this.imagen.HeaderText = "Imagen";
-            this.imagen.Name = "imagen";
-            this.imagen.ReadOnly = true;
-            // 
             // Bebidas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtInfo);
+            this.Controls.Add(this.btnInfo);
+            this.Controls.Add(this.btnImagen);
+            this.Controls.Add(this.lblInstrucciones);
+            this.Controls.Add(this.pcbImagen);
+            this.Controls.Add(this.pcbLupa);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dgvBebidas);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -591,7 +680,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnPagina)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBebidas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnImagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLupa)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -626,10 +720,16 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCarniceria;
         private System.Windows.Forms.DataGridView dgvBebidas;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtInfo;
+        private System.Windows.Forms.PictureBox btnInfo;
+        private System.Windows.Forms.PictureBox btnImagen;
+        private System.Windows.Forms.Label lblInstrucciones;
+        private System.Windows.Forms.PictureBox pcbImagen;
+        private System.Windows.Forms.PictureBox pcbLupa;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn informacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imagen;
     }
 }
