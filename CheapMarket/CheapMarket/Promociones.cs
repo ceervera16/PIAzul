@@ -15,7 +15,14 @@ namespace CheapMarket
         public Promociones()
         {
             InitializeComponent();
-            label1.Text = Sesion.NombreUsu;
+            if (Sesion.Invitado)
+            {
+                label1.Text = "Invitado";
+            }
+            else
+            {
+                label1.Text = Sesion.NombreUsu;
+            }
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -34,7 +41,7 @@ namespace CheapMarket
 
         private void btnCarrito_Click(object sender, EventArgs e)
         {
-            if (label1.Text == "Invitado")
+            if (Sesion.Invitado)
             {
                 MessageBox.Show("Eres usuario invitado. No puedes realizar esta acción.");
             }

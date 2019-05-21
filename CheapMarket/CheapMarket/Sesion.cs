@@ -12,10 +12,13 @@ namespace CheapMarket
         //Atributos
         private static string nombreUsu;
         private static string nifUsu;
+        private static bool invitado;
 
         //Propiedades
         public static string NombreUsu { get => nombreUsu; set => nombreUsu = value; }
         public static string NifUsu { get => nifUsu; set => nifUsu = value; }
+        public static bool Invitado { get => invitado; set => invitado = value; }
+
 
         //Metodos
         public static string NombreUsuario(MySqlConnection conexion, string correo)

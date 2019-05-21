@@ -16,7 +16,14 @@ namespace CheapMarket
         public Perfil()
         {
             InitializeComponent();
-            lblUsuario.Text = Sesion.NombreUsu;
+            if (Sesion.Invitado)
+            {
+                lblUsuario.Text = "Invitado";
+            }
+            else
+            {
+                lblUsuario.Text = Sesion.NombreUsu;
+            }
         }
 
         private void Perfil_Load(object sender, EventArgs e)

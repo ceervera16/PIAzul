@@ -18,6 +18,7 @@ namespace CheapMarket
         {
             InitializeComponent();
             comboBoxIdioma.SelectedIndex = 1;
+            Sesion.Invitado = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -91,7 +92,8 @@ namespace CheapMarket
         private void lblInvitado_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Categorias categorias = new Categorias();          
+            Sesion.Invitado = true;
+            Categorias categorias = new Categorias();
             categorias.Show();
         }
     }

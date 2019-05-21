@@ -17,7 +17,14 @@ namespace Diseño
         {
             InitializeComponent();
             CargarProductos();
-            label1.Text = Sesion.NombreUsu;
+            if (Sesion.Invitado)
+            {
+                label1.Text = "Invitado";
+            }
+            else
+            {
+                label1.Text = Sesion.NombreUsu;
+            }
         }
 
         private void CargarProductos()
@@ -134,7 +141,7 @@ namespace Diseño
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-            if (label1.Text == "Invitado")
+            if (Sesion.Invitado)
             {
                 MessageBox.Show("Eres usuario invitado. No puedes realizar esta acción.");
             }
@@ -148,7 +155,7 @@ namespace Diseño
 
         private void btnCarrito_Click(object sender, EventArgs e)
         {
-            if (label1.Text == "Invitado")
+            if (Sesion.Invitado)
             {
                 MessageBox.Show("Eres usuario invitado. No puedes realizar esta acción.");
             }

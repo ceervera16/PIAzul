@@ -16,7 +16,14 @@ namespace CheapMarket
         public Carrito()
         {
             InitializeComponent();
-            lblUsuario.Text = Sesion.NombreUsu;
+            if (Sesion.Invitado)
+            {
+                lblUsuario.Text = "Invitado";
+            }
+            else
+            {
+                lblUsuario.Text = Sesion.NombreUsu;
+            }
         }
 
         private void Carrito_Load(object sender, EventArgs e)
@@ -125,7 +132,7 @@ namespace CheapMarket
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-            if (lblUsuario.Text == "Invitado")
+            if (Sesion.Invitado)
             {
                 MessageBox.Show("Eres usuario invitado. No puedes realizar esta acción.");
             }

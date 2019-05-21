@@ -17,7 +17,13 @@ namespace CheapMarket
         public Categorias()
         {
             InitializeComponent();
-            label1.Text = Sesion.NombreUsu;
+            if (Sesion.Invitado)
+            {
+                label1.Text = "Invitado";
+            } else
+            {
+                label1.Text = Sesion.NombreUsu;
+            }
         }
 
         public Categorias(string correo)
@@ -145,7 +151,7 @@ namespace CheapMarket
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-            if (label1.Text == "Invitado")
+            if (Sesion.Invitado)
             {
                 MessageBox.Show("Eres usuario invitado. No puedes realizar esta acción.");
             } else
@@ -159,7 +165,7 @@ namespace CheapMarket
 
         private void btnCarrito_Click(object sender, EventArgs e)
         {
-            if (label1.Text == "Invitado")
+            if (Sesion.Invitado)
             {
                 MessageBox.Show("Eres usuario invitado. No puedes realizar esta acción.");
             }
