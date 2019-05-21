@@ -67,9 +67,6 @@
             this.pcbImagen = new System.Windows.Forms.PictureBox();
             this.pcbLupa = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrarSesion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCarrito)).BeginInit();
@@ -521,10 +518,6 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvPreparadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPreparadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPreparadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nombre,
-            this.precio,
-            this.descripcion});
             this.dgvPreparadas.EnableHeadersVisualStyles = false;
             this.dgvPreparadas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.dgvPreparadas.Location = new System.Drawing.Point(384, 372);
@@ -561,6 +554,7 @@
             this.btnInfo.Location = new System.Drawing.Point(1342, 994);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.Size = new System.Drawing.Size(64, 64);
+            this.btnInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnInfo.TabIndex = 65;
             this.btnInfo.TabStop = false;
             // 
@@ -570,6 +564,7 @@
             this.btnImagen.Location = new System.Drawing.Point(1451, 994);
             this.btnImagen.Name = "btnImagen";
             this.btnImagen.Size = new System.Drawing.Size(64, 64);
+            this.btnImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnImagen.TabIndex = 64;
             this.btnImagen.TabStop = false;
             // 
@@ -614,24 +609,6 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(419, 66);
             this.txtBuscar.TabIndex = 61;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Producto";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // precio
-            // 
-            this.precio.HeaderText = "Precio";
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            // 
-            // descripcion
-            // 
-            this.descripcion.HeaderText = "Descripción";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
             // 
             // Preparadas
             // 
@@ -719,8 +696,5 @@
         private System.Windows.Forms.PictureBox pcbImagen;
         private System.Windows.Forms.PictureBox pcbLupa;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
     }
 }

@@ -58,7 +58,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlSelector = new System.Windows.Forms.Panel();
             this.btnCarniceria = new System.Windows.Forms.Button();
-            this.dgvPescaderia = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.txtInfo = new System.Windows.Forms.TextBox();
             this.btnInfo = new System.Windows.Forms.PictureBox();
@@ -67,9 +66,7 @@
             this.pcbImagen = new System.Windows.Forms.PictureBox();
             this.pcbLupa = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvPescaderia = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.btnPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCarrito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCategorias)).BeginInit();
@@ -82,11 +79,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPescaderia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLupa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPescaderia)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -506,36 +503,6 @@
             this.btnCarniceria.UseVisualStyleBackColor = true;
             this.btnCarniceria.Click += new System.EventHandler(this.btnCarniceria_Click);
             // 
-            // dgvPescaderia
-            // 
-            this.dgvPescaderia.AllowUserToAddRows = false;
-            this.dgvPescaderia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPescaderia.BackgroundColor = System.Drawing.Color.White;
-            this.dgvPescaderia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvPescaderia.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPescaderia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvPescaderia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPescaderia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nombre,
-            this.precio,
-            this.descripcion});
-            this.dgvPescaderia.EnableHeadersVisualStyles = false;
-            this.dgvPescaderia.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvPescaderia.Location = new System.Drawing.Point(384, 372);
-            this.dgvPescaderia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvPescaderia.Name = "dgvPescaderia";
-            this.dgvPescaderia.ReadOnly = true;
-            this.dgvPescaderia.RowTemplate.Height = 24;
-            this.dgvPescaderia.Size = new System.Drawing.Size(1155, 588);
-            this.dgvPescaderia.TabIndex = 17;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -619,23 +586,31 @@
             this.txtBuscar.Size = new System.Drawing.Size(419, 66);
             this.txtBuscar.TabIndex = 61;
             // 
-            // nombre
+            // dgvPescaderia
             // 
-            this.nombre.HeaderText = "Producto";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // precio
-            // 
-            this.precio.HeaderText = "Precio";
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            // 
-            // descripcion
-            // 
-            this.descripcion.HeaderText = "Descripción";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
+            this.dgvPescaderia.AllowUserToAddRows = false;
+            this.dgvPescaderia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPescaderia.BackgroundColor = System.Drawing.Color.White;
+            this.dgvPescaderia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvPescaderia.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPescaderia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPescaderia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPescaderia.EnableHeadersVisualStyles = false;
+            this.dgvPescaderia.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvPescaderia.Location = new System.Drawing.Point(384, 372);
+            this.dgvPescaderia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvPescaderia.Name = "dgvPescaderia";
+            this.dgvPescaderia.ReadOnly = true;
+            this.dgvPescaderia.RowTemplate.Height = 24;
+            this.dgvPescaderia.Size = new System.Drawing.Size(1155, 588);
+            this.dgvPescaderia.TabIndex = 17;
             // 
             // Pescaderia
             // 
@@ -676,11 +651,11 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPescaderia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLupa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPescaderia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -716,7 +691,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlSelector;
         private System.Windows.Forms.Button btnCarniceria;
-        private System.Windows.Forms.DataGridView dgvPescaderia;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtInfo;
         private System.Windows.Forms.PictureBox btnInfo;
@@ -725,8 +699,6 @@
         private System.Windows.Forms.PictureBox pcbImagen;
         private System.Windows.Forms.PictureBox pcbLupa;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridView dgvPescaderia;
     }
 }

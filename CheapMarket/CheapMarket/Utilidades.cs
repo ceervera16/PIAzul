@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
 
@@ -188,6 +189,21 @@ namespace CheapMarket
             }
 
             return nombre;
+        }
+
+        public static DataTable CargarProductos2(MySqlConnection conexion, string consulta)
+        {
+            DataTable lista = new DataTable();
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)   // En caso que se hayan registros en el objeto reader
+            {
+                lista.Load(reader);
+            }
+            
+            return lista;
         }
     }
 }

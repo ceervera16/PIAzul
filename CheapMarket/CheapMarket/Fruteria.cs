@@ -18,6 +18,23 @@ namespace Diseño
         public Fruteria()
         {
             InitializeComponent();
+            CargarProductos();
+        }
+
+        private void CargarProductos()
+        {
+            string consulta = String.Format("SELECT Nombre, Precio, Descripcion FROM producto where Categoria='FRUTERIA'");
+
+            if (ConexionBD.AbrirConexion())
+            {
+                dgvFruteria.DataSource = Utilidades.CargarProductos2(ConexionBD.Conexion, consulta);
+
+                ConexionBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

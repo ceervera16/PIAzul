@@ -19,8 +19,23 @@ namespace Diseño
         public Higiene()
         {
             InitializeComponent();
+            CargarProductos();
         }
+        private void CargarProductos()
+        {
+            string consulta = String.Format("SELECT Nombre, Precio, Descripcion FROM producto where Categoria='HIGIENE'");
 
+            if (ConexionBD.AbrirConexion())
+            {
+                dgvHigiene.DataSource = Utilidades.CargarProductos2(ConexionBD.Conexion, consulta);
+
+                ConexionBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+            }
+        }
         private void btnSalir_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)

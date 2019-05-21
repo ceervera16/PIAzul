@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Carrito));
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dtgCarrito = new System.Windows.Forms.DataGridView();
             this.dtgProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtgCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtgPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnGuardarPedido = new System.Windows.Forms.Button();
+            this.btnVaciar = new System.Windows.Forms.Button();
             this.btnFinalizarPedido = new System.Windows.Forms.Button();
             this.lblMetodo = new System.Windows.Forms.Label();
             this.pcbTarjeta = new System.Windows.Forms.PictureBox();
@@ -120,14 +120,14 @@
             this.dtgProducto,
             this.dtgCantidad,
             this.dtgPrecio});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgCarrito.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgCarrito.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtgCarrito.Location = new System.Drawing.Point(616, 222);
             this.dtgCarrito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtgCarrito.Name = "dtgCarrito";
@@ -155,17 +155,17 @@
             this.dtgPrecio.ReadOnly = true;
             this.dtgPrecio.Width = 80;
             // 
-            // btnGuardarPedido
+            // btnVaciar
             // 
-            this.btnGuardarPedido.Font = new System.Drawing.Font("Century Gothic", 15F);
-            this.btnGuardarPedido.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnGuardarPedido.Location = new System.Drawing.Point(1338, 608);
-            this.btnGuardarPedido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnGuardarPedido.Name = "btnGuardarPedido";
-            this.btnGuardarPedido.Size = new System.Drawing.Size(226, 98);
-            this.btnGuardarPedido.TabIndex = 31;
-            this.btnGuardarPedido.Text = "REALIZAR COMPRA";
-            this.btnGuardarPedido.UseVisualStyleBackColor = true;
+            this.btnVaciar.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.btnVaciar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnVaciar.Location = new System.Drawing.Point(1338, 608);
+            this.btnVaciar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnVaciar.Name = "btnVaciar";
+            this.btnVaciar.Size = new System.Drawing.Size(226, 98);
+            this.btnVaciar.TabIndex = 31;
+            this.btnVaciar.Text = "VACIAR CARRITO";
+            this.btnVaciar.UseVisualStyleBackColor = true;
             // 
             // btnFinalizarPedido
             // 
@@ -798,7 +798,7 @@
             this.Controls.Add(this.pcbMetodo);
             this.Controls.Add(this.lblMetodo);
             this.Controls.Add(this.btnFinalizarPedido);
-            this.Controls.Add(this.btnGuardarPedido);
+            this.Controls.Add(this.btnVaciar);
             this.Controls.Add(this.dtgCarrito);
             this.Controls.Add(this.txtBuscar);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
@@ -841,7 +841,7 @@
 
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridView dtgCarrito;
-        private System.Windows.Forms.Button btnGuardarPedido;
+        private System.Windows.Forms.Button btnVaciar;
         private System.Windows.Forms.Button btnFinalizarPedido;
         private System.Windows.Forms.Label lblMetodo;
         private System.Windows.Forms.PictureBox pcbMetodo;

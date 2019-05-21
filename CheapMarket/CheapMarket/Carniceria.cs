@@ -18,6 +18,7 @@ namespace Diseño
         public Carniceria()
         {
             InitializeComponent();
+            CargarProductos();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -151,6 +152,23 @@ namespace Diseño
                 Carrito carrito = new Carrito();
                 carrito.Comentario = label1.Text;
                 carrito.Show();
+            }
+        }
+
+
+        private void CargarProductos()
+        {
+            string consulta = String.Format("SELECT Nombre, Precio, Descripcion FROM producto where Categoria='CARNICERIA'");
+
+            if (ConexionBD.AbrirConexion())
+            {
+                dgvCarniceria.DataSource = Utilidades.CargarProductos2(ConexionBD.Conexion, consulta);
+
+                ConexionBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
             }
         }
     }
