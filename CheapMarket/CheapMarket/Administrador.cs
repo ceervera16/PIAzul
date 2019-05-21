@@ -103,6 +103,33 @@ namespace CheapMarket
             return comando.ExecuteNonQuery();
         }
 
-        
+        /// <summary>
+        /// Busca productos en la base de datos segun la consulta que reciba, debe ser un select, utiliza el orden de la base de datos
+        /// </summary>
+        /// <param name="Conexion"></param>
+        /// <param name="consulta"></param>
+        /// <returns>lista de productos</returns>
+        public static List<Productos> BuscarProducto(MySqlConnection Conexion, string consulta)
+        {
+            List<Productos> lista = new List<Productos>();
+
+            MySqlCommand comando = new MySqlCommand(consulta, Conexion);
+
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    Productos p = new Productos();
+                    p.Codigo = reader.GetInt32(0);
+                    p.Nombre = reader.GetString(1);
+                    p.Categoria = reader.GetString(3);
+                    lista.Add(p);
+                }
+            }
+            reader.Close();
+            return lista;
+        }
     }
 }
