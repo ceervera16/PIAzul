@@ -175,6 +175,7 @@
             this.btnCerrarSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnCerrarSesion.TabIndex = 16;
             this.btnCerrarSesion.TabStop = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // btnTwitter
             // 

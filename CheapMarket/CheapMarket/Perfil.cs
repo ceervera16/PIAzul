@@ -40,5 +40,23 @@ namespace CheapMarket
             categorias.Comentario = lblUsuario.Text;
             categorias.Show();
         }
+
+        private void btnPromociones_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Promociones promociones = new Promociones();
+            promociones.Comentario = lblUsuario.Text;
+            promociones.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea cerrar sesión?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.Hide();
+                Form1 inicio = new Form1();
+                inicio.Show();
+            }
+        }
     }
 }

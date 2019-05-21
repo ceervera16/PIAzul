@@ -39,7 +39,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnCerrarSesion = new System.Windows.Forms.PictureBox();
             this.btnPromociones = new System.Windows.Forms.PictureBox();
             this.btnCategorias = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.PictureBox();
@@ -76,7 +75,6 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarSesion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPromociones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCategorias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
@@ -145,6 +143,7 @@
             this.button1.TabIndex = 33;
             this.button1.Text = "CERRAR SESIÓN";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel3
             // 
@@ -196,7 +195,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.panel2.Controls.Add(this.btnCerrarSesion);
             this.panel2.Controls.Add(this.btnPromociones);
             this.panel2.Controls.Add(this.btnCategorias);
             this.panel2.Controls.Add(this.btnSalir);
@@ -210,32 +208,22 @@
             this.panel2.Size = new System.Drawing.Size(1920, 82);
             this.panel2.TabIndex = 34;
             // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(1746, 6);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(65, 65);
-            this.btnCerrarSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnCerrarSesion.TabIndex = 16;
-            this.btnCerrarSesion.TabStop = false;
-            // 
             // btnPromociones
             // 
             this.btnPromociones.Image = ((System.Drawing.Image)(resources.GetObject("btnPromociones.Image")));
-            this.btnPromociones.Location = new System.Drawing.Point(1666, 6);
+            this.btnPromociones.Location = new System.Drawing.Point(1748, 6);
             this.btnPromociones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPromociones.Name = "btnPromociones";
             this.btnPromociones.Size = new System.Drawing.Size(65, 65);
             this.btnPromociones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnPromociones.TabIndex = 15;
             this.btnPromociones.TabStop = false;
+            this.btnPromociones.Click += new System.EventHandler(this.btnPromociones_Click);
             // 
             // btnCategorias
             // 
             this.btnCategorias.Image = ((System.Drawing.Image)(resources.GetObject("btnCategorias.Image")));
-            this.btnCategorias.Location = new System.Drawing.Point(1583, 6);
+            this.btnCategorias.Location = new System.Drawing.Point(1665, 6);
             this.btnCategorias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCategorias.Name = "btnCategorias";
             this.btnCategorias.Size = new System.Drawing.Size(65, 65);
@@ -638,7 +626,6 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarSesion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPromociones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCategorias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
@@ -665,7 +652,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pcbLogo;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox btnCerrarSesion;
         private System.Windows.Forms.PictureBox btnPromociones;
         private System.Windows.Forms.PictureBox btnCategorias;
         private System.Windows.Forms.PictureBox btnSalir;

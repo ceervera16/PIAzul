@@ -171,5 +171,15 @@ namespace Diseño
                 MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
             }
         }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea cerrar sesión?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.Hide();
+                Form1 inicio = new Form1();
+                inicio.Show();
+            }
+        }
     }
 }
