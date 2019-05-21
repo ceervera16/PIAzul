@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Helados));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnHogar = new System.Windows.Forms.Button();
             this.btnSnacks = new System.Windows.Forms.Button();
             this.btnPanaderia = new System.Windows.Forms.Button();
@@ -57,6 +58,12 @@
             this.btnPescaderia = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCarniceria = new System.Windows.Forms.Button();
+            this.dgvHelados = new System.Windows.Forms.DataGridView();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.informacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrarSesion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCarrito)).BeginInit();
@@ -69,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHelados)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHogar
@@ -487,12 +495,73 @@
             this.btnCarniceria.UseVisualStyleBackColor = true;
             this.btnCarniceria.Click += new System.EventHandler(this.btnCarniceria_Click);
             // 
+            // dgvHelados
+            // 
+            this.dgvHelados.BackgroundColor = System.Drawing.Color.White;
+            this.dgvHelados.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvHelados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHelados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvHelados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHelados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombre,
+            this.precio,
+            this.descripcion,
+            this.informacion,
+            this.imagen});
+            this.dgvHelados.EnableHeadersVisualStyles = false;
+            this.dgvHelados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvHelados.Location = new System.Drawing.Point(384, 372);
+            this.dgvHelados.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvHelados.Name = "dgvHelados";
+            this.dgvHelados.ReadOnly = true;
+            this.dgvHelados.RowTemplate.Height = 24;
+            this.dgvHelados.Size = new System.Drawing.Size(1155, 639);
+            this.dgvHelados.TabIndex = 15;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Producto";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // precio
+            // 
+            this.precio.HeaderText = "Precio";
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            // 
+            // descripcion
+            // 
+            this.descripcion.HeaderText = "Descripción";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            // 
+            // informacion
+            // 
+            this.informacion.HeaderText = "Información Nutricional";
+            this.informacion.Name = "informacion";
+            this.informacion.ReadOnly = true;
+            // 
+            // imagen
+            // 
+            this.imagen.HeaderText = "Imagen";
+            this.imagen.Name = "imagen";
+            this.imagen.ReadOnly = true;
+            // 
             // Helados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.dgvHelados);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -515,6 +584,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHelados)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -549,5 +619,11 @@
         private System.Windows.Forms.Button btnPescaderia;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCarniceria;
+        private System.Windows.Forms.DataGridView dgvHelados;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn informacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imagen;
     }
 }

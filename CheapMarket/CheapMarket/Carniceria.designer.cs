@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Carniceria));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnHelados = new System.Windows.Forms.Button();
             this.btnFiambres = new System.Windows.Forms.Button();
             this.btnVerduleria = new System.Windows.Forms.Button();
@@ -57,6 +58,12 @@
             this.btnBebidas = new System.Windows.Forms.Button();
             this.btnComidaPrep = new System.Windows.Forms.Button();
             this.pnlSelector = new System.Windows.Forms.Panel();
+            this.dgvCarniceria = new System.Windows.Forms.DataGridView();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.informacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrarSesion)).BeginInit();
@@ -69,6 +76,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarniceria)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHelados
@@ -487,12 +495,73 @@
             this.pnlSelector.Size = new System.Drawing.Size(15, 82);
             this.pnlSelector.TabIndex = 4;
             // 
+            // dgvCarniceria
+            // 
+            this.dgvCarniceria.BackgroundColor = System.Drawing.Color.White;
+            this.dgvCarniceria.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvCarniceria.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCarniceria.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCarniceria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCarniceria.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombre,
+            this.precio,
+            this.descripcion,
+            this.informacion,
+            this.imagen});
+            this.dgvCarniceria.EnableHeadersVisualStyles = false;
+            this.dgvCarniceria.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvCarniceria.Location = new System.Drawing.Point(369, 347);
+            this.dgvCarniceria.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvCarniceria.Name = "dgvCarniceria";
+            this.dgvCarniceria.ReadOnly = true;
+            this.dgvCarniceria.RowTemplate.Height = 24;
+            this.dgvCarniceria.Size = new System.Drawing.Size(1155, 639);
+            this.dgvCarniceria.TabIndex = 13;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Producto";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // precio
+            // 
+            this.precio.HeaderText = "Precio";
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            // 
+            // descripcion
+            // 
+            this.descripcion.HeaderText = "Descripción";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            // 
+            // informacion
+            // 
+            this.informacion.HeaderText = "Información Nutricional";
+            this.informacion.Name = "informacion";
+            this.informacion.ReadOnly = true;
+            // 
+            // imagen
+            // 
+            this.imagen.HeaderText = "Imagen";
+            this.imagen.Name = "imagen";
+            this.imagen.ReadOnly = true;
+            // 
             // Carniceria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.dgvCarniceria);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -517,6 +586,7 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarniceria)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -550,6 +620,12 @@
         private System.Windows.Forms.PictureBox btnCategorias;
         private System.Windows.Forms.PictureBox btnSalir;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvCarniceria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn informacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imagen;
     }
 }
 

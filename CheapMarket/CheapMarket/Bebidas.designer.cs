@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bebidas));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,6 +58,12 @@
             this.btnFruteria = new System.Windows.Forms.Button();
             this.btnPescaderia = new System.Windows.Forms.Button();
             this.btnCarniceria = new System.Windows.Forms.Button();
+            this.dgvBebidas = new System.Windows.Forms.DataGridView();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.informacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.panel2.SuspendLayout();
@@ -69,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnInstagram)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPagina)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBebidas)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -492,12 +500,73 @@
             this.btnCarniceria.UseVisualStyleBackColor = true;
             this.btnCarniceria.Click += new System.EventHandler(this.btnCarniceria_Click);
             // 
+            // dgvBebidas
+            // 
+            this.dgvBebidas.BackgroundColor = System.Drawing.Color.White;
+            this.dgvBebidas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvBebidas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBebidas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvBebidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBebidas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombre,
+            this.precio,
+            this.descripcion,
+            this.informacion,
+            this.imagen});
+            this.dgvBebidas.EnableHeadersVisualStyles = false;
+            this.dgvBebidas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvBebidas.Location = new System.Drawing.Point(384, 372);
+            this.dgvBebidas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvBebidas.Name = "dgvBebidas";
+            this.dgvBebidas.ReadOnly = true;
+            this.dgvBebidas.RowTemplate.Height = 24;
+            this.dgvBebidas.Size = new System.Drawing.Size(1155, 639);
+            this.dgvBebidas.TabIndex = 12;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Producto";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // precio
+            // 
+            this.precio.HeaderText = "Precio";
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            // 
+            // descripcion
+            // 
+            this.descripcion.HeaderText = "Descripción";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            // 
+            // informacion
+            // 
+            this.informacion.HeaderText = "Información Nutricional";
+            this.informacion.Name = "informacion";
+            this.informacion.ReadOnly = true;
+            // 
+            // imagen
+            // 
+            this.imagen.HeaderText = "Imagen";
+            this.imagen.Name = "imagen";
+            this.imagen.ReadOnly = true;
+            // 
             // Bebidas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.dgvBebidas);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -521,6 +590,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnInstagram)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPagina)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBebidas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -555,5 +625,11 @@
         private System.Windows.Forms.Button btnPescaderia;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCarniceria;
+        private System.Windows.Forms.DataGridView dgvBebidas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn informacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imagen;
     }
 }
