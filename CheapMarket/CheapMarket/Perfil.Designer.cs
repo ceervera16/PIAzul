@@ -33,7 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblPregunta = new System.Windows.Forms.Label();
-            this.btnGuardarPedido = new System.Windows.Forms.Button();
+            this.btnGuardarCambios = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -123,18 +123,18 @@
             this.lblPregunta.TabIndex = 30;
             this.lblPregunta.Text = "¿Tienes dudas? ¡Llámanos!";
             // 
-            // btnGuardarPedido
+            // btnGuardarCambios
             // 
-            this.btnGuardarPedido.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarPedido.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnGuardarPedido.Location = new System.Drawing.Point(428, 942);
-            this.btnGuardarPedido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnGuardarPedido.Name = "btnGuardarPedido";
-            this.btnGuardarPedido.Size = new System.Drawing.Size(226, 98);
-            this.btnGuardarPedido.TabIndex = 32;
-            this.btnGuardarPedido.Text = "GUARDAR CAMBIOS";
-            this.btnGuardarPedido.UseVisualStyleBackColor = true;
-            this.btnGuardarPedido.Click += new System.EventHandler(this.btnGuardarPedido_Click);
+            this.btnGuardarCambios.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarCambios.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnGuardarCambios.Location = new System.Drawing.Point(428, 942);
+            this.btnGuardarCambios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGuardarCambios.Name = "btnGuardarCambios";
+            this.btnGuardarCambios.Size = new System.Drawing.Size(226, 98);
+            this.btnGuardarCambios.TabIndex = 32;
+            this.btnGuardarCambios.Text = "GUARDAR CAMBIOS";
+            this.btnGuardarCambios.UseVisualStyleBackColor = true;
+            this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
             // 
             // button1
             // 
@@ -621,7 +621,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnGuardarPedido);
+            this.Controls.Add(this.btnGuardarCambios);
             this.Controls.Add(this.lblPregunta);
             this.ForeColor = System.Drawing.Color.Bisque;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -654,7 +654,7 @@
         private System.Windows.Forms.Label lblPregunta;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnGuardarPedido;
+        private System.Windows.Forms.Button btnGuardarCambios;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label8;

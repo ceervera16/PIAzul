@@ -25,20 +25,20 @@ namespace CheapMarket
         private int puerta;
 
         //Atributos
-        public string Dni { get => dni; }
-        public string Nombre { get => nombre; }
-        public string Apellidos { get => apellidos; }
-        public string Correo { get => correo; }
-        public string Password { get => password; }
-        public int Telefono { get => telefono; }
-        public int Puntos { get => puntos; }
-        public string Provincia { get => provincia; }
-        public string Localidad { get => localidad; }
-        public string Calle { get => calle; }
-        public int CodigoPostal { get => codigoPostal; }
-        public int Portal { get => portal; }
-        public int Piso { get => piso; }
-        public int Puerta { get => puerta; }
+        public string Dni { get => dni; set => dni = value; }
+        public string Nombre { get => nombre; set => nombre = value; }
+        public string Apellidos { get => apellidos; set => apellidos = value; }
+        public string Correo { get => correo; set => correo = value; }
+        public string Password { get => password; set => password = value; }
+        public int Telefono { get => telefono; set => telefono = value; }
+        public int Puntos { get => puntos; set => puntos = value; }
+        public string Provincia { get => provincia; set => provincia = value; }
+        public string Localidad { get => localidad; set => localidad = value; }
+        public string Calle { get => calle; set => calle = value; }
+        public int CodigoPostal { get => codigoPostal; set => codigoPostal = value; }
+        public int Portal { get => portal; set => portal = value; }
+        public int Piso { get => piso; set => piso = value; }
+        public int Puerta { get => puerta; set => puerta = value; }
 
         //Constructor
         public Usuario(string dni, string nombre, string apellidos, string correo, string password, int telefono, string provincia,
@@ -58,6 +58,10 @@ namespace CheapMarket
             this.portal = portal;
             this.piso = piso;
             this.puerta = puerta;
+        }
+
+        public Usuario()
+        {
         }
 
         //Metodos

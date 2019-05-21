@@ -21,7 +21,7 @@ namespace CheapMarket
 
         private void Perfil_Load(object sender, EventArgs e)
         {
-
+            CargarDatos();
         }
 
         public bool ValidarDatos()
@@ -195,7 +195,38 @@ namespace CheapMarket
             }
         }
 
-        private void btnGuardarPedido_Click(object sender, EventArgs e)
+
+        private void CargarDatos()
+        {
+            if (ConexionBD.AbrirConexion())
+            {
+                List<string> usu = Utilidades.CargarDatos2(ConexionBD.Conexion);
+
+                //Añado los valores que tiene actualmente
+                txtNombre.Text = usu[1];
+                txtApellidos.Text = usu[2];
+                txtCorreo.Text = usu[3];
+                txtPass1.Text = usu[4];
+                txtPass2.Text = usu[4];
+                txtTelefono.Text = usu[5];
+                txtProvincia.Text = usu[7];
+                txtLocalidad.Text = usu[8];                
+                txtDireccion.Text = usu[9];                
+                txtCodigoPostal.Text = usu[10];
+                txtNum.Text = usu[12];
+                txtPiso.Text = usu[12];
+                txtPuerta.Text = usu[13];
+
+                ConexionBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+            }
+           
+        }
+
+        private void btnGuardarCambios_Click(object sender, EventArgs e)
         {
 
         }

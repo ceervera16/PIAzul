@@ -188,5 +188,35 @@ namespace CheapMarket
             
             return lista;
         }
+
+        public static List<string> CargarDatos2(MySqlConnection conexion)
+        {
+            List<string> usu = new List<string>();
+
+            string consulta = String.Format($"SELECT * FROM cliente WHERE DNI LIKE '{Sesion.NifUsu}'");
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                usu.Add(reader.GetString(0));
+                usu.Add(reader.GetString(1));
+                usu.Add(reader.GetString(2));
+                usu.Add(reader.GetString(3));
+                usu.Add(reader.GetString(4));
+                usu.Add(reader.GetInt32(5).ToString());
+                usu.Add(reader.GetInt32(6).ToString());
+                usu.Add(reader.GetString(7));
+                usu.Add(reader.GetString(8));
+                usu.Add(reader.GetString(9));
+                usu.Add(reader.GetInt32(10).ToString());
+                usu.Add(reader.GetInt32(11).ToString());
+                usu.Add(reader.GetInt32(12).ToString());
+                usu.Add(reader.GetInt32(13).ToString());
+            }
+
+            return usu;
+        }
     }
 }
