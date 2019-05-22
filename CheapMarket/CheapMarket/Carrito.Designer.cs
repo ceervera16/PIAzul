@@ -77,6 +77,7 @@
             this.btnFruteria = new System.Windows.Forms.Button();
             this.btnPescaderia = new System.Windows.Forms.Button();
             this.btnCarniceria = new System.Windows.Forms.Button();
+            this.lblTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCarrito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbTarjeta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -136,7 +137,7 @@
             // 
             this.btnVaciar.Font = new System.Drawing.Font("Century Gothic", 15F);
             this.btnVaciar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnVaciar.Location = new System.Drawing.Point(1338, 608);
+            this.btnVaciar.Location = new System.Drawing.Point(1338, 727);
             this.btnVaciar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnVaciar.Name = "btnVaciar";
             this.btnVaciar.Size = new System.Drawing.Size(226, 98);
@@ -149,7 +150,7 @@
             // 
             this.btnFinalizarPedido.Font = new System.Drawing.Font("Century Gothic", 15F);
             this.btnFinalizarPedido.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnFinalizarPedido.Location = new System.Drawing.Point(1592, 608);
+            this.btnFinalizarPedido.Location = new System.Drawing.Point(1592, 727);
             this.btnFinalizarPedido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFinalizarPedido.Name = "btnFinalizarPedido";
             this.btnFinalizarPedido.Size = new System.Drawing.Size(226, 98);
@@ -164,7 +165,7 @@
             this.lblMetodo.BackColor = System.Drawing.Color.Transparent;
             this.lblMetodo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMetodo.ForeColor = System.Drawing.Color.White;
-            this.lblMetodo.Location = new System.Drawing.Point(609, 712);
+            this.lblMetodo.Location = new System.Drawing.Point(615, 771);
             this.lblMetodo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMetodo.Name = "lblMetodo";
             this.lblMetodo.Size = new System.Drawing.Size(455, 43);
@@ -240,7 +241,7 @@
             // pcbMetodo
             // 
             this.pcbMetodo.Image = global::CheapMarket.Properties.Resources.flecha_hacia_abajo;
-            this.pcbMetodo.Location = new System.Drawing.Point(1072, 712);
+            this.pcbMetodo.Location = new System.Drawing.Point(1078, 771);
             this.pcbMetodo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pcbMetodo.Name = "pcbMetodo";
             this.pcbMetodo.Size = new System.Drawing.Size(68, 52);
@@ -261,7 +262,7 @@
             this.groupBoxMetodo.Controls.Add(this.pcbMastercard);
             this.groupBoxMetodo.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxMetodo.ForeColor = System.Drawing.Color.White;
-            this.groupBoxMetodo.Location = new System.Drawing.Point(618, 774);
+            this.groupBoxMetodo.Location = new System.Drawing.Point(616, 826);
             this.groupBoxMetodo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBoxMetodo.Name = "groupBoxMetodo";
             this.groupBoxMetodo.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -760,12 +761,25 @@
             this.btnCarniceria.UseVisualStyleBackColor = true;
             this.btnCarniceria.Click += new System.EventHandler(this.btnCarniceria_Click);
             // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
+            this.lblTotal.Location = new System.Drawing.Point(1586, 608);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(118, 34);
+            this.lblTotal.TabIndex = 55;
+            this.lblTotal.Text = "Total:    ";
+            // 
             // Carrito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -866,5 +880,6 @@
         private System.Windows.Forms.Button btnFruteria;
         private System.Windows.Forms.Button btnPescaderia;
         private System.Windows.Forms.Button btnCarniceria;
+        private System.Windows.Forms.Label lblTotal;
     }
 }

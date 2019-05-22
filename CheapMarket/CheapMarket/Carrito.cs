@@ -29,6 +29,7 @@ namespace CheapMarket
         private void Carrito_Load(object sender, EventArgs e)
         {
             CargarCarrito();
+            ImporteTotal();
         }
 
         //Metodos
@@ -49,7 +50,25 @@ namespace CheapMarket
 
         }
 
+        private void ImporteTotal()
+        {
+            if (dtgCarrito.Rows.Count > 0)
+            {
+                double total = 0;
 
+                for (int i = 0; i < dtgCarrito.Rows.Count; i++)
+                {
+                    total = total + double.Parse(dtgCarrito.Rows[i].Cells[2].Value.ToString());
+                }
+
+                lblTotal.Text = "Total:    " + total + "€";
+            }
+            else
+            {
+                lblTotal.Text = "Total:    ";
+            }
+
+        }
 
         //Botones
 
@@ -69,6 +88,7 @@ namespace CheapMarket
                 }
 
                 CargarCarrito();
+                lblTotal.Text = "Total:    ";
             }
         }
 
