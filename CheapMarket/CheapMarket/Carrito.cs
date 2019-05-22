@@ -28,7 +28,23 @@ namespace CheapMarket
 
         private void Carrito_Load(object sender, EventArgs e)
         {
+            CargarCarrito();
+        }
 
+        private void CargarCarrito()
+        {
+            string consulta = String.Format($"SELECT NomProducto, Cantidad, Importe FROM carritotemporal where DniCliente LIKE '{Sesion.NifUsu}'");
+
+            if (ConexionBD.AbrirConexion())
+            {
+                dtgCarrito.DataSource = Utilidades.CargarCarrito(ConexionBD.Conexion, consulta);
+
+                ConexionBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -38,7 +54,6 @@ namespace CheapMarket
                 this.Close();
             }
         }
-
 
         private void btnCarniceria_Click(object sender, EventArgs e)
         {

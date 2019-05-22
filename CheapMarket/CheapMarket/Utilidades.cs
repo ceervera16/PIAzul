@@ -74,13 +74,28 @@ namespace CheapMarket
         {
             int retorno;
 
-            string consulta = String.Format("DELETE FROM CarritoTemporal WHERE dni={0}", nif);
+            string consulta = String.Format($"DELETE FROM carritotemporal where DniCliente LIKE '{Sesion.NifUsu}'");
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
 
             retorno = comando.ExecuteNonQuery();
 
             return retorno;
+        }
+
+        public static DataTable CargarCarrito(MySqlConnection conexion, string consulta)
+        {
+            DataTable lista = new DataTable();
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)   // En caso que se hayan registros en el objeto reader
+            {
+                lista.Load(reader);
+            }
+
+            return lista;
         }
 
         public static int EliminarUsuario(MySqlConnection conexion, string nif)
@@ -232,6 +247,17 @@ namespace CheapMarket
             }
 
             return info;
+        }
+
+        public static int AgregarAlCarrito(MySqlConnection conexion, string consulta)
+        {
+            int retorno;
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+            retorno = comando.ExecuteNonQuery();
+
+            return retorno;
         }
     }
 }

@@ -32,9 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Carrito));
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dtgCarrito = new System.Windows.Forms.DataGridView();
-            this.dtgProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtgCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtgPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnVaciar = new System.Windows.Forms.Button();
             this.btnFinalizarPedido = new System.Windows.Forms.Button();
             this.lblMetodo = new System.Windows.Forms.Label();
@@ -115,14 +112,13 @@
             // 
             // dtgCarrito
             // 
+            this.dtgCarrito.AllowUserToAddRows = false;
+            this.dtgCarrito.AllowUserToDeleteRows = false;
+            this.dtgCarrito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgCarrito.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dtgProducto,
-            this.dtgCantidad,
-            this.dtgPrecio});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -131,29 +127,10 @@
             this.dtgCarrito.Location = new System.Drawing.Point(616, 222);
             this.dtgCarrito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtgCarrito.Name = "dtgCarrito";
+            this.dtgCarrito.ReadOnly = true;
+            this.dtgCarrito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgCarrito.Size = new System.Drawing.Size(1202, 362);
             this.dtgCarrito.TabIndex = 3;
-            // 
-            // dtgProducto
-            // 
-            this.dtgProducto.HeaderText = "Producto";
-            this.dtgProducto.Name = "dtgProducto";
-            this.dtgProducto.ReadOnly = true;
-            this.dtgProducto.Width = 400;
-            // 
-            // dtgCantidad
-            // 
-            this.dtgCantidad.HeaderText = "Cantidad";
-            this.dtgCantidad.Name = "dtgCantidad";
-            this.dtgCantidad.ReadOnly = true;
-            this.dtgCantidad.Width = 80;
-            // 
-            // dtgPrecio
-            // 
-            this.dtgPrecio.HeaderText = "Precio";
-            this.dtgPrecio.Name = "dtgPrecio";
-            this.dtgPrecio.ReadOnly = true;
-            this.dtgPrecio.Width = 80;
             // 
             // btnVaciar
             // 
@@ -858,9 +835,6 @@
         private System.Windows.Forms.RadioButton pcbPaypal;
         private System.Windows.Forms.RadioButton rdbTarjeta;
         private System.Windows.Forms.RadioButton rdbVisa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtgProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtgCantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dtgPrecio;
         private System.Windows.Forms.Label lblLista;
         private System.Windows.Forms.Label lblEliminar;
         private System.Windows.Forms.PictureBox pcbLupa;
