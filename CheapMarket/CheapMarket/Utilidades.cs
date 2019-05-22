@@ -3,6 +3,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
+using System.IO;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
 
@@ -258,6 +260,23 @@ namespace CheapMarket
             retorno = comando.ExecuteNonQuery();
 
             return retorno;
+        }
+
+        public static Image ImagenProducto(MySqlConnection conexion, string consulta2)
+        {
+            MySqlCommand comando = new MySqlCommand(consulta2, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            Image imagen = null;
+
+            while (reader.Read())
+            {
+                byte[] num = (byte[])reader[0];
+                MemoryStream ms = new MemoryStream(num);
+                imagen = Image.FromStream(ms);
+            }
+
+            return imagen;
         }
     }
 }
