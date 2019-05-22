@@ -1,4 +1,5 @@
 ﻿using CheapMarket;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -219,26 +220,78 @@ namespace Diseño
             }
             else
             {
-                int cant = Decimal.ToInt32(cantidad.Value);
-                string dni = Sesion.NifUsu;
-                string nombre = dgvPescaderia.CurrentRow.Cells[0].Value.ToString();
-                double precio = double.Parse(dgvPescaderia.CurrentRow.Cells[1].Value.ToString());
-                double importe = cant * precio;
-
-
-                string consulta = String.Format($"INSERT INTO carritotemporal (DniCliente, NomProducto, Cantidad, Importe) VALUES ('{dni}', '{nombre}', '{cant}', '{importe}');");
-
                 if (ConexionBD.AbrirConexion())
                 {
-                    txtInfo.Text = Utilidades.AgregarAlCarrito(ConexionBD.Conexion, consulta).ToString();
-                    MessageBox.Show("Producto agregado correctamente");
-                    cantidad.Value = 1;
+                    if (Utilidades.ComprobarProducto(ConexionBD.Conexion, dgvPescaderia.CurrentRow.Cells[0].Value.ToString()))
+                    {
+                        MessageBox.Show("El producto ya esta en tu carrito");
+                        ConexionBD.CerrarConexion();
+
+                        string dni = Sesion.NifUsu;
+                        string nombre = dgvPescaderia.CurrentRow.Cells[0].Value.ToString();
+                        double precio = double.Parse(dgvPescaderia.CurrentRow.Cells[1].Value.ToString());
+                        int cantAdd = Decimal.ToInt32(cantidad.Value);
+                        int cantCart = 0;
+
+                        if (ConexionBD.AbrirConexion())
+                        {
+                            cantCart = Utilidades.CalcularCantidad(ConexionBD.Conexion, nombre, dni);
+                            ConexionBD.CerrarConexion();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+                        }
+
+                        int cant = cantAdd + cantCart;
+                        double importe = cant * precio;
+
+                        if (ConexionBD.AbrirConexion())
+                        {
+                            string consulta = String.Format($"UPDATE carritotemporal SET Importe='{importe}', Cantidad={cant} WHERE DniCliente LIKE '{dni}' AND NomProducto LIKE '{nombre}'");
+                            MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+                            MySqlDataReader reader = comando.ExecuteReader();
+                            MessageBox.Show("Producto actualizado correctamente.");
+                            ConexionBD.CerrarConexion();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+                        }
+                    }
+                    else
+                    {
+                        ConexionBD.CerrarConexion();
+
+                        int cant = Decimal.ToInt32(cantidad.Value);
+                        string dni = Sesion.NifUsu;
+                        string nombre = dgvPescaderia.CurrentRow.Cells[0].Value.ToString();
+                        double precio = double.Parse(dgvPescaderia.CurrentRow.Cells[1].Value.ToString());
+                        double importe = cant * precio;
+
+
+                        string consulta = String.Format($"INSERT INTO carritotemporal (DniCliente, NomProducto, Cantidad, Importe) VALUES ('{dni}', '{nombre}', '{cant}', '{importe}');");
+
+                        if (ConexionBD.AbrirConexion())
+                        {
+                            txtInfo.Text = Utilidades.AgregarAlCarrito(ConexionBD.Conexion, consulta).ToString();
+                            MessageBox.Show("Producto agregado correctamente");
+                            cantidad.Value = 1;
+                            ConexionBD.CerrarConexion();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+                        }
+                    }
+
                     ConexionBD.CerrarConexion();
                 }
                 else
                 {
                     MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
                 }
+
             }
         }
     }
