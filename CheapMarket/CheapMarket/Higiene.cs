@@ -207,5 +207,24 @@ namespace Diseño
                 }
             }
         }
+
+        private void dgvHigiene_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string producto = dgvHigiene.CurrentRow.Cells[0].Value.ToString();
+
+            //Imagen
+            string consulta2 = String.Format($"SELECT Imagen FROM producto where Nombre='{producto}'");
+
+            if (ConexionBD.AbrirConexion())
+            {
+                pcbImagen.Image = Utilidades.ImagenProducto(ConexionBD.Conexion, consulta2);
+
+                ConexionBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+            }
+        }
     }
 }

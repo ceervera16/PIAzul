@@ -192,6 +192,20 @@ namespace Diseño
             {
                 MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
             }
+
+            //Imagen
+            string consulta2 = String.Format($"SELECT Imagen FROM producto where Nombre='{producto}'");
+
+            if (ConexionBD.AbrirConexion())
+            {
+                pcbImagen.Image = Utilidades.ImagenProducto(ConexionBD.Conexion, consulta2);
+
+                ConexionBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

@@ -558,6 +558,7 @@
             this.pcbImagen.Location = new System.Drawing.Point(1629, 347);
             this.pcbImagen.Name = "pcbImagen";
             this.pcbImagen.Size = new System.Drawing.Size(190, 190);
+            this.pcbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbImagen.TabIndex = 55;
             this.pcbImagen.TabStop = false;
             // 

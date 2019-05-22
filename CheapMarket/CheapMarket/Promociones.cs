@@ -83,5 +83,14 @@ namespace CheapMarket
             Categorias categorias = new Categorias();
             categorias.Show();
         }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                Close();
+                Dispose();
+            }
+        }
     }
 }
