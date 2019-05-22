@@ -150,6 +150,7 @@
             this.label1.Size = new System.Drawing.Size(151, 59);
             this.label1.TabIndex = 18;
             this.label1.Text = "Hola!";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnPerfil
             // 
@@ -161,6 +162,7 @@
             this.btnPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnPerfil.TabIndex = 17;
             this.btnPerfil.TabStop = false;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click_1);
             // 
             // btnCerrarSesion
             // 
@@ -196,6 +198,7 @@
             this.btnCategorias.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnCategorias.TabIndex = 14;
             this.btnCategorias.TabStop = false;
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
             // 
             // btnSalir
             // 

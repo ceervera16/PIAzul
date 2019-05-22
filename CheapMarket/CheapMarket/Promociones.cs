@@ -62,5 +62,26 @@ namespace CheapMarket
                 inicio.Show();
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Perfil perfil = new Perfil();
+            perfil.Show();
+        }
+
+        private void btnPerfil_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Perfil perfil = new Perfil();
+            perfil.Show();
+        }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Categorias categorias = new Categorias();
+            categorias.Show();
+        }
     }
 }
