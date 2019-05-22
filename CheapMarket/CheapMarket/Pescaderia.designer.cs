@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pescaderia));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.btnPerfil = new System.Windows.Forms.PictureBox();
             this.btnCarrito = new System.Windows.Forms.PictureBox();
@@ -576,6 +577,8 @@
             this.dgvPescaderia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvPescaderia.Name = "dgvPescaderia";
             this.dgvPescaderia.ReadOnly = true;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dgvPescaderia.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPescaderia.RowTemplate.Height = 24;
             this.dgvPescaderia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPescaderia.Size = new System.Drawing.Size(1155, 588);
@@ -594,6 +597,7 @@
             this.btnAgregar.TabIndex = 70;
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // cantidad
             // 

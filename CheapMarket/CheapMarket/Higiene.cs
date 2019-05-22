@@ -177,5 +177,35 @@ namespace Diseño
             }
         }
 
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if (Sesion.Invitado)
+            {
+                MessageBox.Show("Eres usuario invitado. No puedes realizar esta acción.");
+            }
+            else
+            {
+                int cant = Decimal.ToInt32(cantidad.Value);
+                string dni = Sesion.NifUsu;
+                string nombre = dgvHigiene.CurrentRow.Cells[0].Value.ToString();
+                double precio = double.Parse(dgvHigiene.CurrentRow.Cells[1].Value.ToString());
+                double importe = cant * precio;
+
+
+                string consulta = String.Format($"INSERT INTO carritotemporal (DniCliente, NomProducto, Cantidad, Importe) VALUES ('{dni}', '{nombre}', '{cant}', '{importe}');");
+
+                if (ConexionBD.AbrirConexion())
+                {
+                    Utilidades.AgregarAlCarrito(ConexionBD.Conexion, consulta).ToString();
+                    MessageBox.Show("Producto agregado correctamente");
+                    cantidad.Value = 1;
+                    ConexionBD.CerrarConexion();
+                }
+                else
+                {
+                    MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+                }
+            }
+        }
     }
 }
