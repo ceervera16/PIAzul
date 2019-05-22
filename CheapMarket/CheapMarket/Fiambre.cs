@@ -268,7 +268,7 @@ namespace Diseño
 
                         if (ConexionBD.AbrirConexion())
                         {
-                            txtInfo.Text = Utilidades.AgregarAlCarrito(ConexionBD.Conexion, consulta).ToString();
+                            Utilidades.AgregarAlCarrito(ConexionBD.Conexion, consulta).ToString();
                             MessageBox.Show("Producto agregado correctamente");
                             cantidad.Value = 1;
                             ConexionBD.CerrarConexion();
