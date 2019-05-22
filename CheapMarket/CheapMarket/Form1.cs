@@ -25,6 +25,7 @@ namespace CheapMarket
         {
             Registro Registro = new Registro();
             Registro.ShowDialog();
+            this.Hide();
         }
 
         private void btnPassword_Click(object sender, EventArgs e)
