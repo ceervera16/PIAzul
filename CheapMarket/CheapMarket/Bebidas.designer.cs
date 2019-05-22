@@ -531,6 +531,7 @@
             this.dgvBebidas.Name = "dgvBebidas";
             this.dgvBebidas.ReadOnly = true;
             this.dgvBebidas.RowTemplate.Height = 24;
+            this.dgvBebidas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBebidas.Size = new System.Drawing.Size(1155, 588);
             this.dgvBebidas.TabIndex = 12;
             // 

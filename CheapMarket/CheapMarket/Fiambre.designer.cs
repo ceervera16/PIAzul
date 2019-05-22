@@ -526,6 +526,7 @@
             this.dgvFiambre.Name = "dgvFiambre";
             this.dgvFiambre.ReadOnly = true;
             this.dgvFiambre.RowTemplate.Height = 24;
+            this.dgvFiambre.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFiambre.Size = new System.Drawing.Size(1155, 588);
             this.dgvFiambre.TabIndex = 14;
             // 

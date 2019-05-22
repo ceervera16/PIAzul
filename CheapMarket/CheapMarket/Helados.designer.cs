@@ -526,6 +526,7 @@
             this.dgvHelados.Name = "dgvHelados";
             this.dgvHelados.ReadOnly = true;
             this.dgvHelados.RowTemplate.Height = 24;
+            this.dgvHelados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHelados.Size = new System.Drawing.Size(1155, 588);
             this.dgvHelados.TabIndex = 15;
             // 

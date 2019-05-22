@@ -30,6 +30,8 @@ namespace Diseño
 
         private void CargarProductos()
         {
+            dgvPanaderia.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
             string consulta = String.Format("SELECT Nombre, Precio, Descripcion FROM producto where Categoria='PANADERIA'");
 
             if (ConexionBD.AbrirConexion())

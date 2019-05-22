@@ -610,6 +610,7 @@
             this.dgvPescaderia.Name = "dgvPescaderia";
             this.dgvPescaderia.ReadOnly = true;
             this.dgvPescaderia.RowTemplate.Height = 24;
+            this.dgvPescaderia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPescaderia.Size = new System.Drawing.Size(1155, 588);
             this.dgvPescaderia.TabIndex = 17;
             // 

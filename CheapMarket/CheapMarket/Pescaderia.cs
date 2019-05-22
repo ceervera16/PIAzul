@@ -29,6 +29,8 @@ namespace Diseño
 
         private void CargarProductos()
         {
+            dgvPescaderia.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
             string consulta = String.Format("SELECT Nombre, Precio, Descripcion FROM producto where Categoria='PESCADERIA'");
 
             if (ConexionBD.AbrirConexion())

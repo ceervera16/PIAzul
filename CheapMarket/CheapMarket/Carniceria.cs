@@ -150,6 +150,8 @@ namespace Diseño
 
         private void CargarProductos()
         {
+            dgvCarniceria.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
             string consulta = String.Format("SELECT Nombre, Precio, Descripcion FROM producto where Categoria='CARNICERIA'");
 
             if (ConexionBD.AbrirConexion())

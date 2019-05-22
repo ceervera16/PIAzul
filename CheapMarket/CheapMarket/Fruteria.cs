@@ -29,6 +29,8 @@ namespace Diseño
 
         private void CargarProductos()
         {
+            dgvFruteria.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
             string consulta = String.Format("SELECT Nombre, Precio, Descripcion FROM producto where Categoria='FRUTERIA'");
 
             if (ConexionBD.AbrirConexion())

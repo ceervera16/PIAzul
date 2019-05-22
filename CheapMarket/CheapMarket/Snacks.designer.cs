@@ -526,6 +526,7 @@
             this.dgvSnacks.Name = "dgvSnacks";
             this.dgvSnacks.ReadOnly = true;
             this.dgvSnacks.RowTemplate.Height = 24;
+            this.dgvSnacks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSnacks.Size = new System.Drawing.Size(1155, 603);
             this.dgvSnacks.TabIndex = 18;
             // 

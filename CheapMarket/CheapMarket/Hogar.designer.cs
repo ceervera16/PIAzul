@@ -526,6 +526,7 @@
             this.dgvHogar.Name = "dgvHogar";
             this.dgvHogar.ReadOnly = true;
             this.dgvHogar.RowTemplate.Height = 24;
+            this.dgvHogar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHogar.Size = new System.Drawing.Size(1155, 588);
             this.dgvHogar.TabIndex = 15;
             // 

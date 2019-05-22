@@ -526,6 +526,7 @@
             this.dgvPanaderia.Name = "dgvPanaderia";
             this.dgvPanaderia.ReadOnly = true;
             this.dgvPanaderia.RowTemplate.Height = 24;
+            this.dgvPanaderia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPanaderia.Size = new System.Drawing.Size(1155, 597);
             this.dgvPanaderia.TabIndex = 16;
             // 

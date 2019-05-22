@@ -28,6 +28,8 @@ namespace Diseño
         }
         private void CargarProductos()
         {
+            dgvHigiene.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
             string consulta = String.Format("SELECT Nombre, Precio, Descripcion FROM producto where Categoria='HIGIENE'");
 
             if (ConexionBD.AbrirConexion())

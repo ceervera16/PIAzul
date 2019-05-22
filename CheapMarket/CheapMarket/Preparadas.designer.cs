@@ -526,6 +526,7 @@
             this.dgvPreparadas.Name = "dgvPreparadas";
             this.dgvPreparadas.ReadOnly = true;
             this.dgvPreparadas.RowTemplate.Height = 24;
+            this.dgvPreparadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPreparadas.Size = new System.Drawing.Size(1155, 600);
             this.dgvPreparadas.TabIndex = 18;
             // 

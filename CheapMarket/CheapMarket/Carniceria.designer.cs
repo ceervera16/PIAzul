@@ -506,6 +506,7 @@
             // dgvCarniceria
             // 
             this.dgvCarniceria.AllowUserToAddRows = false;
+            this.dgvCarniceria.AllowUserToDeleteRows = false;
             this.dgvCarniceria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCarniceria.BackgroundColor = System.Drawing.Color.White;
             this.dgvCarniceria.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -526,6 +527,7 @@
             this.dgvCarniceria.Name = "dgvCarniceria";
             this.dgvCarniceria.ReadOnly = true;
             this.dgvCarniceria.RowTemplate.Height = 24;
+            this.dgvCarniceria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCarniceria.Size = new System.Drawing.Size(1155, 599);
             this.dgvCarniceria.TabIndex = 13;
             // 

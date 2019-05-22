@@ -526,6 +526,7 @@
             this.dgvVerduleria.Name = "dgvVerduleria";
             this.dgvVerduleria.ReadOnly = true;
             this.dgvVerduleria.RowTemplate.Height = 24;
+            this.dgvVerduleria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVerduleria.Size = new System.Drawing.Size(1155, 588);
             this.dgvVerduleria.TabIndex = 18;
             // 

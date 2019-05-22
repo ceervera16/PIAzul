@@ -526,6 +526,7 @@
             this.dgvFruteria.Name = "dgvFruteria";
             this.dgvFruteria.ReadOnly = true;
             this.dgvFruteria.RowTemplate.Height = 24;
+            this.dgvFruteria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFruteria.Size = new System.Drawing.Size(1155, 588);
             this.dgvFruteria.TabIndex = 15;
             // 

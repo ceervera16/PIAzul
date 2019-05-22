@@ -526,6 +526,7 @@
             this.dgvHigiene.Name = "dgvHigiene";
             this.dgvHigiene.ReadOnly = true;
             this.dgvHigiene.RowTemplate.Height = 24;
+            this.dgvHigiene.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHigiene.Size = new System.Drawing.Size(1155, 588);
             this.dgvHigiene.TabIndex = 15;
             // 
