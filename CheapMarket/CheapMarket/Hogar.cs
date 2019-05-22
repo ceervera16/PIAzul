@@ -178,5 +178,6 @@ namespace Diseño
                 inicio.Show();
             }
         }
+
     }
 }

@@ -529,6 +529,7 @@
             this.dgvSnacks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSnacks.Size = new System.Drawing.Size(1155, 603);
             this.dgvSnacks.TabIndex = 18;
+            this.dgvSnacks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSnacks_CellClick);
             // 
             // label4
             // 

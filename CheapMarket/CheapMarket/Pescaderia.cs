@@ -178,5 +178,23 @@ namespace Diseño
                 inicio.Show();
             }
         }
+
+        private void dgvPescaderia_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string producto = dgvPescaderia.CurrentRow.Cells[0].Value.ToString();
+
+            string consulta = String.Format($"SELECT Informacion FROM producto where Nombre='{producto}'");
+
+            if (ConexionBD.AbrirConexion())
+            {
+                txtInfo.Text = Utilidades.InfoProducto(ConexionBD.Conexion, consulta);
+
+                ConexionBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+            }
+        }
     }
 }

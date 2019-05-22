@@ -529,6 +529,7 @@
             this.dgvFruteria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFruteria.Size = new System.Drawing.Size(1155, 588);
             this.dgvFruteria.TabIndex = 15;
+            this.dgvFruteria.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFruteria_CellClick);
             // 
             // label4
             // 

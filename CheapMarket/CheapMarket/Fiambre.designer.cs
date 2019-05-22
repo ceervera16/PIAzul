@@ -529,6 +529,7 @@
             this.dgvFiambre.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFiambre.Size = new System.Drawing.Size(1155, 588);
             this.dgvFiambre.TabIndex = 14;
+            this.dgvFiambre.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFiambre_CellClick);
             // 
             // label4
             // 

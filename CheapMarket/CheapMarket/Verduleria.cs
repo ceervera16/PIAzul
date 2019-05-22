@@ -180,5 +180,23 @@ namespace Diseño
                 inicio.Show();
             }
         }
+
+        private void dgvVerduleria_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string producto = dgvVerduleria.CurrentRow.Cells[0].Value.ToString();
+
+            string consulta = String.Format($"SELECT Informacion FROM producto where Nombre='{producto}'");
+
+            if (ConexionBD.AbrirConexion())
+            {
+                txtInfo.Text = Utilidades.InfoProducto(ConexionBD.Conexion, consulta);
+
+                ConexionBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+            }
+        }
     }
 }

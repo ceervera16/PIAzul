@@ -59,8 +59,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCarniceria = new System.Windows.Forms.Button();
             this.dgvHogar = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtInfo = new System.Windows.Forms.TextBox();
             this.btnInfo = new System.Windows.Forms.PictureBox();
             this.btnImagen = new System.Windows.Forms.PictureBox();
             this.lblInstrucciones = new System.Windows.Forms.Label();
@@ -530,27 +528,6 @@
             this.dgvHogar.Size = new System.Drawing.Size(1155, 588);
             this.dgvHogar.TabIndex = 15;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(1549, 547);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(334, 34);
-            this.label4.TabIndex = 67;
-            this.label4.Text = "Información Nutricional";
-            // 
-            // txtInfo
-            // 
-            this.txtInfo.Location = new System.Drawing.Point(1560, 601);
-            this.txtInfo.Multiline = true;
-            this.txtInfo.Name = "txtInfo";
-            this.txtInfo.ReadOnly = true;
-            this.txtInfo.Size = new System.Drawing.Size(312, 359);
-            this.txtInfo.TabIndex = 66;
-            // 
             // btnInfo
             // 
             this.btnInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnInfo.Image")));
@@ -619,8 +596,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtInfo);
             this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.btnImagen);
             this.Controls.Add(this.lblInstrucciones);
@@ -691,8 +666,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCarniceria;
         private System.Windows.Forms.DataGridView dgvHogar;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtInfo;
         private System.Windows.Forms.PictureBox btnInfo;
         private System.Windows.Forms.PictureBox btnImagen;
         private System.Windows.Forms.Label lblInstrucciones;

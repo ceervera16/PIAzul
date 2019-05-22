@@ -530,6 +530,7 @@
             this.dgvCarniceria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCarniceria.Size = new System.Drawing.Size(1155, 599);
             this.dgvCarniceria.TabIndex = 13;
+            this.dgvCarniceria.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCarniceria_CellClick);
             // 
             // pcbLupa
             // 

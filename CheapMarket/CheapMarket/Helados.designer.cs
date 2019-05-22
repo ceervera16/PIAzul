@@ -529,6 +529,7 @@
             this.dgvHelados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHelados.Size = new System.Drawing.Size(1155, 588);
             this.dgvHelados.TabIndex = 15;
+            this.dgvHelados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHelados_CellClick);
             // 
             // label4
             // 

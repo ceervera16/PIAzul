@@ -529,6 +529,7 @@
             this.dgvPanaderia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPanaderia.Size = new System.Drawing.Size(1155, 597);
             this.dgvPanaderia.TabIndex = 16;
+            this.dgvPanaderia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPanaderia_CellClick);
             // 
             // label4
             // 

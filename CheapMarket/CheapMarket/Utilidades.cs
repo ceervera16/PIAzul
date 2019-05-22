@@ -218,5 +218,20 @@ namespace CheapMarket
 
             return usu;
         }
+
+        public static string InfoProducto(MySqlConnection conexion, string consulta)
+        {
+            string info="Información";
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                info = reader.GetString(0);
+            }
+
+            return info;
+        }
     }
 }

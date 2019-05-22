@@ -529,6 +529,7 @@
             this.dgvVerduleria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVerduleria.Size = new System.Drawing.Size(1155, 588);
             this.dgvVerduleria.TabIndex = 18;
+            this.dgvVerduleria.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVerduleria_CellClick);
             // 
             // label4
             // 

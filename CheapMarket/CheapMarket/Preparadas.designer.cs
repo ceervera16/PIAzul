@@ -529,6 +529,7 @@
             this.dgvPreparadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPreparadas.Size = new System.Drawing.Size(1155, 600);
             this.dgvPreparadas.TabIndex = 18;
+            this.dgvPreparadas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPreparadas_CellClick);
             // 
             // label4
             // 

@@ -176,5 +176,6 @@ namespace Diseño
                 inicio.Show();
             }
         }
+
     }
 }
