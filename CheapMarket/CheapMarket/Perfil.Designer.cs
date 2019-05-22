@@ -488,6 +488,7 @@
             this.txtPass2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPass2.Multiline = true;
             this.txtPass2.Name = "txtPass2";
+            this.txtPass2.PasswordChar = '*';
             this.txtPass2.Size = new System.Drawing.Size(453, 49);
             this.txtPass2.TabIndex = 9;
             // 
@@ -498,6 +499,7 @@
             this.txtPass1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPass1.Multiline = true;
             this.txtPass1.Name = "txtPass1";
+            this.txtPass1.PasswordChar = '*';
             this.txtPass1.Size = new System.Drawing.Size(453, 49);
             this.txtPass1.TabIndex = 8;
             // 
@@ -508,6 +510,7 @@
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCorreo.Multiline = true;
             this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.ReadOnly = true;
             this.txtCorreo.Size = new System.Drawing.Size(453, 49);
             this.txtCorreo.TabIndex = 7;
             // 

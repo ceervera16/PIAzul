@@ -39,14 +39,14 @@ namespace CheapMarket
             return valido;
         }
 
-        public static int EditarUsuario(MySqlConnection conexion, Usuario usu, string nif)
+        public static int EditarUsuario(MySqlConnection conexion, Usuario usu)
         {
             int retorno;
 
             string consulta = string.Format("UPDATE cliente SET Nombre='{1}', Apellidos='{2}', Correo='{3}', Password='{4}', Telefono={5}," +
-                "Puntos={6}, Provincia='{7}', Localidad='{8}', Calle='{9}', CodigoPostal={10}, Patio={11}, Piso={12}, Puerta={13}" +
-                "WHERE DNI={14}", usu.Dni, usu.Nombre, usu.Apellidos, usu.Correo, usu.Password, usu.Telefono, usu.Puntos, usu.Provincia,
-                usu.Localidad, usu.Calle, usu.CodigoPostal, usu.Portal, usu.Piso, usu.Puerta, nif);
+                "Puntos={6}, Provincia='{7}', Localidad='{8}', Calle='{9}', CodigoPostal={10}, Patio={11}, Piso={12}, Puerta={13} " +
+                "WHERE DNI='{14}'", usu.Dni, usu.Nombre, usu.Apellidos, usu.Correo, usu.Password, usu.Telefono, usu.Puntos, usu.Provincia,
+                usu.Localidad, usu.Calle, usu.CodigoPostal, usu.Portal, usu.Piso, usu.Puerta, usu.Dni);
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             retorno = comando.ExecuteNonQuery();

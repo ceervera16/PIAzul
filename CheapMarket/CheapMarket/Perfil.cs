@@ -214,7 +214,7 @@ namespace CheapMarket
                 txtApellidos.Text = usu[2];
                 txtCorreo.Text = usu[3];
                 txtPass1.Text = usu[4];
-                txtPass2.Text = usu[4];
+                txtPass2.Text = "";
                 txtTelefono.Text = usu[5];
                 txtProvincia.Text = usu[7];
                 txtLocalidad.Text = usu[8];                
@@ -235,7 +235,40 @@ namespace CheapMarket
 
         private void btnGuardarCambios_Click(object sender, EventArgs e)
         {
+            if (ValidarDatos()) //Compruebo que todos los datos son validos
+            {
+                if (txtPass1.Text == txtPass2.Text) //Compruebo que ambas contraseñas coindicen
+                {
+                    ConexionBD.AbrirConexion();
 
+                    if (MessageBox.Show("¿Seguro que quieres guardar los cambios?", "Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                        //Creo el usuario
+                        Usuario usu = new Usuario(Sesion.NifUsu, txtNombre.Text, txtApellidos.Text, txtCorreo.Text, txtPass1.Text,
+                            int.Parse(txtTelefono.Text), txtProvincia.Text, txtLocalidad.Text, txtDireccion.Text, int.Parse(txtCodigoPostal.Text),
+                            int.Parse(txtNum.Text), int.Parse(txtPiso.Text), int.Parse(txtPuerta.Text));
+
+                        ConexionBD.CerrarConexion();
+                        ConexionBD.AbrirConexion();
+
+                        Utilidades.EditarUsuario(ConexionBD.Conexion, usu);
+                        MessageBox.Show("Cambios realizados correctamente. Debes iniciar sesión para actualizar.");
+                        ConexionBD.CerrarConexion();
+
+                        this.Hide();
+                        Form1 inicio = new Form1();
+                        inicio.Show();
+                    }
+                    else
+                    {
+                        ConexionBD.CerrarConexion();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Las contraseñas no coinciden.");
+                }
+            }
         }
     }
 }
