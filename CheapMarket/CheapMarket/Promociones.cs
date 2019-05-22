@@ -34,9 +34,9 @@ namespace CheapMarket
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-            this.Hide();
             CheapMarket.Perfil perfil = new CheapMarket.Perfil();
             perfil.Show();
+            this.Hide();
         }
 
         private void btnCarrito_Click(object sender, EventArgs e)
@@ -47,9 +47,9 @@ namespace CheapMarket
             }
             else
             {
-                this.Hide();
                 Carrito carrito = new Carrito();
                 carrito.Show();
+                this.Hide();
             }
         }
 
@@ -65,9 +65,9 @@ namespace CheapMarket
 
         private void label1_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Perfil perfil = new Perfil();
             perfil.Show();
+            this.Hide();
         }
 
         private void btnPerfil_Click_1(object sender, EventArgs e)
@@ -79,9 +79,9 @@ namespace CheapMarket
 
         private void btnCategorias_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Categorias categorias = new Categorias();
             categorias.Show();
+            this.Hide();
         }
 
         private void btnSalir_Click_1(object sender, EventArgs e)

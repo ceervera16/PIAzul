@@ -57,91 +57,91 @@ namespace Diseño
 
         private void btnCategorias_Click(object sender, EventArgs e)
         {
-            this.Hide();
             CheapMarket.Categorias categorias = new CheapMarket.Categorias();
             categorias.Show();
+            this.Hide();
         }
         private void btnCarniceria_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Carniceria carniceria = new Carniceria();
             carniceria.Show();
+            this.Hide();
         }
         private void btnPescaderia_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Pescaderia pescaderia = new Pescaderia();
             pescaderia.Show();
+            this.Hide();
         }
 
         private void btnFruteria_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Fruteria fruteria = new Fruteria();
             fruteria.Show();
+            this.Hide();
         }
 
         private void btnVerduleria_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Verduleria verduleria = new Verduleria();
             verduleria.Show();
+            this.Hide();
         }
 
         private void btnFiambres_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Fiambre fiambre = new Fiambre();
             fiambre.Show();
+            this.Hide();
         }
 
         private void btnHelados_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Helados helados = new Helados();
             helados.Show();
+            this.Hide();
         }
 
         private void btnComidaPrep_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Preparadas preparadas = new Preparadas();
             preparadas.Show();
+            this.Hide();
         }
 
         private void btnBebidas_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Bebidas bebidas = new Bebidas();
             bebidas.Show();
+            this.Hide();
         }
 
         private void btnPanaderia_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Panaderia panaderia = new Panaderia();
             panaderia.Show();
+            this.Hide();
         }
 
         private void btnSnacks_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Snacks snacks = new Snacks();
             snacks.Show();
+            this.Hide();
         }
 
         private void btnHigiene_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Higiene higiene = new Higiene();
             higiene.Show();
+            this.Hide();
         }
 
         private void btnHogar_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Hogar hogar = new Hogar();
             hogar.Show();
+            this.Hide();
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
@@ -152,9 +152,9 @@ namespace Diseño
             }
             else
             {
-                this.Hide();
                 Perfil perfil = new Perfil();
                 perfil.Show();
+                this.Hide();
             }
         }
 
@@ -166,9 +166,9 @@ namespace Diseño
             }
             else
             {
-                this.Hide();
                 Carrito carrito = new Carrito();
                 carrito.Show();
+                this.Hide();
             }
         }
 

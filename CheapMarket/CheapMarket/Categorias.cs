@@ -67,86 +67,86 @@ namespace CheapMarket
 
         private void ptbCarniceria_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Diseño.Carniceria carniceria = new Diseño.Carniceria();
             carniceria.Show();
+            this.Hide();
         }
 
         private void ptbPescaderia_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Diseño.Pescaderia pescaderia = new Diseño.Pescaderia();
             pescaderia.Show();
+            this.Hide();
         }
 
         private void ptbFruteria_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Diseño.Fruteria fruteria = new Diseño.Fruteria();
             fruteria.Show();
+            this.Hide();
         }
 
         private void ptbVerduleria_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Diseño.Verduleria verduleria = new Diseño.Verduleria();
             verduleria.Show();
+            this.Hide();
         }
 
         private void ptbFiambres_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Diseño.Fiambre fiambre = new Diseño.Fiambre();
             fiambre.Show();
+            this.Hide();
         }
 
         private void ptbHelados_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Diseño.Helados helados = new Diseño.Helados();
             helados.Show();
+            this.Hide();
         }
 
         private void ptbBebidas_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Diseño.Bebidas bebidas = new Diseño.Bebidas();
             bebidas.Show();
+            this.Hide();
         }
 
         private void ptbPreparadas_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Diseño.Preparadas preparadas = new Diseño.Preparadas();
             preparadas.Show();
+            this.Hide();
         }
 
         private void ptbPanaderia_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Diseño.Panaderia panaderia = new Diseño.Panaderia();
             panaderia.Show();
+            this.Hide();
         }
 
         private void ptbSnacks_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Diseño.Snacks snacks = new Diseño.Snacks();
             snacks.Show();
+            this.Hide();
         }
 
         private void ptbHigiene_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Diseño.Higiene higiene = new Diseño.Higiene();
             higiene.Show();
+            this.Hide();
         }
 
         private void ptbHogar_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Diseño.Hogar hogar = new Diseño.Hogar();
             hogar.Show();
+            this.Hide();
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
@@ -156,9 +156,9 @@ namespace CheapMarket
                 MessageBox.Show("Eres usuario invitado. No puedes realizar esta acción.");
             } else
             {
-                this.Hide();
                 Perfil perfil = new Perfil();
                 perfil.Show();
+                this.Hide();
             }
 
         }
@@ -171,9 +171,9 @@ namespace CheapMarket
             }
             else
             {
-                this.Hide();
                 Carrito carrito = new Carrito();
                 carrito.Show();
+                this.Hide();
             }
         }
 

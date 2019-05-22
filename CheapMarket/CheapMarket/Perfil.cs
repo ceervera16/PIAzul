@@ -180,16 +180,16 @@ namespace CheapMarket
 
         private void btnCategorias_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Categorias categorias = new Categorias();
             categorias.Show();
+            this.Hide();
         }
 
         private void btnPromociones_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Promociones promociones = new Promociones();
             promociones.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
