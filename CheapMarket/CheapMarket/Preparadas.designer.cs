@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Preparadas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnHogar = new System.Windows.Forms.Button();
             this.btnSnacks = new System.Windows.Forms.Button();
             this.btnPanaderia = new System.Windows.Forms.Button();
@@ -61,12 +61,12 @@
             this.dgvPreparadas = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.txtInfo = new System.Windows.Forms.TextBox();
-            this.btnInfo = new System.Windows.Forms.PictureBox();
-            this.btnImagen = new System.Windows.Forms.PictureBox();
-            this.lblInstrucciones = new System.Windows.Forms.Label();
             this.pcbImagen = new System.Windows.Forms.PictureBox();
             this.pcbLupa = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.cantidad = new System.Windows.Forms.NumericUpDown();
+            this.lblCantidad = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrarSesion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCarrito)).BeginInit();
@@ -80,10 +80,9 @@
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPreparadas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLupa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHogar
@@ -510,14 +509,14 @@
             this.dgvPreparadas.BackgroundColor = System.Drawing.Color.White;
             this.dgvPreparadas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPreparadas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Coral;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPreparadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Coral;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPreparadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPreparadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPreparadas.EnableHeadersVisualStyles = false;
             this.dgvPreparadas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -551,38 +550,6 @@
             this.txtInfo.Size = new System.Drawing.Size(312, 359);
             this.txtInfo.TabIndex = 66;
             // 
-            // btnInfo
-            // 
-            this.btnInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnInfo.Image")));
-            this.btnInfo.Location = new System.Drawing.Point(1342, 994);
-            this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(64, 64);
-            this.btnInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnInfo.TabIndex = 65;
-            this.btnInfo.TabStop = false;
-            // 
-            // btnImagen
-            // 
-            this.btnImagen.Image = ((System.Drawing.Image)(resources.GetObject("btnImagen.Image")));
-            this.btnImagen.Location = new System.Drawing.Point(1451, 994);
-            this.btnImagen.Name = "btnImagen";
-            this.btnImagen.Size = new System.Drawing.Size(64, 64);
-            this.btnImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnImagen.TabIndex = 64;
-            this.btnImagen.TabStop = false;
-            // 
-            // lblInstrucciones
-            // 
-            this.lblInstrucciones.AutoSize = true;
-            this.lblInstrucciones.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInstrucciones.ForeColor = System.Drawing.Color.Black;
-            this.lblInstrucciones.Location = new System.Drawing.Point(355, 1016);
-            this.lblInstrucciones.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblInstrucciones.Name = "lblInstrucciones";
-            this.lblInstrucciones.Size = new System.Drawing.Size(486, 28);
-            this.lblInstrucciones.TabIndex = 60;
-            this.lblInstrucciones.Text = "Doble click en el producto para agregar";
-            // 
             // pcbImagen
             // 
             this.pcbImagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -613,17 +580,65 @@
             this.txtBuscar.Size = new System.Drawing.Size(419, 66);
             this.txtBuscar.TabIndex = 61;
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.Coral;
+            this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.btnAgregar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAgregar.Location = new System.Drawing.Point(1351, 982);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(188, 77);
+            this.btnAgregar.TabIndex = 70;
+            this.btnAgregar.Text = "AGREGAR";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            // 
+            // cantidad
+            // 
+            this.cantidad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.cantidad.Location = new System.Drawing.Point(535, 1002);
+            this.cantidad.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.cantidad.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.cantidad.Name = "cantidad";
+            this.cantidad.Size = new System.Drawing.Size(120, 37);
+            this.cantidad.TabIndex = 69;
+            this.cantidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lblCantidad
+            // 
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidad.ForeColor = System.Drawing.Color.Black;
+            this.lblCantidad.Location = new System.Drawing.Point(379, 1006);
+            this.lblCantidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(136, 28);
+            this.lblCantidad.TabIndex = 68;
+            this.lblCantidad.Text = "Cantidad: ";
+            // 
             // Preparadas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.cantidad);
+            this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtInfo);
-            this.Controls.Add(this.btnInfo);
-            this.Controls.Add(this.btnImagen);
-            this.Controls.Add(this.lblInstrucciones);
             this.Controls.Add(this.pcbImagen);
             this.Controls.Add(this.pcbLupa);
             this.Controls.Add(this.txtBuscar);
@@ -651,10 +666,9 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPreparadas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLupa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -693,11 +707,11 @@
         private System.Windows.Forms.DataGridView dgvPreparadas;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtInfo;
-        private System.Windows.Forms.PictureBox btnInfo;
-        private System.Windows.Forms.PictureBox btnImagen;
-        private System.Windows.Forms.Label lblInstrucciones;
         private System.Windows.Forms.PictureBox pcbImagen;
         private System.Windows.Forms.PictureBox pcbLupa;
         private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.NumericUpDown cantidad;
+        private System.Windows.Forms.Label lblCantidad;
     }
 }

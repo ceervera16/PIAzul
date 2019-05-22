@@ -46,6 +46,8 @@ namespace CheapMarket
             {
                 MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
             }
+
+            CargarCarrito();
         }
 
 

@@ -62,11 +62,11 @@
             this.pcbLupa = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.pcbImagen = new System.Windows.Forms.PictureBox();
-            this.lblInstrucciones = new System.Windows.Forms.Label();
-            this.btnImagen = new System.Windows.Forms.PictureBox();
-            this.btnInfo = new System.Windows.Forms.PictureBox();
+            this.lblCantidad = new System.Windows.Forms.Label();
             this.txtInfo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.cantidad = new System.Windows.Forms.NumericUpDown();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrarSesion)).BeginInit();
@@ -82,8 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarniceria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLupa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnImagen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHelados
@@ -562,37 +561,17 @@
             this.pcbImagen.TabIndex = 55;
             this.pcbImagen.TabStop = false;
             // 
-            // lblInstrucciones
+            // lblCantidad
             // 
-            this.lblInstrucciones.AutoSize = true;
-            this.lblInstrucciones.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInstrucciones.ForeColor = System.Drawing.Color.Black;
-            this.lblInstrucciones.Location = new System.Drawing.Point(364, 1015);
-            this.lblInstrucciones.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblInstrucciones.Name = "lblInstrucciones";
-            this.lblInstrucciones.Size = new System.Drawing.Size(486, 28);
-            this.lblInstrucciones.TabIndex = 9;
-            this.lblInstrucciones.Text = "Doble click en el producto para agregar";
-            // 
-            // btnImagen
-            // 
-            this.btnImagen.Image = ((System.Drawing.Image)(resources.GetObject("btnImagen.Image")));
-            this.btnImagen.Location = new System.Drawing.Point(1460, 993);
-            this.btnImagen.Name = "btnImagen";
-            this.btnImagen.Size = new System.Drawing.Size(64, 64);
-            this.btnImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnImagen.TabIndex = 56;
-            this.btnImagen.TabStop = false;
-            // 
-            // btnInfo
-            // 
-            this.btnInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnInfo.Image")));
-            this.btnInfo.Location = new System.Drawing.Point(1351, 993);
-            this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(64, 64);
-            this.btnInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnInfo.TabIndex = 57;
-            this.btnInfo.TabStop = false;
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidad.ForeColor = System.Drawing.Color.Black;
+            this.lblCantidad.Location = new System.Drawing.Point(364, 1006);
+            this.lblCantidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(136, 28);
+            this.lblCantidad.TabIndex = 9;
+            this.lblCantidad.Text = "Cantidad: ";
             // 
             // txtInfo
             // 
@@ -615,17 +594,54 @@
             this.label4.TabIndex = 59;
             this.label4.Text = "Información Nutricional";
             // 
+            // cantidad
+            // 
+            this.cantidad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.cantidad.Location = new System.Drawing.Point(520, 1002);
+            this.cantidad.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.cantidad.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.cantidad.Name = "cantidad";
+            this.cantidad.Size = new System.Drawing.Size(120, 37);
+            this.cantidad.TabIndex = 60;
+            this.cantidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.btnAgregar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAgregar.Location = new System.Drawing.Point(1336, 982);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(188, 77);
+            this.btnAgregar.TabIndex = 61;
+            this.btnAgregar.Text = "AGREGAR";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
             // Carniceria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.cantidad);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtInfo);
-            this.Controls.Add(this.btnInfo);
-            this.Controls.Add(this.btnImagen);
-            this.Controls.Add(this.lblInstrucciones);
+            this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.pcbImagen);
             this.Controls.Add(this.pcbLupa);
             this.Controls.Add(this.txtBuscar);
@@ -657,8 +673,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarniceria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLupa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnImagen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -697,11 +712,11 @@
         private System.Windows.Forms.PictureBox pcbLupa;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.PictureBox pcbImagen;
-        private System.Windows.Forms.Label lblInstrucciones;
-        private System.Windows.Forms.PictureBox btnImagen;
-        private System.Windows.Forms.PictureBox btnInfo;
+        private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.TextBox txtInfo;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown cantidad;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }
 
