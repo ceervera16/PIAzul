@@ -225,7 +225,6 @@ namespace Diseño
                 {
                     if (Utilidades.ComprobarProducto(ConexionBD.Conexion, dgvBebidas.CurrentRow.Cells[0].Value.ToString()))
                     {
-                        MessageBox.Show("El producto ya esta en tu carrito");
                         ConexionBD.CerrarConexion();
 
                         string dni = Sesion.NifUsu;
@@ -244,20 +243,24 @@ namespace Diseño
                             MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
                         }
 
-                        int cant = cantAdd + cantCart;
-                        double importe = cant * precio;
+                        if (MessageBox.Show($"El producto ya esta en tu carrito. Actualmente tienes {cantCart} y quieres añadir {cantAdd} mas. " +
+                            $"¿Quieres añadir dicha cantidad?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                        {
+                            int cant = cantAdd + cantCart;
+                            double importe = cant * precio;
 
-                        if (ConexionBD.AbrirConexion())
-                        {
-                            string consulta = String.Format($"UPDATE carritotemporal SET Importe='{importe}', Cantidad={cant} WHERE DniCliente LIKE '{dni}' AND NomProducto LIKE '{nombre}'");
-                            MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
-                            MySqlDataReader reader = comando.ExecuteReader();
-                            MessageBox.Show("Producto actualizado correctamente.");
-                            ConexionBD.CerrarConexion();
-                        }
-                        else
-                        {
-                            MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+                            if (ConexionBD.AbrirConexion())
+                            {
+                                string consulta = String.Format($"UPDATE carritotemporal SET Importe='{importe}', Cantidad={cant} WHERE DniCliente LIKE '{dni}' AND NomProducto LIKE '{nombre}'");
+                                MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+                                MySqlDataReader reader = comando.ExecuteReader();
+                                MessageBox.Show("Producto actualizado correctamente.");
+                                ConexionBD.CerrarConexion();
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+                            }
                         }
                     }
                     else
