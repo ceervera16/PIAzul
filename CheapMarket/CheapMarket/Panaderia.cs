@@ -279,7 +279,7 @@ namespace Diseño
 
                         if (ConexionBD.AbrirConexion())
                         {
-                            Utilidades.AgregarAlCarrito(ConexionBD.Conexion, consulta).ToString();
+                            Utilidades.AgregarAlCarrito(ConexionBD.Conexion, consulta);
                             MessageBox.Show("Producto agregado correctamente");
                             cantidad.Value = 1;
                             ConexionBD.CerrarConexion();
