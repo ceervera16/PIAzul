@@ -363,5 +363,40 @@ namespace CheapMarket
 
             return precio;
         }
+
+        public static bool ComprobarCarrito(MySqlConnection conexion)
+        {
+            string consulta = String.Format($"SELECT * FROM carritotemporal WHERE DniCliente LIKE '{Sesion.NifUsu}'");
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        public static int CodigoProducto(MySqlConnection conexion, string producto)
+        {
+            int codigo = 0;
+
+            string consulta = String.Format($"SELECT Codigo FROM producto WHERE Nombre LIKE '{producto}'");
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                codigo = reader.GetInt32(0);
+            }
+
+            return codigo;
+        }
     }
 }
