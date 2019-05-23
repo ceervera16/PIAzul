@@ -47,7 +47,6 @@ namespace CheapMarket
             {
                 MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
             }
-
         }
 
         private void ImporteTotal()
@@ -216,6 +215,20 @@ namespace CheapMarket
                 this.Hide();
                 Form1 inicio = new Form1();
                 inicio.Show();
+            }
+        }
+
+        private void pcbLupa_Click(object sender, EventArgs e)
+        {
+            if (ConexionBD.AbrirConexion())
+            {
+                dtgCarrito.DataSource = Utilidades.FiltrarCarrito(ConexionBD.Conexion, txtBuscar.Text);
+
+                ConexionBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
             }
         }
     }

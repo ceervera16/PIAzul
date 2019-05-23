@@ -329,5 +329,22 @@ namespace CheapMarket
 
             return lista;
         }
+
+        public static DataTable FiltrarCarrito(MySqlConnection conexion, string palabra)
+        {
+            DataTable lista = new DataTable();
+
+            string consulta = String.Format($"SELECT NomProducto, Cantidad, Importe FROM carritotemporal where DniCliente LIKE '{Sesion.NifUsu}' AND (NomProducto LIKE '%{palabra}%' OR Cantidad LIKE '%{palabra}%' OR Importe LIKE '%{palabra}%')");
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                lista.Load(reader);
+            }
+
+            return lista;
+        }
     }
 }
