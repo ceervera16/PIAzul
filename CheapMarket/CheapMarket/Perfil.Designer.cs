@@ -258,6 +258,7 @@
             this.btnTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnTwitter.TabIndex = 12;
             this.btnTwitter.TabStop = false;
+            this.btnTwitter.Click += new System.EventHandler(this.btnTwitter_Click);
             // 
             // btnInstagram
             // 
@@ -269,6 +270,7 @@
             this.btnInstagram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnInstagram.TabIndex = 11;
             this.btnInstagram.TabStop = false;
+            this.btnInstagram.Click += new System.EventHandler(this.btnInstagram_Click);
             // 
             // btnPagina
             // 
@@ -280,6 +282,7 @@
             this.btnPagina.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnPagina.TabIndex = 10;
             this.btnPagina.TabStop = false;
+            this.btnPagina.Click += new System.EventHandler(this.btnPagina_Click);
             // 
             // groupBox1
             // 

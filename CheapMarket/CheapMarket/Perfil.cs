@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -269,6 +270,21 @@ namespace CheapMarket
                     MessageBox.Show("Las contraseñas no coinciden.");
                 }
             }
+        }
+
+        private void btnPagina_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://cheapmarket123.000webhostapp.com/index.html");
+        }
+
+        private void btnTwitter_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://twitter.com/CheapMarket_");
+        }
+
+        private void btnInstagram_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.instagram.com/CheapMarket_1/");
         }
     }
 }

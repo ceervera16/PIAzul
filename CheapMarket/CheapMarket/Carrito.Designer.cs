@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Carrito));
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dtgCarrito = new System.Windows.Forms.DataGridView();
@@ -120,14 +120,14 @@
             this.dtgCarrito.AllowUserToDeleteRows = false;
             this.dtgCarrito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgCarrito.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgCarrito.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgCarrito.Location = new System.Drawing.Point(616, 222);
             this.dtgCarrito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtgCarrito.Name = "dtgCarrito";
@@ -493,6 +493,7 @@
             this.btnTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnTwitter.TabIndex = 12;
             this.btnTwitter.TabStop = false;
+            this.btnTwitter.Click += new System.EventHandler(this.btnTwitter_Click);
             // 
             // btnInstagram
             // 
@@ -504,6 +505,7 @@
             this.btnInstagram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnInstagram.TabIndex = 11;
             this.btnInstagram.TabStop = false;
+            this.btnInstagram.Click += new System.EventHandler(this.btnInstagram_Click);
             // 
             // btnPagina
             // 
@@ -515,6 +517,7 @@
             this.btnPagina.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnPagina.TabIndex = 10;
             this.btnPagina.TabStop = false;
+            this.btnPagina.Click += new System.EventHandler(this.btnPagina_Click);
             // 
             // panel1
             // 
