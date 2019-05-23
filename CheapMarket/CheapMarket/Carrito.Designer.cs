@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Carrito));
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dtgCarrito = new System.Windows.Forms.DataGridView();
@@ -49,7 +49,6 @@
             this.rdbTarjeta = new System.Windows.Forms.RadioButton();
             this.rdbVisa = new System.Windows.Forms.RadioButton();
             this.lblLista = new System.Windows.Forms.Label();
-            this.lblEliminar = new System.Windows.Forms.Label();
             this.pcbLupa = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -78,6 +77,9 @@
             this.btnPescaderia = new System.Windows.Forms.Button();
             this.btnCarniceria = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.cantidad = new System.Windows.Forms.NumericUpDown();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.lblEliminar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCarrito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbTarjeta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -99,6 +101,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnInstagram)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPagina)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBuscar
@@ -117,14 +120,14 @@
             this.dtgCarrito.AllowUserToDeleteRows = false;
             this.dtgCarrito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgCarrito.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgCarrito.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgCarrito.Location = new System.Drawing.Point(616, 222);
             this.dtgCarrito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtgCarrito.Name = "dtgCarrito";
@@ -132,6 +135,7 @@
             this.dtgCarrito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgCarrito.Size = new System.Drawing.Size(1202, 362);
             this.dtgCarrito.TabIndex = 3;
+            this.dtgCarrito.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgCarrito_CellDoubleClick);
             // 
             // btnVaciar
             // 
@@ -341,18 +345,6 @@
             this.lblLista.Size = new System.Drawing.Size(126, 55);
             this.lblLista.TabIndex = 39;
             this.lblLista.Text = "LISTA";
-            // 
-            // lblEliminar
-            // 
-            this.lblEliminar.AutoSize = true;
-            this.lblEliminar.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminar.ForeColor = System.Drawing.Color.White;
-            this.lblEliminar.Location = new System.Drawing.Point(612, 608);
-            this.lblEliminar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEliminar.Name = "lblEliminar";
-            this.lblEliminar.Size = new System.Drawing.Size(577, 34);
-            this.lblEliminar.TabIndex = 50;
-            this.lblEliminar.Text = "Doble click en un producto para eliminar";
             // 
             // pcbLupa
             // 
@@ -774,18 +766,67 @@
             this.lblTotal.TabIndex = 55;
             this.lblTotal.Text = "Total:    ";
             // 
+            // cantidad
+            // 
+            this.cantidad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.cantidad.Location = new System.Drawing.Point(759, 593);
+            this.cantidad.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.cantidad.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.cantidad.Name = "cantidad";
+            this.cantidad.Size = new System.Drawing.Size(120, 37);
+            this.cantidad.TabIndex = 65;
+            this.cantidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lblCantidad
+            // 
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidad.ForeColor = System.Drawing.Color.White;
+            this.lblCantidad.Location = new System.Drawing.Point(618, 597);
+            this.lblCantidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(136, 28);
+            this.lblCantidad.TabIndex = 64;
+            this.lblCantidad.Text = "Cantidad: ";
+            // 
+            // lblEliminar
+            // 
+            this.lblEliminar.AutoSize = true;
+            this.lblEliminar.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEliminar.ForeColor = System.Drawing.Color.White;
+            this.lblEliminar.Location = new System.Drawing.Point(617, 647);
+            this.lblEliminar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEliminar.Name = "lblEliminar";
+            this.lblEliminar.Size = new System.Drawing.Size(577, 34);
+            this.lblEliminar.TabIndex = 63;
+            this.lblEliminar.Text = "Doble click en un producto para eliminar";
+            // 
             // Carrito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.cantidad);
+            this.Controls.Add(this.lblCantidad);
+            this.Controls.Add(this.lblEliminar);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pcbLupa);
-            this.Controls.Add(this.lblEliminar);
             this.Controls.Add(this.lblLista);
             this.Controls.Add(this.groupBoxMetodo);
             this.Controls.Add(this.pictureBox9);
@@ -827,6 +868,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnInstagram)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPagina)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -853,7 +895,6 @@
         private System.Windows.Forms.RadioButton rdbTarjeta;
         private System.Windows.Forms.RadioButton rdbVisa;
         private System.Windows.Forms.Label lblLista;
-        private System.Windows.Forms.Label lblEliminar;
         private System.Windows.Forms.PictureBox pcbLupa;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label4;
@@ -882,5 +923,8 @@
         private System.Windows.Forms.Button btnPescaderia;
         private System.Windows.Forms.Button btnCarniceria;
         private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.NumericUpDown cantidad;
+        private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.Label lblEliminar;
     }
 }

@@ -346,5 +346,22 @@ namespace CheapMarket
 
             return lista;
         }
+
+        public static double CalcularPrecio(MySqlConnection conexion, string producto)
+        {
+            double precio = 0;
+
+            string consulta = String.Format($"SELECT Precio FROM producto WHERE Nombre LIKE '{producto}'");
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                precio = reader.GetDouble(0);
+            }
+
+            return precio;
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Diseño;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -229,6 +230,63 @@ namespace CheapMarket
             else
             {
                 MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+            }
+        }
+
+        private void dtgCarrito_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string nombre = dtgCarrito.CurrentRow.Cells[0].Value.ToString();
+            int cantidadEliminar = Decimal.ToInt32(cantidad.Value);
+            int cantCart = int.Parse(dtgCarrito.CurrentRow.Cells[1].Value.ToString());
+
+            if (cantidadEliminar > cantCart)
+            {
+                MessageBox.Show("No tienes tanta cantidad de ese producto en el carrito");
+            }
+            else if (cantidadEliminar == cantCart)
+            {
+                if (MessageBox.Show("Se eliminaran todas las cantidades ¿Seguro que desea eliminar?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    string consulta = String.Format($"DELETE FROM carritotemporal WHERE DniCliente LIKE '{Sesion.NifUsu}' AND NomProducto LIKE '{nombre}'");
+
+                    ConexionBD.AbrirConexion();
+
+                    MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+                    MySqlDataReader reader = comando.ExecuteReader();
+
+                    ConexionBD.CerrarConexion();
+
+                    cantidad.Value = 1;
+                    CargarCarrito();
+                    ImporteTotal();
+                }
+            }
+            else
+            {
+                int nuevaCantidad = cantCart - cantidadEliminar;
+                double precio = 0;
+
+                if (MessageBox.Show($"Te quedaras con {nuevaCantidad} unidad(es) en el carrito ¿Seguro que desea eliminar?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    ConexionBD.AbrirConexion();
+                    precio = Utilidades.CalcularPrecio(ConexionBD.Conexion, nombre);
+                    ConexionBD.CerrarConexion();
+
+                    double nuevoImporte = nuevaCantidad * precio;
+
+                    string consulta = String.Format($"UPDATE carritotemporal SET Cantidad='{nuevaCantidad}', Importe='{nuevoImporte}' WHERE DniCliente LIKE '{Sesion.NifUsu}' AND NomProducto LIKE '{nombre}'");
+
+                    ConexionBD.AbrirConexion();
+
+                    MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+                    MySqlDataReader reader = comando.ExecuteReader();
+
+                    ConexionBD.CerrarConexion();
+                }
+
+                cantidad.Value = 1;
+                CargarCarrito();
+                ImporteTotal();
             }
         }
     }
