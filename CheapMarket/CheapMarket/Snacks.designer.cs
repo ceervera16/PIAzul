@@ -352,12 +352,12 @@
             this.btnComidaPrep.ForeColor = System.Drawing.Color.White;
             this.btnComidaPrep.Image = ((System.Drawing.Image)(resources.GetObject("btnComidaPrep.Image")));
             this.btnComidaPrep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnComidaPrep.Location = new System.Drawing.Point(14, 558);
+            this.btnComidaPrep.Location = new System.Drawing.Point(16, 558);
             this.btnComidaPrep.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnComidaPrep.Name = "btnComidaPrep";
             this.btnComidaPrep.Size = new System.Drawing.Size(296, 82);
             this.btnComidaPrep.TabIndex = 10;
-            this.btnComidaPrep.Text = "       COMIDAD PREP.";
+            this.btnComidaPrep.Text = "       COMIDAS PREP.";
             this.btnComidaPrep.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnComidaPrep.UseVisualStyleBackColor = true;
             this.btnComidaPrep.Click += new System.EventHandler(this.btnComidaPrep_Click);
