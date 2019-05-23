@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Carrito));
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dtgCarrito = new System.Windows.Forms.DataGridView();
@@ -45,7 +45,7 @@
             this.groupBoxMetodo = new System.Windows.Forms.GroupBox();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.rdbMastercard = new System.Windows.Forms.RadioButton();
-            this.pcbPaypal = new System.Windows.Forms.RadioButton();
+            this.rdbPaypal = new System.Windows.Forms.RadioButton();
             this.rdbTarjeta = new System.Windows.Forms.RadioButton();
             this.rdbVisa = new System.Windows.Forms.RadioButton();
             this.lblLista = new System.Windows.Forms.Label();
@@ -120,14 +120,14 @@
             this.dtgCarrito.AllowUserToDeleteRows = false;
             this.dtgCarrito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgCarrito.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgCarrito.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtgCarrito.Location = new System.Drawing.Point(616, 222);
             this.dtgCarrito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtgCarrito.Name = "dtgCarrito";
@@ -257,7 +257,7 @@
             // 
             this.groupBoxMetodo.Controls.Add(this.radioButton5);
             this.groupBoxMetodo.Controls.Add(this.rdbMastercard);
-            this.groupBoxMetodo.Controls.Add(this.pcbPaypal);
+            this.groupBoxMetodo.Controls.Add(this.rdbPaypal);
             this.groupBoxMetodo.Controls.Add(this.rdbTarjeta);
             this.groupBoxMetodo.Controls.Add(this.rdbVisa);
             this.groupBoxMetodo.Controls.Add(this.pcbVisa);
@@ -282,7 +282,6 @@
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(289, 37);
             this.radioButton5.TabIndex = 51;
-            this.radioButton5.TabStop = true;
             this.radioButton5.Text = "CONTRAREEMBOLSO";
             this.radioButton5.UseVisualStyleBackColor = true;
             // 
@@ -294,21 +293,19 @@
             this.rdbMastercard.Name = "rdbMastercard";
             this.rdbMastercard.Size = new System.Drawing.Size(204, 37);
             this.rdbMastercard.TabIndex = 50;
-            this.rdbMastercard.TabStop = true;
             this.rdbMastercard.Text = "MASTERCARD";
             this.rdbMastercard.UseVisualStyleBackColor = true;
             // 
-            // pcbPaypal
+            // rdbPaypal
             // 
-            this.pcbPaypal.AutoSize = true;
-            this.pcbPaypal.Location = new System.Drawing.Point(720, 49);
-            this.pcbPaypal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pcbPaypal.Name = "pcbPaypal";
-            this.pcbPaypal.Size = new System.Drawing.Size(129, 37);
-            this.pcbPaypal.TabIndex = 49;
-            this.pcbPaypal.TabStop = true;
-            this.pcbPaypal.Text = "PAYPAL";
-            this.pcbPaypal.UseVisualStyleBackColor = true;
+            this.rdbPaypal.AutoSize = true;
+            this.rdbPaypal.Location = new System.Drawing.Point(720, 49);
+            this.rdbPaypal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rdbPaypal.Name = "rdbPaypal";
+            this.rdbPaypal.Size = new System.Drawing.Size(129, 37);
+            this.rdbPaypal.TabIndex = 49;
+            this.rdbPaypal.Text = "PAYPAL";
+            this.rdbPaypal.UseVisualStyleBackColor = true;
             // 
             // rdbTarjeta
             // 
@@ -318,13 +315,13 @@
             this.rdbTarjeta.Name = "rdbTarjeta";
             this.rdbTarjeta.Size = new System.Drawing.Size(307, 37);
             this.rdbTarjeta.TabIndex = 48;
-            this.rdbTarjeta.TabStop = true;
             this.rdbTarjeta.Text = "TARJETA DE CRÉDITO";
             this.rdbTarjeta.UseVisualStyleBackColor = true;
             // 
             // rdbVisa
             // 
             this.rdbVisa.AutoSize = true;
+            this.rdbVisa.Checked = true;
             this.rdbVisa.Location = new System.Drawing.Point(147, 49);
             this.rdbVisa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rdbVisa.Name = "rdbVisa";
@@ -772,7 +769,7 @@
             // cantidad
             // 
             this.cantidad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.cantidad.Location = new System.Drawing.Point(759, 593);
+            this.cantidad.Location = new System.Drawing.Point(882, 593);
             this.cantidad.Maximum = new decimal(new int[] {
             99,
             0,
@@ -800,9 +797,9 @@
             this.lblCantidad.Location = new System.Drawing.Point(618, 597);
             this.lblCantidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(136, 28);
+            this.lblCantidad.Size = new System.Drawing.Size(260, 28);
             this.lblCantidad.TabIndex = 64;
-            this.lblCantidad.Text = "Cantidad: ";
+            this.lblCantidad.Text = "Cantidad a eliminar: ";
             // 
             // lblEliminar
             // 
@@ -894,7 +891,7 @@
         private System.Windows.Forms.GroupBox groupBoxMetodo;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton rdbMastercard;
-        private System.Windows.Forms.RadioButton pcbPaypal;
+        private System.Windows.Forms.RadioButton rdbPaypal;
         private System.Windows.Forms.RadioButton rdbTarjeta;
         private System.Windows.Forms.RadioButton rdbVisa;
         private System.Windows.Forms.Label lblLista;

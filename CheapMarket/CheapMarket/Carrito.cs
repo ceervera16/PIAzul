@@ -95,7 +95,73 @@ namespace CheapMarket
 
         private void btnFinalizarPedido_Click(object sender, EventArgs e)
         {
+            //Cargo el datagrid con todos los productos por si el cliente ha realizado alguna busqueda
+            ConexionBD.AbrirConexion();
+            dtgCarrito.DataSource = Utilidades.FiltrarCarrito(ConexionBD.Conexion, "");
+            ConexionBD.CerrarConexion();
 
+            string metodoPago = "";
+            DateTime fecha = DateTime.Now;
+            string dni = Sesion.NifUsu;
+
+            if (rdbVisa.Checked)
+            {
+                metodoPago = "Visa";
+            } else if (rdbTarjeta.Checked)
+            {
+                metodoPago = "Tarjeta";
+            } else if (rdbMastercard.Checked)
+            {
+                metodoPago = "Mastercard";
+            } else if (rdbPaypal.Checked)
+            {
+                metodoPago = "PayPal";
+            }
+
+            ConexionBD.AbrirConexion();
+
+            if (Utilidades.ComprobarCarrito(ConexionBD.Conexion))
+            {
+                ConexionBD.CerrarConexion();
+                if (MessageBox.Show("¿Seguro que desea realizar la compra? No podrá modificarla después.", "Comprar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    //Añado los productos del carrito a la tabla compra
+                    for (int i = 0; i < dtgCarrito.Rows.Count; i++)
+                    {
+                        int codigoProducto;
+                        string nombreProducto = dtgCarrito.Rows[i].Cells[0].Value.ToString();
+                        int cantidadProducto = int.Parse(dtgCarrito.Rows[i].Cells[1].Value.ToString());
+
+                        ConexionBD.AbrirConexion();
+                        codigoProducto = Utilidades.CodigoProducto(ConexionBD.Conexion, nombreProducto);
+                        ConexionBD.CerrarConexion();
+
+                        ConexionBD.AbrirConexion();
+                        string consultaInsert = String.Format("INSERT INTO compra (Fecha, DniCliente, CodProducto, Cantidad, Metodo) VALUES ('{0}','{1}','{2}','{3}','{4}');", fecha.ToString("yyyy-MM-dd HH:mm:ss"), dni, codigoProducto, cantidadProducto, metodoPago);
+                        MySqlCommand comando = new MySqlCommand(consultaInsert, ConexionBD.Conexion);
+                        MySqlDataReader reader = comando.ExecuteReader();
+                        ConexionBD.CerrarConexion();
+                    }
+
+                    //Muestro mensaje indicando que la compra se ha realizado correctamente
+                    MessageBox.Show("Compra realizada correctamente. Le enviaremos su pedido lo antes posible.");
+
+                    //Pregunto al cliente si quiere vaciar el carrito
+                    if (MessageBox.Show("¿Quieres vaciar el carrito?", "Vaciar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                        ConexionBD.AbrirConexion();
+                        Utilidades.VaciarCarrito(ConexionBD.Conexion, Sesion.NifUsu);
+                        ConexionBD.CerrarConexion();
+                    }
+                    CargarCarrito();
+                    ImporteTotal();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No tienes ningun producto en tu carrito.");
+                ConexionBD.CerrarConexion();
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
