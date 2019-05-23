@@ -113,5 +113,10 @@ namespace CheapMarket
         {
             Process.Start("https://www.instagram.com/CheapMarket_1/");
         }
+
+        private void lblPregunta_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("E-Mail: supermercadoscheapmarket@gmail.com\nTeléfono: 900 101 112");
+        }
     }
 }

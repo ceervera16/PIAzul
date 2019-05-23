@@ -321,7 +321,7 @@ namespace Diseño
 
         private void btnTwitter_Click(object sender, EventArgs e)
         {
-            Process.Start("https://twitter.com/CheapMarket_")
+            Process.Start("https://twitter.com/CheapMarket_");
         }
 
         private void btnInstagram_Click(object sender, EventArgs e)

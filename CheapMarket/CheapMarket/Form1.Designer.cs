@@ -157,6 +157,7 @@
             this.lblPregunta.Size = new System.Drawing.Size(306, 29);
             this.lblPregunta.TabIndex = 15;
             this.lblPregunta.Text = "¿Tienes dudas? ¡Llámanos!";
+            this.lblPregunta.Click += new System.EventHandler(this.lblPregunta_Click);
             // 
             // btnContacto
             // 
@@ -169,6 +170,7 @@
             this.btnContacto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnContacto.TabIndex = 14;
             this.btnContacto.TabStop = false;
+            this.btnContacto.Click += new System.EventHandler(this.lblPregunta_Click);
             // 
             // panel3
             // 
