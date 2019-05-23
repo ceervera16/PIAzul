@@ -570,6 +570,7 @@
             this.pcbLupa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbLupa.TabIndex = 62;
             this.pcbLupa.TabStop = false;
+            this.pcbLupa.Click += new System.EventHandler(this.pcbLupa_Click);
             // 
             // txtBuscar
             // 

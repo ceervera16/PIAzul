@@ -312,5 +312,22 @@ namespace CheapMarket
 
             return cantidad;
         }
+
+        public static DataTable FiltrarProductos(MySqlConnection conexion, string categoria, string palabra)
+        {
+            DataTable lista = new DataTable();
+
+            string consulta = String.Format($"SELECT Nombre, Precio, Descripcion FROM producto WHERE Categoria LIKE '{categoria}' AND (Nombre LIKE '%{palabra}%' OR Precio LIKE '%{palabra}%' OR Descripcion LIKE '%{palabra}%' OR Informacion LIKE '%{palabra}%')");
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                lista.Load(reader);
+            }
+
+            return lista;
+        }
     }
 }

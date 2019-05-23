@@ -297,5 +297,19 @@ namespace Diseño
 
             }
         }
+
+        private void pcbLupa_Click(object sender, EventArgs e)
+        {
+            if (ConexionBD.AbrirConexion())
+            {
+                dgvSnacks.DataSource = Utilidades.FiltrarProductos(ConexionBD.Conexion, "SNACKS", txtBuscar.Text);
+
+                ConexionBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+            }
+        }
     }
 }

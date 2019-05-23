@@ -282,5 +282,19 @@ namespace Diseño
                 MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
             }
         }
+
+        private void pcbLupa_Click(object sender, EventArgs e)
+        {
+            if (ConexionBD.AbrirConexion())
+            {
+                dgvHigiene.DataSource = Utilidades.FiltrarProductos(ConexionBD.Conexion, "HIGIENE", txtBuscar.Text);
+
+                ConexionBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+            }
+        }
     }
 }
