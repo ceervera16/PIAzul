@@ -119,5 +119,18 @@ namespace CheapMarket
         {
             MessageBox.Show("E-Mail: supermercadoscheapmarket@gmail.com\nTeléfono: 900 101 112");
         }
+
+        private void btnAdministracion_Click(object sender, EventArgs e)
+        {
+            if (txtCorreo.Text == "cheapmarket@gmail.com" && txtContraseña.Text == "admin")
+            {
+                this.Hide();
+                Administracion administracion = new Administracion();
+                administracion.Show();
+            } else
+            {
+                MessageBox.Show("Usuario incorrecto para acceder a esta función");
+            }
+        }
     }
 }

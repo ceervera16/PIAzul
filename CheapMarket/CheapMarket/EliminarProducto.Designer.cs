@@ -35,20 +35,28 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.lblPregunta = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnTwitter = new System.Windows.Forms.PictureBox();
             this.btnInstagram = new System.Windows.Forms.PictureBox();
             this.btnPagina = new System.Windows.Forms.PictureBox();
-            this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.btnContacto = new System.Windows.Forms.PictureBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.cmbFiltrar = new System.Windows.Forms.ComboBox();
+            this.lblFiltos = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnFiltrar = new System.Windows.Forms.Button();
+            this.btnEliminarFiltros = new System.Windows.Forms.Button();
+            this.dtgProductos = new System.Windows.Forms.DataGridView();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTwitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInstagram)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPagina)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnContacto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -56,7 +64,7 @@
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.ForeColor = System.Drawing.Color.Black;
-            this.lblCodigo.Location = new System.Drawing.Point(226, 100);
+            this.lblCodigo.Location = new System.Drawing.Point(8, 347);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(87, 23);
             this.lblCodigo.TabIndex = 70;
@@ -65,7 +73,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 20F);
-            this.btnEliminar.Location = new System.Drawing.Point(593, 379);
+            this.btnEliminar.Location = new System.Drawing.Point(595, 379);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(134, 47);
             this.btnEliminar.TabIndex = 68;
@@ -80,9 +88,9 @@
             this.lblIntro.ForeColor = System.Drawing.Color.Black;
             this.lblIntro.Location = new System.Drawing.Point(205, 67);
             this.lblIntro.Name = "lblIntro";
-            this.lblIntro.Size = new System.Drawing.Size(173, 23);
+            this.lblIntro.Size = new System.Drawing.Size(179, 23);
             this.lblIntro.TabIndex = 67;
-            this.lblIntro.Text = "EliminarProducto";
+            this.lblIntro.Text = "Eliminar Producto";
             this.lblIntro.Click += new System.EventHandler(this.lblIntro_Click);
             // 
             // panel3
@@ -117,6 +125,17 @@
             this.label2.Size = new System.Drawing.Size(116, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "CheapMarket";
+            // 
+            // pcbLogo
+            // 
+            this.pcbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogo.Image")));
+            this.pcbLogo.Location = new System.Drawing.Point(13, -18);
+            this.pcbLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.pcbLogo.Name = "pcbLogo";
+            this.pcbLogo.Size = new System.Drawing.Size(166, 172);
+            this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbLogo.TabIndex = 8;
+            this.pcbLogo.TabStop = false;
             // 
             // lblPregunta
             // 
@@ -174,17 +193,6 @@
             this.btnPagina.TabIndex = 63;
             this.btnPagina.TabStop = false;
             // 
-            // pcbLogo
-            // 
-            this.pcbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogo.Image")));
-            this.pcbLogo.Location = new System.Drawing.Point(13, -18);
-            this.pcbLogo.Margin = new System.Windows.Forms.Padding(2);
-            this.pcbLogo.Name = "pcbLogo";
-            this.pcbLogo.Size = new System.Drawing.Size(166, 172);
-            this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbLogo.TabIndex = 8;
-            this.pcbLogo.TabStop = false;
-            // 
             // btnContacto
             // 
             this.btnContacto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
@@ -199,16 +207,97 @@
             // txtCodigo
             // 
             this.txtCodigo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(230, 126);
+            this.txtCodigo.Location = new System.Drawing.Point(9, 373);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(323, 37);
+            this.txtCodigo.Size = new System.Drawing.Size(167, 37);
             this.txtCodigo.TabIndex = 69;
+            // 
+            // cmbFiltrar
+            // 
+            this.cmbFiltrar.FormattingEnabled = true;
+            this.cmbFiltrar.Items.AddRange(new object[] {
+            "BEBIDAS",
+            "CARNICERIA",
+            "PESCADERIA",
+            "FRUTERIA",
+            "VERDULERIA",
+            "FIAMBRES",
+            "COMIDAS PREPARADAS",
+            "HELADOS",
+            "HOGAR",
+            "HIGIENE",
+            "SNACKS",
+            "PANADERIA"});
+            this.cmbFiltrar.Location = new System.Drawing.Point(9, 238);
+            this.cmbFiltrar.Name = "cmbFiltrar";
+            this.cmbFiltrar.Size = new System.Drawing.Size(180, 21);
+            this.cmbFiltrar.TabIndex = 72;
+            this.cmbFiltrar.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // lblFiltos
+            // 
+            this.lblFiltos.AutoSize = true;
+            this.lblFiltos.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltos.ForeColor = System.Drawing.Color.Black;
+            this.lblFiltos.Location = new System.Drawing.Point(5, 212);
+            this.lblFiltos.Name = "lblFiltos";
+            this.lblFiltos.Size = new System.Drawing.Size(67, 23);
+            this.lblFiltos.TabIndex = 73;
+            this.lblFiltos.Text = "Filtros:";
+            this.lblFiltos.Click += new System.EventHandler(this.lblFiltos_Click);
+            // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnFiltrar.Location = new System.Drawing.Point(102, 265);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(87, 50);
+            this.btnFiltrar.TabIndex = 74;
+            this.btnFiltrar.Text = "Filtrar";
+            this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
+            // 
+            // btnEliminarFiltros
+            // 
+            this.btnEliminarFiltros.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnEliminarFiltros.Location = new System.Drawing.Point(12, 265);
+            this.btnEliminarFiltros.Name = "btnEliminarFiltros";
+            this.btnEliminarFiltros.Size = new System.Drawing.Size(87, 50);
+            this.btnEliminarFiltros.TabIndex = 75;
+            this.btnEliminarFiltros.Text = "Eliminar filtros";
+            this.btnEliminarFiltros.UseVisualStyleBackColor = true;
+            this.btnEliminarFiltros.Click += new System.EventHandler(this.btnEliminarFiltros_Click);
+            // 
+            // dtgProductos
+            // 
+            this.dtgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgProductos.Location = new System.Drawing.Point(202, 93);
+            this.dtgProductos.Name = "dtgProductos";
+            this.dtgProductos.Size = new System.Drawing.Size(527, 280);
+            this.dtgProductos.TabIndex = 71;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 20F);
+            this.btnSalir.Location = new System.Drawing.Point(502, 379);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(87, 47);
+            this.btnSalir.TabIndex = 101;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // EliminarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 438);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnEliminarFiltros);
+            this.Controls.Add(this.btnFiltrar);
+            this.Controls.Add(this.lblFiltos);
+            this.Controls.Add(this.cmbFiltrar);
+            this.Controls.Add(this.dtgProductos);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.btnEliminar);
@@ -225,11 +314,12 @@
             this.Load += new System.EventHandler(this.EliminarProducto_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTwitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInstagram)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPagina)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnContacto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,5 +340,12 @@
         private System.Windows.Forms.PictureBox btnContacto;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.ComboBox cmbFiltrar;
+        private System.Windows.Forms.Label lblFiltos;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button btnFiltrar;
+        private System.Windows.Forms.Button btnEliminarFiltros;
+        private System.Windows.Forms.DataGridView dtgProductos;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

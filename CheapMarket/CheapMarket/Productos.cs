@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.IO;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,15 +21,17 @@ namespace CheapMarket
         private string descripcion;
         private string categoria;
         private string info;
+        private Image foto;
 
 
         //PROPIEDADES
-        public int Codigo { get {return codigo; } set { value=codigo; } }
-        public string Nombre { get {return nombre; } set { value = nombre; } }
-        public double Precio { get { return precio; } set { value = precio; } }
-        public string Descripcion { get { return nombre; } set { value = nombre; } }
-        public string Categoria { get { return categoria; } set { value = categoria; } }
-        public string Info { get { return info; } set { value = info; } }
+        public int Codigo { get { return codigo; } set { codigo = value; } }
+        public string Nombre { get { return nombre; } set { nombre = value; } }
+        public double Precio { get { return precio; } set { precio = value; } }
+        public string Descripcion { get { return descripcion; } set { descripcion = value; } }
+        public string Categoria { get { return categoria; } set { categoria = value; } }
+        public string Info { get { return info; } set { info = value; } }
+        public Image Foto { get { return foto; } set { foto = value; } }
 
         //CONSTRUCTOR
         public Productos() { }
@@ -177,5 +181,6 @@ namespace CheapMarket
 
             return codigo;
         }
+
     }
 }

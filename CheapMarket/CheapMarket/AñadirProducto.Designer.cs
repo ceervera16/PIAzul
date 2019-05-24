@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AñadirProducto));
             this.btnInsertar = new System.Windows.Forms.Button();
             this.lblIntro = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.lblPregunta = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -41,7 +43,6 @@
             this.lblPrecio = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.lblCategoria = new System.Windows.Forms.Label();
-            this.txtCategoria = new System.Windows.Forms.TextBox();
             this.lblInformacionNutritiva = new System.Windows.Forms.Label();
             this.txtInformacionNutritiva = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
@@ -49,14 +50,20 @@
             this.btnTwitter = new System.Windows.Forms.PictureBox();
             this.btnInstagram = new System.Windows.Forms.PictureBox();
             this.btnPagina = new System.Windows.Forms.PictureBox();
-            this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.btnContacto = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
+            this.pctFoto = new System.Windows.Forms.PictureBox();
+            this.btnSubirFoto = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTwitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInstagram)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPagina)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnContacto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // btnInsertar
@@ -113,6 +120,17 @@
             this.label2.Size = new System.Drawing.Size(116, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "CheapMarket";
+            // 
+            // pcbLogo
+            // 
+            this.pcbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogo.Image")));
+            this.pcbLogo.Location = new System.Drawing.Point(13, -18);
+            this.pcbLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.pcbLogo.Name = "pcbLogo";
+            this.pcbLogo.Size = new System.Drawing.Size(166, 172);
+            this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbLogo.TabIndex = 8;
+            this.pcbLogo.TabStop = false;
             // 
             // lblPregunta
             // 
@@ -182,14 +200,6 @@
             this.lblCategoria.Size = new System.Drawing.Size(116, 23);
             this.lblCategoria.TabIndex = 55;
             this.lblCategoria.Text = "Categoría:";
-            // 
-            // txtCategoria
-            // 
-            this.txtCategoria.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCategoria.Location = new System.Drawing.Point(232, 261);
-            this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(323, 37);
-            this.txtCategoria.TabIndex = 54;
             // 
             // lblInformacionNutritiva
             // 
@@ -265,17 +275,6 @@
             this.btnPagina.TabIndex = 43;
             this.btnPagina.TabStop = false;
             // 
-            // pcbLogo
-            // 
-            this.pcbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogo.Image")));
-            this.pcbLogo.Location = new System.Drawing.Point(13, -18);
-            this.pcbLogo.Margin = new System.Windows.Forms.Padding(2);
-            this.pcbLogo.Name = "pcbLogo";
-            this.pcbLogo.Size = new System.Drawing.Size(166, 172);
-            this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbLogo.TabIndex = 8;
-            this.pcbLogo.TabStop = false;
-            // 
             // btnContacto
             // 
             this.btnContacto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
@@ -287,17 +286,79 @@
             this.btnContacto.TabIndex = 40;
             this.btnContacto.TabStop = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // cmbCategoria
+            // 
+            this.cmbCategoria.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Items.AddRange(new object[] {
+            "BEBIDAS",
+            "CARNICERIA",
+            "PESCADERIA",
+            "FRUTERIA",
+            "VERDULERIA",
+            "FIAMBRES",
+            "COMIDAS PREPARADAS",
+            "HELADOS",
+            "HOGAR",
+            "HIGIENE",
+            "SNACKS",
+            "PANADERIA"});
+            this.cmbCategoria.Location = new System.Drawing.Point(232, 260);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(323, 38);
+            this.cmbCategoria.TabIndex = 73;
+            // 
+            // pctFoto
+            // 
+            this.pctFoto.Image = ((System.Drawing.Image)(resources.GetObject("pctFoto.Image")));
+            this.pctFoto.Location = new System.Drawing.Point(595, 168);
+            this.pctFoto.Margin = new System.Windows.Forms.Padding(2);
+            this.pctFoto.Name = "pctFoto";
+            this.pctFoto.Size = new System.Drawing.Size(134, 126);
+            this.pctFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctFoto.TabIndex = 9;
+            this.pctFoto.TabStop = false;
+            // 
+            // btnSubirFoto
+            // 
+            this.btnSubirFoto.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.btnSubirFoto.Location = new System.Drawing.Point(595, 299);
+            this.btnSubirFoto.Name = "btnSubirFoto";
+            this.btnSubirFoto.Size = new System.Drawing.Size(134, 63);
+            this.btnSubirFoto.TabIndex = 74;
+            this.btnSubirFoto.Text = "Cargar imagen";
+            this.btnSubirFoto.UseVisualStyleBackColor = true;
+            this.btnSubirFoto.Click += new System.EventHandler(this.btnSubirFoto_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 20F);
+            this.btnSalir.Location = new System.Drawing.Point(12, 379);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(87, 47);
+            this.btnSalir.TabIndex = 101;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // AñadirProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 438);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnSubirFoto);
+            this.Controls.Add(this.pctFoto);
+            this.Controls.Add(this.cmbCategoria);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lblInformacionNutritiva);
             this.Controls.Add(this.txtInformacionNutritiva);
             this.Controls.Add(this.lblCategoria);
-            this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.lblNombre);
@@ -316,11 +377,13 @@
             this.Load += new System.EventHandler(this.AñadirProducto_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTwitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInstagram)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPagina)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnContacto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,10 +407,14 @@
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label lblCategoria;
-        private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.Label lblInformacionNutritiva;
         private System.Windows.Forms.TextBox txtInformacionNutritiva;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ComboBox cmbCategoria;
+        private System.Windows.Forms.Button btnSubirFoto;
+        private System.Windows.Forms.PictureBox pctFoto;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
