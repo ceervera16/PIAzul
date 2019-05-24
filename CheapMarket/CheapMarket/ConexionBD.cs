@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace CheapMarket
 {
-    class ConexionBD
+    public class ConexionBD
     {
         //Atributos
         private static MySqlConnection conexion;

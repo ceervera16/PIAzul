@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 
 namespace CheapMarket
 {
-    static class Utilidades
+    public static class Utilidades
     {
         /// <summary>
         /// Método para comprobar si un dni es correcto
