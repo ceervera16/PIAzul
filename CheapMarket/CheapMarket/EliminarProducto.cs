@@ -39,7 +39,7 @@ namespace CheapMarket
             {
                 int codigo = (int)dtgProductos.CurrentRow.Cells[0].Value;
 
-                DialogResult eliminacion = MessageBox.Show("Eliminar producto?, se eliminará este producto de todos los carritos", "Eliminar", MessageBoxButtons.YesNo);
+                DialogResult eliminacion = MessageBox.Show("¿Eliminar producto?, se eliminará este producto de todos los carritos", "Eliminar", MessageBoxButtons.YesNo);
 
                 if (eliminacion == DialogResult.Yes)
                 {

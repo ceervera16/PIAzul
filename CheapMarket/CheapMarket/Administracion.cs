@@ -39,5 +39,15 @@ namespace CheapMarket
             EliminarProducto elim = new EliminarProducto();
             elim.ShowDialog();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.Close();
+                Form1 inicio = new Form1();
+                inicio.Show();
+            }
+        }
     }
 }

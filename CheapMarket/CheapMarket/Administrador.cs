@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,18 +44,16 @@ namespace CheapMarket
         /// <returns></returns>
         public int AgregarProducto(MySqlConnection conexion, Productos prod)
         {
-            string consulta;
-            if (prod.Info == "" || prod.Info == null)
-            {
-                consulta = string.Format("INSERT INTO producto (Codigo, Nombre, Precio, Descripcion, Categoria, Imagen) " +
-                "VALUES ('{0}','{1}','{2}','{3}','{4}','{5}');", prod.Codigo, prod.Nombre, prod.Precio, prod.Descripcion, prod.Categoria,prod.Foto);
-            }
-            else
-            {
-                consulta = string.Format("INSERT INTO producto (Codigo,Nombre,Precio,Descripcion,Categoria,Informacion,Imagen) " +
-                "VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}');", prod.Codigo, prod.Nombre, prod.Precio, prod.Descripcion, prod.Categoria, prod.Info, prod.Foto);
-            }
+            MemoryStream ms = new MemoryStream();
+            prod.Foto.Save(ms, ImageFormat.Jpeg);
+            byte[] img = ms.ToArray();
+
+            string consulta = string.Format("INSERT INTO producto (Codigo,Nombre,Precio,Descripcion,Categoria,Informacion,Imagen) " +
+                "VALUES ('{0}','{1}','{2}','{3}','{4}','{5}',@imagen);", prod.Codigo, prod.Nombre, prod.Precio, prod.Descripcion, prod.Categoria, prod.Info);
+
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            comando.Parameters.AddWithValue("imagen", img);
+
             return comando.ExecuteNonQuery();
         }
 

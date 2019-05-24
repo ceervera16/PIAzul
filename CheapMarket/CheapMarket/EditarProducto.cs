@@ -104,7 +104,7 @@ namespace CheapMarket
         {
             Administrador admin = new Administrador();
             int res;
-            DialogResult respuesta = MessageBox.Show("Modificar producto?", "Modificar", MessageBoxButtons.YesNo);
+            DialogResult respuesta = MessageBox.Show("¿Modificar producto?", "Modificar", MessageBoxButtons.YesNo);
             if (respuesta == DialogResult.Yes)
             {
                 if (ConexionBD.AbrirConexion())

@@ -73,11 +73,16 @@ namespace CheapMarket
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
+            if (txtInformacionNutritiva.Text.Length == 0)
+            {
+                txtInformacionNutritiva.Text = " ";
+            }
+
             if (ConexionBD.AbrirConexion())
             {
                 if (comprobarVacios())
                 {
-                    DialogResult respuesta = MessageBox.Show("Insertar producto?", "Insertar", MessageBoxButtons.YesNo);
+                    DialogResult respuesta = MessageBox.Show("¿Insertar producto?", "Insertar", MessageBoxButtons.YesNo);
                     if (respuesta == DialogResult.Yes)
                     {
                         bool ok = false;
@@ -97,6 +102,7 @@ namespace CheapMarket
 
                             
                         }
+
                         prod.Categoria = cmbCategoria.Text;
                         prod.Descripcion = txtDescripcion.Text;
                         prod.Info = txtInformacionNutritiva.Text;
@@ -106,7 +112,7 @@ namespace CheapMarket
                         {
                             if (!NombreRepetido(prod.Nombre))
                             {
-                                MySqlCommand commando = new MySqlCommand("SELECT Codigo FROM producto;", ConexionBD.Conexion);
+                                MySqlCommand commando = new MySqlCommand("SELECT Codigo FROM producto ORDER BY Codigo;", ConexionBD.Conexion);
                                 MySqlDataReader reader = commando.ExecuteReader();
 
                                 if (reader.HasRows)
@@ -162,7 +168,6 @@ namespace CheapMarket
             if (cargaImagen.ShowDialog() == DialogResult.OK)
             {
                 pctFoto.ImageLocation = cargaImagen.FileName;
-                MessageBox.Show(cargaImagen.FileName);
             }
             else
             {
