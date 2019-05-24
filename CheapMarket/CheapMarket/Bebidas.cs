@@ -29,6 +29,7 @@ namespace Diseño
             }
         }
 
+        //Metodo para agregar productos al datagrid
         private void CargarProductos()
         {
             dgvBebidas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
@@ -47,6 +48,7 @@ namespace Diseño
             }
         }
 
+        //Botones
         private void btnSalir_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -182,6 +184,7 @@ namespace Diseño
             }
         }
 
+        //Metodos para ver info e imagen del producto seleccionado
         private void dgvBebidas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string producto = dgvBebidas.CurrentRow.Cells[0].Value.ToString();
@@ -214,6 +217,7 @@ namespace Diseño
             }
         }
 
+        //Metodo para agregar productos al carrito
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (Sesion.Invitado)

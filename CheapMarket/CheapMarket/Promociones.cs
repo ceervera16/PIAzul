@@ -25,6 +25,8 @@ namespace CheapMarket
                 label1.Text = Sesion.NombreUsu;
             }
         }
+
+        //Botones
         private void btnSalir_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)

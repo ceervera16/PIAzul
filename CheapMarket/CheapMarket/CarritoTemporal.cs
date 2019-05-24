@@ -33,6 +33,13 @@ namespace CheapMarket
 
         //Metodos
 
+
+        /// <summary>
+        /// Método para vaciar el carrito del cliente
+        /// </summary>
+        /// <param name="conexion">Conexión a la base de datos</param>
+        /// <param name="nif">DNI del cliente</param>
+        /// <returns></returns>
         public static int VaciarCarrito(MySqlConnection conexion, string nif)
         {
             int retorno;
@@ -46,6 +53,12 @@ namespace CheapMarket
             return retorno;
         }
 
+        /// <summary>
+        /// Método para cargar el carrito del cliente
+        /// </summary>
+        /// <param name="conexion">Conexión a la base de datos</param>
+        /// <param name="consulta">Consulta sql para cargar los datos del carrito</param>
+        /// <returns>Tabla con la información del carrito del cliente</returns>
         public static DataTable CargarCarrito(MySqlConnection conexion, string consulta)
         {
             DataTable lista = new DataTable();
@@ -61,6 +74,12 @@ namespace CheapMarket
             return lista;
         }
 
+        /// <summary>
+        /// Método para agregar productos al carrito
+        /// </summary>
+        /// <param name="conexion">Conexión a la base de datos</param>
+        /// <param name="consulta">Consulta sql que realiza un insert a la tabla carrito</param>
+        /// <returns></returns>
         public static int AgregarAlCarrito(MySqlConnection conexion, string consulta)
         {
             int retorno;
@@ -72,6 +91,12 @@ namespace CheapMarket
             return retorno;
         }
 
+        /// <summary>
+        /// Método para filtrar productos del carrito
+        /// </summary>
+        /// <param name="conexion">Conexión a la base de datos</param>
+        /// <param name="palabra">Palabra que se filtra </param>
+        /// <returns>Tabla con los productos filtrados</returns>
         public static DataTable FiltrarCarrito(MySqlConnection conexion, string palabra)
         {
             DataTable lista = new DataTable();
@@ -89,6 +114,11 @@ namespace CheapMarket
             return lista;
         }
 
+        /// <summary>
+        /// Método para comprobar si el cliente tiene algun producto en su carrrito
+        /// </summary>
+        /// <param name="conexion">Conexión a la base de datos</param>
+        /// <returns>True o false en funcion de si tiene productos o no</returns>
         public static bool ComprobarCarrito(MySqlConnection conexion)
         {
             string consulta = String.Format($"SELECT * FROM carritotemporal WHERE DniCliente LIKE '{Sesion.NifUsu}'");

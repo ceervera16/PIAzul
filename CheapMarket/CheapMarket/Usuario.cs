@@ -67,6 +67,12 @@ namespace CheapMarket
 
         //Metodos
 
+        /// <summary>
+        /// Método para modificar un usuario
+        /// </summary>
+        /// <param name="conexion">Conexión a la base de datos</param>
+        /// <param name="usu">Usuario con los datos ya modificados</param>
+        /// <returns></returns>
         public static int EditarUsuario(MySqlConnection conexion, Usuario usu)
         {
             int retorno;
@@ -82,6 +88,12 @@ namespace CheapMarket
             return retorno; ;
         }
 
+        /// <summary>
+        /// Método par añadir un usuario a la base de datos
+        /// </summary>
+        /// <param name="conexion">Conexión a la base de datos</param>
+        /// <param name="usu">Usuario a agregar a la base de datos</param>
+        /// <returns></returns>
         public static int AgregarUsuario(MySqlConnection conexion, Usuario usu)
         {
             int retorno;
@@ -98,6 +110,12 @@ namespace CheapMarket
             return retorno;
         }
 
+        /// <summary>
+        /// Método para ver si un correo ya esta en uso
+        /// </summary>
+        /// <param name="conexion">Conexión a la base de datos</param>
+        /// <param name="correo">Correo del cliente</param>
+        /// <returns>True o false en función de si el correo esta en uso o no</returns>
         public static bool ExisteUsuario(MySqlConnection conexion, string correo)
         {
             string consulta = String.Format($"SELECT * FROM cliente WHERE correo LIKE '{correo}'");
@@ -116,6 +134,12 @@ namespace CheapMarket
 
         }
 
+        /// <summary>
+        /// Método para ver si un dni ya esta en uso
+        /// </summary>
+        /// <param name="conexion">Conexión a la base de datos</param>
+        /// <param name="nif">Dni del cliente</param>
+        /// <returns>True o false en función de si el dni esta en uso o no</returns>
         public static bool ExisteUsuario2(MySqlConnection conexion, string nif)
         {
             string consulta = String.Format($"SELECT * FROM cliente WHERE DNI LIKE '{nif}'");
@@ -134,6 +158,11 @@ namespace CheapMarket
 
         }
 
+        /// <summary>
+        /// Método para cargar los datos del cliente
+        /// </summary>
+        /// <param name="conexion">Conexión a la base de datos</param>
+        /// <returns>Lista de string con los valores modificables del cliente</returns>
         public static List<string> CargarDatos2(MySqlConnection conexion)
         {
             List<string> usu = new List<string>();

@@ -30,6 +30,7 @@ namespace Diseño
             }
         }
 
+        //Metodos
         private void CargarProductos()
         {
             dgvPanaderia.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
@@ -48,6 +49,7 @@ namespace Diseño
             }
         }
 
+        //Botones
         private void btnSalir_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -55,7 +57,6 @@ namespace Diseño
                 this.Close();
             }
         }
-
         private void btnCategorias_Click(object sender, EventArgs e)
         {
             CheapMarket.Categorias categorias = new CheapMarket.Categorias();
@@ -74,77 +75,66 @@ namespace Diseño
             pescaderia.Show();
             this.Hide();
         }
-
         private void btnFruteria_Click(object sender, EventArgs e)
         {
             Fruteria fruteria = new Fruteria();
             fruteria.Show();
             this.Hide();
         }
-
         private void btnVerduleria_Click(object sender, EventArgs e)
         {
             Verduleria verduleria = new Verduleria();
             verduleria.Show();
             this.Hide();
         }
-
         private void btnFiambres_Click(object sender, EventArgs e)
         {
             Fiambre fiambre = new Fiambre();
             fiambre.Show();
             this.Hide();
         }
-
         private void btnHelados_Click(object sender, EventArgs e)
         {
             Helados helados = new Helados();
             helados.Show();
             this.Hide();
         }
-
         private void btnComidaPrep_Click(object sender, EventArgs e)
         {
             Preparadas preparadas = new Preparadas();
             preparadas.Show();
             this.Hide();
         }
-
         private void btnBebidas_Click(object sender, EventArgs e)
         {
             Bebidas bebidas = new Bebidas();
             bebidas.Show();
             this.Hide();
         }
-
         private void btnPanaderia_Click(object sender, EventArgs e)
         {
             Panaderia panaderia = new Panaderia();
             panaderia.Show();
             this.Hide();
         }
-
         private void btnSnacks_Click(object sender, EventArgs e)
         {
             Snacks snacks = new Snacks();
             snacks.Show();
             this.Hide();
         }
-
         private void btnHigiene_Click(object sender, EventArgs e)
         {
             Higiene higiene = new Higiene();
             higiene.Show();
             this.Hide();
         }
-
         private void btnHogar_Click(object sender, EventArgs e)
         {
             Hogar hogar = new Hogar();
             hogar.Show();
             this.Hide();
         }
-
         private void btnPerfil_Click(object sender, EventArgs e)
         {
             if (Sesion.Invitado)
@@ -158,7 +148,6 @@ namespace Diseño
                 this.Hide();
             }
         }
-
         private void btnCarrito_Click(object sender, EventArgs e)
         {
             if (Sesion.Invitado)
@@ -172,7 +161,6 @@ namespace Diseño
                 this.Hide();
             }
         }
-
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Seguro que desea cerrar sesión?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -183,6 +171,7 @@ namespace Diseño
             }
         }
 
+        //Metodo para ver informacion e imagen del producto al hacer click sobre el
         private void dgvPanaderia_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string producto = dgvPanaderia.CurrentRow.Cells[0].Value.ToString();
@@ -215,6 +204,7 @@ namespace Diseño
             }
         }
 
+        //Metodo para agregar un producto al carrito
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (Sesion.Invitado)
@@ -301,6 +291,7 @@ namespace Diseño
             }
         }
 
+        //Metodo para "filtrar" productos
         private void pcbLupa_Click(object sender, EventArgs e)
         {
             if (ConexionBD.AbrirConexion())
@@ -314,6 +305,7 @@ namespace Diseño
                 MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
             }
         }
+
 
         private void btnPagina_Click(object sender, EventArgs e)
         {

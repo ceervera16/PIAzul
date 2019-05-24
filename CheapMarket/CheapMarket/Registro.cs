@@ -20,6 +20,7 @@ namespace CheapMarket
             comboBoxIdioma.SelectedIndex = 1;
         }
 
+        //Metodo para validar que todos los datos son correctos
         public bool ValidarDatos()
         {
             bool ok = true;
@@ -179,6 +180,7 @@ namespace CheapMarket
             return ok;
         }
 
+        //Metodo para realizar el registro
         private void btnRegistar_Click(object sender, EventArgs e)
         {
             if (ValidarDatos())
@@ -230,6 +232,7 @@ namespace CheapMarket
             }
         }
 
+        //Botones
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Hide();

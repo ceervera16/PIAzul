@@ -12,6 +12,11 @@ namespace CheapMarket
 {
     static class Utilidades
     {
+        /// <summary>
+        /// Método para comprobar si un dni es correcto
+        /// </summary>
+        /// <param name="nif">Dni que se comprueba</param>
+        /// <returns>True o false en función de si es correcto o no</returns>
         public static bool NifCorrecto(string nif)
         {
             bool valido = false;
@@ -41,6 +46,11 @@ namespace CheapMarket
             return valido;
         }
 
+        /// <summary>
+        /// Método para comprobar si un correo es correcto
+        /// </summary>
+        /// <param name="correo">Correo que se comprueba</param>
+        /// <returns>True o false en función de si es correcto o no</returns>
         public static bool ComprobarCorreo(string correo)
         {
             if (correo.Length == 0)
@@ -59,6 +69,13 @@ namespace CheapMarket
                 return (false);
         }
 
+        /// <summary>
+        /// Método para comprobar si el correo y la contraseña son correctos
+        /// </summary>
+        /// <param name="conexion">Conexión a la base de datos</param>
+        /// <param name="correo">Correo con el que se intenta iniciar sesión</param>
+        /// <param name="pass">Contraseña con el que se intenta iniciar sesión </param>
+        /// <returns>True o false en función de si es correcto o no</returns>
         public static bool IniciarSesion(MySqlConnection conexion, string correo, string pass)
         {
             string consulta = String.Format($"SELECT DNI, Password FROM cliente WHERE correo LIKE '{correo}' AND Password LIKE '{pass}'");
@@ -76,6 +93,12 @@ namespace CheapMarket
             }
         }
 
+        /// <summary>
+        /// Método para comprobar si un producto esta en el carrito del cliente
+        /// </summary>
+        /// <param name="conexion">Conexión a la base de datos</param>
+        /// <param name="producto">Nombre del producto</param>
+        /// <returns>True o false en función el producto esta en el carrito o no</returns>
         public static bool ComprobarProducto(MySqlConnection conexion, string producto)
         {
             bool existe = false;
@@ -93,6 +116,13 @@ namespace CheapMarket
             return existe;
         }
 
+        /// <summary>
+        /// Método para calcular la cantidad de un producto en el carrito
+        /// </summary>
+        /// <param name="conexion">Conexión a la base de datos</param>
+        /// <param name="producto">Nombre del producto</param>
+        /// <param name="dni">dni del cliente</param>
+        /// <returns>Cantidad del producto</returns>
         public static int CalcularCantidad(MySqlConnection conexion, string producto, string dni)
         {
             int cantidad = 0;

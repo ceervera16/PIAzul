@@ -29,6 +29,9 @@ namespace Diseño
             }
         }
 
+        //Metodos
+
+        //Metodos para cargar los productos en el datagrid
         private void CargarProductos()
         {
             dgvPescaderia.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
@@ -47,6 +50,7 @@ namespace Diseño
             }
         }
 
+        //Botones
         private void btnSalir_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -181,6 +185,7 @@ namespace Diseño
             }
         }
 
+        //Metodo para ver info e imagen del producto seleccionado
         private void dgvPescaderia_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string producto = dgvPescaderia.CurrentRow.Cells[0].Value.ToString();
@@ -213,6 +218,7 @@ namespace Diseño
             }
         }
 
+        //Metodo para agregar productos al carrito
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (Sesion.Invitado)
@@ -299,6 +305,7 @@ namespace Diseño
             }
         }
 
+        //Metodo para filtrar productos
         private void pcbLupa_Click(object sender, EventArgs e)
         {
             if (ConexionBD.AbrirConexion())

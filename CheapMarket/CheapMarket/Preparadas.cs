@@ -29,6 +29,7 @@ namespace Diseño
             }
         }
 
+        //Metodos para cargar los productos en el datagrid
         private void CargarProductos()
         {
             dgvPreparadas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
@@ -182,6 +183,7 @@ namespace Diseño
             }
         }
 
+        //Metodo para ver info e imagen del producto seleccionado
         private void dgvPreparadas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string producto = dgvPreparadas.CurrentRow.Cells[0].Value.ToString();
@@ -214,6 +216,7 @@ namespace Diseño
             }
         }
 
+        //Metodo para agregar productos al carrito
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (Sesion.Invitado)
@@ -300,6 +303,7 @@ namespace Diseño
             }
         }
 
+        //Metodo para filtrar productos
         private void pcbLupa_Click(object sender, EventArgs e)
         {
             if (ConexionBD.AbrirConexion())

@@ -42,6 +42,13 @@ namespace CheapMarket
         }
 
         //Metodos
+
+        /// <summary>
+        /// Método para cargar los productos y añadirlos a un DataTable
+        /// </summary>
+        /// <param name="conexion">Conexión a la base de datos</param>
+        /// <param name="consulta">Consulta sql sobre los productos que se quieren cargar</param>
+        /// <returns>DataTable con los productos</returns>
         public static DataTable CargarProductos2(MySqlConnection conexion, string consulta)
         {
             DataTable lista = new DataTable();
@@ -57,6 +64,12 @@ namespace CheapMarket
             return lista;
         }
 
+        /// <summary>
+        /// Método para averiguar la información nutriconal del producto
+        /// </summary>
+        /// <param name="conexion">Conexión a la base de datos</param>
+        /// <param name="consulta">Consulta sql para averiguar la info del producto</param>
+        /// <returns>String con la información nutricional del producto</returns>
         public static string InfoProducto(MySqlConnection conexion, string consulta)
         {
             string info = "Información";
@@ -72,6 +85,12 @@ namespace CheapMarket
             return info;
         }
 
+        /// <summary>
+        /// Método para averiguar la imagen del producto
+        /// </summary>
+        /// <param name="conexion">Conexión a la base de datos</param>
+        /// <param name="consulta2">Consulta sql para averiguar la imagen del producto</param>
+        /// <returns>Imagen del producto</returns>
         public static Image ImagenProducto(MySqlConnection conexion, string consulta2)
         {
             MySqlCommand comando = new MySqlCommand(consulta2, conexion);
@@ -89,6 +108,13 @@ namespace CheapMarket
             return imagen;
         }
 
+        /// <summary>
+        /// Método para filtrar productos
+        /// </summary>
+        /// <param name="conexion">Conexión a la base de datos</param>
+        /// <param name="categoria">Categoria del producto</param>
+        /// <param name="palabra">Palabra a filtrar</param>
+        /// <returns>DataTable con los productos filtrados</returns>
         public static DataTable FiltrarProductos(MySqlConnection conexion, string categoria, string palabra)
         {
             DataTable lista = new DataTable();
@@ -106,6 +132,12 @@ namespace CheapMarket
             return lista;
         }
 
+        /// <summary>
+        /// Método para ver el precio de un producto
+        /// </summary>
+        /// <param name="conexion">Conexión a la base de datos</param>
+        /// <param name="producto">Nombre del producto</param>
+        /// <returns>Precio del producto</returns>
         public static double CalcularPrecio(MySqlConnection conexion, string producto)
         {
             double precio = 0;
@@ -123,6 +155,12 @@ namespace CheapMarket
             return precio;
         }
 
+        /// <summary>
+        /// Método para ver el código de un producto
+        /// </summary>
+        /// <param name="conexion">Conexión a la base de datos</param>
+        /// <param name="producto">Nombre del producto</param>
+        /// <returns>Código del producto</returns>
         public static int CodigoProducto(MySqlConnection conexion, string producto)
         {
             int codigo = 0;

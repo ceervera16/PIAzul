@@ -21,6 +21,13 @@ namespace CheapMarket
 
 
         //Metodos
+
+        /// <summary>
+        /// Método para averiguar el nombre de un cliente en base a su correo
+        /// </summary>
+        /// <param name="conexion">Conexión a la base de datos</param>
+        /// <param name="correo">Correo del cliente</param>
+        /// <returns>Nombre del cliente</returns>
         public static string NombreUsuario(MySqlConnection conexion, string correo)
         {
             string consulta = String.Format($"SELECT Nombre FROM cliente WHERE correo LIKE '{correo}'");
@@ -38,6 +45,12 @@ namespace CheapMarket
             return nombre;
         }
 
+        /// <summary>
+        /// Método para averiguarel dni de un cliente en base a su correo
+        /// </summary>
+        /// <param name="conexion">Conexión a la base de datos</param>
+        /// <param name="correo">Correo del cliente</param>
+        /// <returns>Nombre del cliente</returns>
         public static string NifUsuario(MySqlConnection conexion, string correo)
         {
             string consulta = String.Format($"SELECT DNI FROM cliente WHERE correo LIKE '{correo}'");

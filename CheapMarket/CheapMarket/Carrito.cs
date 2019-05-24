@@ -35,6 +35,8 @@ namespace CheapMarket
         }
 
         //Metodos
+
+        //Metodo para cargar el carrito del cliente
         private void CargarCarrito()
         {
             string consulta = String.Format($"SELECT NomProducto, Cantidad, Importe FROM carritotemporal where DniCliente LIKE '{Sesion.NifUsu}'");
@@ -51,6 +53,7 @@ namespace CheapMarket
             }
         }
 
+        //Metodo para calcular el importe del carrito
         private void ImporteTotal()
         {
             if (dtgCarrito.Rows.Count > 0)
@@ -73,6 +76,7 @@ namespace CheapMarket
 
         //Botones
 
+        //Boton para vaciar el carrito
         private void btnVaciar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Seguro que desea vaciar el carrito?", "Vaciar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -93,6 +97,7 @@ namespace CheapMarket
             }
         }
 
+        //Metodo para final la compra
         private void btnFinalizarPedido_Click(object sender, EventArgs e)
         {
             //Cargo el datagrid con todos los productos por si el cliente ha realizado alguna busqueda
@@ -164,6 +169,7 @@ namespace CheapMarket
             }
         }
 
+        //Botones
         private void btnSalir_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -300,6 +306,7 @@ namespace CheapMarket
             }
         }
 
+        //Metodo para eliminar productos del carrito
         private void dtgCarrito_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             string nombre = dtgCarrito.CurrentRow.Cells[0].Value.ToString();
@@ -357,6 +364,7 @@ namespace CheapMarket
             }
         }
 
+        //Botones redes sociales
         private void btnPagina_Click(object sender, EventArgs e)
         {
             Process.Start("https://cheapmarket123.000webhostapp.com/index.html");

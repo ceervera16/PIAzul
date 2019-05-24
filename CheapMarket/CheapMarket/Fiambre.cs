@@ -29,6 +29,7 @@ namespace Diseño
             }
         }
 
+        //Metodo para agregar productos al datagrid
         private void CargarProductos()
         {
             dgvFiambre.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
@@ -47,6 +48,7 @@ namespace Diseño
             }
         }
 
+        //Botones
         private void btnSalir_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -175,6 +177,7 @@ namespace Diseño
             }
         }
 
+        //Metodo para ver info e imagen del producto seleccionado
         private void dgvFiambre_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string producto = dgvFiambre.CurrentRow.Cells[0].Value.ToString();
@@ -207,6 +210,7 @@ namespace Diseño
             }
         }
 
+        //Metodo para agregar productos al carrito
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (Sesion.Invitado)
@@ -293,6 +297,7 @@ namespace Diseño
             }
         }
 
+        //Metodos para filtrar productos
         private void pcbLupa_Click(object sender, EventArgs e)
         {
             if (ConexionBD.AbrirConexion())
@@ -307,6 +312,7 @@ namespace Diseño
             }
         }
 
+        //Botones redes sociales
         private void btnPagina_Click(object sender, EventArgs e)
         {
             Process.Start("https://cheapmarket123.000webhostapp.com/index.html");

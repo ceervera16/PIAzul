@@ -32,6 +32,9 @@ namespace CheapMarket
             CargarDatos();
         }
 
+        //Metodos
+
+        //Metodo para validar que todos los son correctos
         public bool ValidarDatos()
         {
             bool ok = true;
@@ -203,7 +206,7 @@ namespace CheapMarket
             }
         }
 
-
+        //Metodo para cargar los datos del usuario
         private void CargarDatos()
         {
             if (ConexionBD.AbrirConexion())
@@ -234,6 +237,7 @@ namespace CheapMarket
            
         }
 
+        //Metodo para guardar cambios realizados en el perfil
         private void btnGuardarCambios_Click(object sender, EventArgs e)
         {
             if (ValidarDatos()) //Compruebo que todos los datos son validos

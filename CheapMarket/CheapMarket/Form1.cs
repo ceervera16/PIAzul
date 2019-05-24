@@ -29,6 +29,7 @@ namespace CheapMarket
             this.Hide();
         }
 
+        //Boton para hacer visible/invisible la contraseña
         private void btnPassword_Click(object sender, EventArgs e)
         {        
             if (pass)
