@@ -43,12 +43,13 @@
             this.btnPagina = new System.Windows.Forms.PictureBox();
             this.btnContacto = new System.Windows.Forms.PictureBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.dtgProductos = new System.Windows.Forms.DataGridView();
             this.cmbFiltrar = new System.Windows.Forms.ComboBox();
             this.lblFiltos = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.btnEliminarFiltros = new System.Windows.Forms.Button();
+            this.dtgProductos = new System.Windows.Forms.DataGridView();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTwitter)).BeginInit();
@@ -211,30 +212,22 @@
             this.txtCodigo.Size = new System.Drawing.Size(167, 37);
             this.txtCodigo.TabIndex = 69;
             // 
-            // dtgProductos
-            // 
-            this.dtgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgProductos.Location = new System.Drawing.Point(202, 93);
-            this.dtgProductos.Name = "dtgProductos";
-            this.dtgProductos.Size = new System.Drawing.Size(527, 280);
-            this.dtgProductos.TabIndex = 71;
-            // 
             // cmbFiltrar
             // 
             this.cmbFiltrar.FormattingEnabled = true;
             this.cmbFiltrar.Items.AddRange(new object[] {
             "BEBIDAS",
-            "CARNICERÍA",
-            "PESCADERÍA",
-            "FRUTERÍA",
-            "VERDULERÍA",
+            "CARNICERIA",
+            "PESCADERIA",
+            "FRUTERIA",
+            "VERDULERIA",
             "FIAMBRES",
             "COMIDAS PREPARADAS",
             "HELADOS",
             "HOGAR",
             "HIGIENE",
             "SNACKS",
-            "PANADERÍA"});
+            "PANADERIA"});
             this.cmbFiltrar.Location = new System.Drawing.Point(9, 238);
             this.cmbFiltrar.Name = "cmbFiltrar";
             this.cmbFiltrar.Size = new System.Drawing.Size(180, 21);
@@ -275,11 +268,31 @@
             this.btnEliminarFiltros.UseVisualStyleBackColor = true;
             this.btnEliminarFiltros.Click += new System.EventHandler(this.btnEliminarFiltros_Click);
             // 
+            // dtgProductos
+            // 
+            this.dtgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgProductos.Location = new System.Drawing.Point(202, 93);
+            this.dtgProductos.Name = "dtgProductos";
+            this.dtgProductos.Size = new System.Drawing.Size(527, 280);
+            this.dtgProductos.TabIndex = 71;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 20F);
+            this.btnSalir.Location = new System.Drawing.Point(502, 379);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(87, 47);
+            this.btnSalir.TabIndex = 101;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // EliminarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 438);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminarFiltros);
             this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.lblFiltos);
@@ -327,11 +340,12 @@
         private System.Windows.Forms.PictureBox btnContacto;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.DataGridView dtgProductos;
         private System.Windows.Forms.ComboBox cmbFiltrar;
         private System.Windows.Forms.Label lblFiltos;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnFiltrar;
         private System.Windows.Forms.Button btnEliminarFiltros;
+        private System.Windows.Forms.DataGridView dtgProductos;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

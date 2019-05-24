@@ -96,5 +96,10 @@ namespace CheapMarket
             categorias.Comentario = "Invitado";
             categorias.Show();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

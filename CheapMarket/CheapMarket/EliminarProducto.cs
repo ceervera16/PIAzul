@@ -12,6 +12,8 @@ namespace CheapMarket
 {
     public partial class EliminarProducto : Form
     {
+
+        ConexionBD conexion = new ConexionBD();
         public EliminarProducto()
         {
             InitializeComponent();
@@ -19,12 +21,11 @@ namespace CheapMarket
             if (ConexionBD.AbrirConexion())
             {
                 List<Productos> productos = new List<Productos>();
-                string consulta = string.Format("SELECT * FROM Productos");
+                string consulta = string.Format("SELECT Codigo,Nombre,Precio,Categoria,Descripcion,Informacion FROM producto");
                 productos = Administrador.BuscarProducto(ConexionBD.Conexion, consulta);
                 dtgProductos.DataSource = productos;
                 ConexionBD.CerrarConexion();
             }
-            
         }
 
         private void lblIntro_Click(object sender, EventArgs e)
@@ -34,44 +35,34 @@ namespace CheapMarket
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            
-           
             if (dtgProductos.SelectedRows.Count == 1)
             {
                 int codigo = (int)dtgProductos.CurrentRow.Cells[0].Value;
 
-                DialogResult eliminacion = MessageBox.Show("¿Estas seguro que quieres borrar?",
-                                                "Eliminación", MessageBoxButtons.YesNo);
+                DialogResult eliminacion = MessageBox.Show("Eliminar producto?, se eliminará este producto de todos los carritos", "Eliminar", MessageBoxButtons.YesNo);
 
                 if (eliminacion == DialogResult.Yes)
                 {
-                        if (ConexionBD.AbrirConexion())
-                        {
-                            Administrador admin = new Administrador();
-                            int resultado = admin.BorrarProducto(ConexionBD.Conexion, codigo);
-                            if (resultado>0)
-                            {
-                                MessageBox.Show("Se ha eliminado el producto");
-                            }
-                            else
-                            {
-                                MessageBox.Show("No se ha eliminado el producto");
-                            }
-                            ConexionBD.CerrarConexion();
-                        }
-                        else
-                        {
-                            MessageBox.Show("No se puede abrir la Base de Datos");
-                        }
+                    if (ConexionBD.AbrirConexion())
+                    {
+                        Administrador admin = new Administrador();
+                        int resultado = admin.BorrarProducto(ConexionBD.Conexion, codigo);
+                        MessageBox.Show("Se ha eliminado el producto");
+                        ConexionBD.CerrarConexion();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se puede abrir la Base de Datos");
                     }
                 }
-                else
-                {
-                DialogResult respuesta = MessageBox.Show("Eliminar producto?, se eliminará este producto de todos los carritos temporales", "Eliminar", MessageBoxButtons.YesNo);
+            }
+            else
+            {
+                DialogResult respuesta = MessageBox.Show("Eliminar producto?, se eliminará este producto de todos los carritos", "Eliminar", MessageBoxButtons.YesNo);
                 if (respuesta == DialogResult.Yes)
                 {
                     Administrador admin = new Administrador();
-                    int codigo;
+                    int codigo = 0;
                     bool ok = false;
                     try
                     {
@@ -81,35 +72,35 @@ namespace CheapMarket
                     catch (Exception)
                     {
 
-                        throw;
+
                     }
 
                     if (ok)
                     {
-                        int exito = admin.BorrarProducto(ConexionBD.Conexion, codigo);
-                        if (exito > 0)
+                        if (ConexionBD.AbrirConexion())
                         {
-                            MessageBox.Show("Producto eliminado");
+                            int exito = admin.BorrarProducto(ConexionBD.Conexion, codigo);
+                            if (exito > 0)
+                            {
+                                MessageBox.Show("Producto eliminado");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Producto no encontrado");
+                            }
+                            ConexionBD.CerrarConexion();
                         }
                         else
                         {
-                            MessageBox.Show("Producto no encontrado");
+                            MessageBox.Show("No se ha podido abrir la conexión con la base de datos");
                         }
                     }
                     else
                     {
                         MessageBox.Show("Código incorrecto");
                     }
-
                 }
             }
-
-            
-            
-                
-            
-            
-
         }
 
         private void EliminarProducto_Load(object sender, EventArgs e)
@@ -129,14 +120,16 @@ namespace CheapMarket
                 if (cmbFiltrar.Text != "")
                 {
                     List<Productos> productos = new List<Productos>();
-                    string consulta = string.Format("Select * from Productos WHERE categoria like '{0}'", cmbFiltrar.Text);
+                    string consulta = string.Format("Select * from producto WHERE categoria like '{0}'", cmbFiltrar.Text);
                     productos = Administrador.BuscarProducto(ConexionBD.Conexion, consulta);
                     dtgProductos.DataSource = productos;
                 }
                 ConexionBD.CerrarConexion();
             }
-            
-            
+            else
+            {
+                MessageBox.Show("No se ha podido abrir la conexión con la base de datos");
+            }
         }
 
         private void btnEliminarFiltros_Click(object sender, EventArgs e)
@@ -144,9 +137,13 @@ namespace CheapMarket
             if (ConexionBD.AbrirConexion())
             {
                 List<Productos> productos = new List<Productos>();
-                string consulta = string.Format("Select * from Productos");
+                string consulta = string.Format("Select * from producto");
                 productos = Administrador.BuscarProducto(ConexionBD.Conexion, consulta);
                 dtgProductos.DataSource = productos;
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido abrir la conexión con la base de datos");
             }
             ConexionBD.CerrarConexion();
         }
@@ -154,6 +151,16 @@ namespace CheapMarket
         private void lblFiltos_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Salir del fromulario?", "Salir", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+                this.Dispose();
+            }
         }
     }
 }

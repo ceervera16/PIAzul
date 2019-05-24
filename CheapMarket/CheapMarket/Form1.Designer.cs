@@ -198,7 +198,7 @@
             // 
             this.pcbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogo.Image")));
             this.pcbLogo.Location = new System.Drawing.Point(13, -18);
-            this.pcbLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbLogo.Margin = new System.Windows.Forms.Padding(2);
             this.pcbLogo.Name = "pcbLogo";
             this.pcbLogo.Size = new System.Drawing.Size(166, 172);
             this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -210,7 +210,7 @@
             this.btnTwitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnTwitter.Image = ((System.Drawing.Image)(resources.GetObject("btnTwitter.Image")));
             this.btnTwitter.Location = new System.Drawing.Point(257, 5);
-            this.btnTwitter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTwitter.Margin = new System.Windows.Forms.Padding(2);
             this.btnTwitter.Name = "btnTwitter";
             this.btnTwitter.Size = new System.Drawing.Size(43, 42);
             this.btnTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -222,7 +222,7 @@
             this.btnInstagram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnInstagram.Image = ((System.Drawing.Image)(resources.GetObject("btnInstagram.Image")));
             this.btnInstagram.Location = new System.Drawing.Point(319, 5);
-            this.btnInstagram.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInstagram.Margin = new System.Windows.Forms.Padding(2);
             this.btnInstagram.Name = "btnInstagram";
             this.btnInstagram.Size = new System.Drawing.Size(43, 42);
             this.btnInstagram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -234,7 +234,7 @@
             this.btnPagina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnPagina.Image = ((System.Drawing.Image)(resources.GetObject("btnPagina.Image")));
             this.btnPagina.Location = new System.Drawing.Point(194, 5);
-            this.btnPagina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPagina.Margin = new System.Windows.Forms.Padding(2);
             this.btnPagina.Name = "btnPagina";
             this.btnPagina.Size = new System.Drawing.Size(43, 42);
             this.btnPagina.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -245,7 +245,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.panel1.Location = new System.Drawing.Point(182, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(560, 54);
             this.panel1.TabIndex = 20;
@@ -263,7 +263,7 @@
             this.btnPassword.BackColor = System.Drawing.Color.SeaShell;
             this.btnPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnPassword.Image")));
             this.btnPassword.Location = new System.Drawing.Point(549, 225);
-            this.btnPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPassword.Margin = new System.Windows.Forms.Padding(2);
             this.btnPassword.Name = "btnPassword";
             this.btnPassword.Size = new System.Drawing.Size(35, 34);
             this.btnPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -346,6 +346,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnContacto)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

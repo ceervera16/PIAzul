@@ -24,18 +24,20 @@ namespace CheapMarket
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-            Administracion admi = new Administracion();
-            admi.ShowDialog();
+            AñadirProducto add = new AñadirProducto();
+            add.ShowDialog();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-
+            EditarProducto editar = new EditarProducto();
+            editar.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            EliminarProducto elim = new EliminarProducto();
+            elim.ShowDialog();
         }
     }
 }

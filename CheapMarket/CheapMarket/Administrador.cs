@@ -43,15 +43,15 @@ namespace CheapMarket
         public int AgregarProducto(MySqlConnection conexion, Productos prod)
         {
             string consulta;
-            if (prod.Info=="")
+            if (prod.Info == "" || prod.Info == null)
             {
-                consulta = string.Format("INSERT INTO productos(Codigo,Nombre,Precio,Descripcion,Categoria" +
-                "VALUES ('{0}','{1}','{2}','{3}','{4}','{5}'", prod.Codigo, prod.Nombre, prod.Precio, prod.Descripcion, prod.Categoria);
+                consulta = string.Format("INSERT INTO producto (Codigo, Nombre, Precio, Descripcion, Categoria, Imagen) " +
+                "VALUES ('{0}','{1}','{2}','{3}','{4}','{5}');", prod.Codigo, prod.Nombre, prod.Precio, prod.Descripcion, prod.Categoria,prod.Foto);
             }
             else
             {
-                consulta = string.Format("INSERT INTO productos(Codigo,Nombre,Precio,Descripcion,Categoria,InformacionNutritiva" +
-                "VALUES ('{0}','{1}','{2}','{3}','{4}','{5}'", prod.Codigo, prod.Nombre, prod.Precio, prod.Descripcion, prod.Categoria, prod.Info);
+                consulta = string.Format("INSERT INTO producto (Codigo,Nombre,Precio,Descripcion,Categoria,Informacion,Imagen) " +
+                "VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}');", prod.Codigo, prod.Nombre, prod.Precio, prod.Descripcion, prod.Categoria, prod.Info, prod.Foto);
             }
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             return comando.ExecuteNonQuery();
@@ -67,8 +67,8 @@ namespace CheapMarket
         {
             string consultaProducto;
             string consultaCarrito;
-            consultaProducto = string.Format("DELETE FROM productos WHERE codigo = '{0}'",codigo);
-            consultaCarrito = string.Format("DELETE FROM CarritoTemporal WHERE codigo = '{0}'", codigo);
+            consultaProducto = string.Format("DELETE FROM producto WHERE codigo = '{0}';",codigo);
+            consultaCarrito = string.Format("DELETE FROM CarritoTemporal WHERE codigo = '{0}';", codigo);
             MySqlCommand comandoProducto = new MySqlCommand(consultaProducto, conexion);
             MySqlCommand comandoCarrito = new MySqlCommand(consultaProducto, conexion);
             comandoProducto.ExecuteNonQuery();
@@ -89,16 +89,32 @@ namespace CheapMarket
         public int EditarProducto(MySqlConnection conexion, int codigo, string nombre, double precio, string descripcion, string categoria, string informacionNutritiva)
         {
             string consulta;
-            if (informacionNutritiva=="")
-            {
-                consulta = string.Format("ALTER TABLE productos SET Nombre='{0}',Precio='{1}',Descripcion='{2}',Categoria='{3}'", nombre,
-                precio, descripcion, categoria);
-            }
-            else
-            {
-                consulta = string.Format("UPDATE productos SET Nombre='{0}',Precio='{1}',Descripcion='{2}',Categoria='{3}',InformacionNutritiva='{4}'", nombre,
-                precio, descripcion, categoria, informacionNutritiva);
-            }
+            
+            consulta = string.Format("UPDATE producto SET Nombre='{0}',Precio='{1}',Descripcion='{2}',Categoria='{3}',Informacion='{4}' WHERE Codigo='{5}';", nombre,
+            precio, descripcion, categoria, informacionNutritiva, codigo);
+            
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            return comando.ExecuteNonQuery();
+        }
+
+        /// <summary>
+        /// Edita la información de un producto de la base de datos
+        /// </summary>
+        /// <param name="conexion">Conexión con la base de datos</param>
+        /// <param name="codigo">Código del producto</param>
+        /// <param name="nombre">Nuevo nombre del producto</param>
+        /// <param name="precio">Nuevo precio del producto</param>
+        /// <param name="descripcion">Nueva descripcion del producto</param>
+        /// <param name="categoria">Nueva categoria del producto</param>
+        /// <param name="informacionNutritiva">Nueva informacionNutritiva del producto</param>
+        /// <returns>Número de registros afectados</returns>
+        public int EditarProducto(MySqlConnection conexion, int codigo, string nombre, double precio, string descripcion, string categoria)
+        {
+            string consulta;
+
+            consulta = string.Format("UPDATE producto SET Nombre='{0}',Precio='{1}',Descripcion='{2}',Categoria='{3}' WHERE Codigo='{4}';", nombre,
+            precio, descripcion, categoria, codigo);
+
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             return comando.ExecuteNonQuery();
         }
@@ -121,11 +137,19 @@ namespace CheapMarket
             {
                 while (reader.Read())
                 {
-                    Productos p = new Productos();
-                    p.Codigo = reader.GetInt32(0);
-                    p.Nombre = reader.GetString(1);
-                    p.Categoria = reader.GetString(3);
-                    lista.Add(p);
+                    Productos prod = new Productos();
+                    prod.Codigo = reader.GetInt32(0);
+                    prod.Nombre = reader.GetString(1);
+                    prod.Precio = reader.GetDouble(2);
+                    prod.Categoria = reader.GetString(3);
+                    prod.Descripcion = reader.GetString(4);
+                    try
+                    {
+                        prod.Info = reader.GetString(5);
+                    }
+                    catch (Exception)
+                    { }
+                    lista.Add(prod);
                 }
             }
             reader.Close();

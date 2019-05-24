@@ -48,18 +48,19 @@
             this.lblInformacionNutritiva = new System.Windows.Forms.Label();
             this.txtInformacionNutritiva = new System.Windows.Forms.TextBox();
             this.lblCategoria = new System.Windows.Forms.Label();
-            this.txtCategoria = new System.Windows.Forms.TextBox();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.dtgProductos = new System.Windows.Forms.DataGridView();
             this.btnEliminarFiltros = new System.Windows.Forms.Button();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.lblFiltos = new System.Windows.Forms.Label();
             this.cmbFiltrar = new System.Windows.Forms.ComboBox();
+            this.dtgProductos = new System.Windows.Forms.DataGridView();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTwitter)).BeginInit();
@@ -276,15 +277,6 @@
             this.lblCategoria.Text = "Categoría:";
             this.lblCategoria.Visible = false;
             // 
-            // txtCategoria
-            // 
-            this.txtCategoria.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCategoria.Location = new System.Drawing.Point(257, 252);
-            this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(323, 37);
-            this.txtCategoria.TabIndex = 86;
-            this.txtCategoria.Visible = false;
-            // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
@@ -341,21 +333,13 @@
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 20F);
-            this.btnVolver.Location = new System.Drawing.Point(12, 379);
+            this.btnVolver.Location = new System.Drawing.Point(103, 382);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(134, 47);
             this.btnVolver.TabIndex = 93;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
-            // dtgProductos
-            // 
-            this.dtgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgProductos.Location = new System.Drawing.Point(209, 163);
-            this.dtgProductos.Name = "dtgProductos";
-            this.dtgProductos.Size = new System.Drawing.Size(518, 190);
-            this.dtgProductos.TabIndex = 94;
             // 
             // btnEliminarFiltros
             // 
@@ -366,6 +350,7 @@
             this.btnEliminarFiltros.TabIndex = 98;
             this.btnEliminarFiltros.Text = "Eliminar filtros";
             this.btnEliminarFiltros.UseVisualStyleBackColor = true;
+            this.btnEliminarFiltros.Click += new System.EventHandler(this.btnEliminarFiltros_Click_1);
             // 
             // btnFiltrar
             // 
@@ -394,21 +379,62 @@
             this.cmbFiltrar.FormattingEnabled = true;
             this.cmbFiltrar.Items.AddRange(new object[] {
             "BEBIDAS",
-            "CARNICERÍA",
-            "PESCADERÍA",
-            "FRUTERÍA",
-            "VERDULERÍA",
+            "CARNICERIA",
+            "PESCADERIA",
+            "FRUTERIA",
+            "VERDULERIA",
             "FIAMBRES",
             "COMIDAS PREPARADAS",
             "HELADOS",
             "HOGAR",
             "HIGIENE",
             "SNACKS",
-            "PANADERÍA"});
+            "PANADERIA"});
             this.cmbFiltrar.Location = new System.Drawing.Point(9, 250);
             this.cmbFiltrar.Name = "cmbFiltrar";
             this.cmbFiltrar.Size = new System.Drawing.Size(180, 21);
             this.cmbFiltrar.TabIndex = 95;
+            // 
+            // dtgProductos
+            // 
+            this.dtgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgProductos.Location = new System.Drawing.Point(209, 163);
+            this.dtgProductos.Name = "dtgProductos";
+            this.dtgProductos.Size = new System.Drawing.Size(518, 190);
+            this.dtgProductos.TabIndex = 94;
+            // 
+            // cmbCategoria
+            // 
+            this.cmbCategoria.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Items.AddRange(new object[] {
+            "BEBIDAS",
+            "CARNICERIA",
+            "PESCADERIA",
+            "FRUTERIA",
+            "VERDULERIA",
+            "FIAMBRES",
+            "COMIDAS PREPARADAS",
+            "HELADOS",
+            "HOGAR",
+            "HIGIENE",
+            "SNACKS",
+            "PANADERIA"});
+            this.cmbCategoria.Location = new System.Drawing.Point(257, 250);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(323, 38);
+            this.cmbCategoria.TabIndex = 99;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 20F);
+            this.btnSalir.Location = new System.Drawing.Point(12, 382);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(87, 47);
+            this.btnSalir.TabIndex = 100;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // EditarProducto
             // 
@@ -416,6 +442,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(741, 438);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.cmbCategoria);
             this.Controls.Add(this.btnEliminarFiltros);
             this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.lblFiltos);
@@ -428,7 +456,6 @@
             this.Controls.Add(this.lblInformacionNutritiva);
             this.Controls.Add(this.txtInformacionNutritiva);
             this.Controls.Add(this.lblCategoria);
-            this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.lblNombre);
@@ -481,17 +508,18 @@
         private System.Windows.Forms.Label lblInformacionNutritiva;
         private System.Windows.Forms.TextBox txtInformacionNutritiva;
         private System.Windows.Forms.Label lblCategoria;
-        private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnVolver;
-        private System.Windows.Forms.DataGridView dtgProductos;
         private System.Windows.Forms.Button btnEliminarFiltros;
         private System.Windows.Forms.Button btnFiltrar;
         private System.Windows.Forms.Label lblFiltos;
         private System.Windows.Forms.ComboBox cmbFiltrar;
+        private System.Windows.Forms.DataGridView dtgProductos;
+        private System.Windows.Forms.ComboBox cmbCategoria;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
