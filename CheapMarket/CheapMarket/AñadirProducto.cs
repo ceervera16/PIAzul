@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using CheapMarket.Recursos;
+using System.Globalization;
+using System.Threading;
 
 namespace CheapMarket
 {
@@ -22,6 +25,23 @@ namespace CheapMarket
 
         private void AñadirProducto_Load(object sender, EventArgs e)
         {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(Idioma.idioma);
+            AplicarIdioma();
+        }
+        private void AplicarIdioma()
+        {
+            label3.Text = CheapMarket.Recursos.StringRecursos.Supermercado;
+            lblIntro.Text = CheapMarket.Recursos.StringRecursos.Añadir_producto;
+            btnInsertar.Text = CheapMarket.Recursos.StringRecursos.Insertar;
+            lblPregunta.Text = CheapMarket.Recursos.StringRecursos.Tienes_dudas_Llamanos;
+            lblNombre.Text = CheapMarket.Recursos.StringRecursos.Nombre_dospuntitos;
+            lblPrecio.Text = CheapMarket.Recursos.StringRecursos.Precio;
+            lblCategoria.Text = CheapMarket.Recursos.StringRecursos.Categoría;
+            lblDescripcion.Text = CheapMarket.Recursos.StringRecursos.Descripción;
+            lblInformacionNutritiva.Text = CheapMarket.Recursos.StringRecursos.Información_nutritiva;
+            btnSubirFoto.Text = CheapMarket.Recursos.StringRecursos.Cargar_imagen;
+            btnSalir.Text = CheapMarket.Recursos.StringRecursos.Salir;
+            btnInsertar.Text = CheapMarket.Recursos.StringRecursos.Insertar;
 
         }
 

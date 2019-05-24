@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CheapMarket.Recursos;
+using System.Globalization;
+using System.Threading;
 
 namespace CheapMarket
 {
@@ -30,6 +33,29 @@ namespace CheapMarket
         private void Perfil_Load(object sender, EventArgs e)
         {
             CargarDatos();
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(Idioma.idioma);
+            AplicarIdioma();
+        }
+        private void AplicarIdioma()
+        {
+            label8.Text = Recursos.StringRecursos.Supermercado;
+            label1.Text = Recursos.StringRecursos.Datos_Personales;
+            label7.Text = Recursos.StringRecursos.Direccion_entrega;
+            lblPregunta.Text = Recursos.StringRecursos.Tienes_dudas_Llamanos;
+            button1.Text = Recursos.StringRecursos.Cerrar_sesion;
+            lblNombre.Text = Recursos.StringRecursos.Nombre;
+            lblApellidos.Text = Recursos.StringRecursos.Apellidos;
+            lblCorreo.Text = Recursos.StringRecursos.Correo_Electrónico;
+            lblContraseña.Text = Recursos.StringRecursos.Contraseña;
+            lblRepetirContraseña.Text = Recursos.StringRecursos.Repetir_Contraseña;
+            label6.Text = Recursos.StringRecursos.Direccion;
+            label5.Text = Recursos.StringRecursos.Num_Piso_Puerta;
+            label4.Text = Recursos.StringRecursos.Provincia;
+            label3.Text = Recursos.StringRecursos.Localidad;
+            label2.Text = Recursos.StringRecursos.Codigo_Postal;
+            lblTelefono.Text = Recursos.StringRecursos.Telefono;
+            btnGuardarCambios.Text = Recursos.StringRecursos.Guardar_cambios;
+
         }
 
         //Metodos

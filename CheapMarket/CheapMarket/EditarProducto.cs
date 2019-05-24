@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using CheapMarket.Recursos;
+using System.Globalization;
+using System.Threading;
 
 
 namespace CheapMarket
@@ -33,7 +36,25 @@ namespace CheapMarket
 
         private void EditarProducto_Load(object sender, EventArgs e)
         {
-
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(Idioma.idioma);
+            AplicarIdioma();
+        }
+        private void AplicarIdioma()
+        {
+            label3.Text = CheapMarket.Recursos.StringRecursos.Supermercado;
+            lblIntro.Text = CheapMarket.Recursos.StringRecursos.Editar_Producto;
+            lblFiltos.Text = CheapMarket.Recursos.StringRecursos.Filtros_dospuntitos;
+            btnEliminarFiltros.Text = CheapMarket.Recursos.StringRecursos.Eliminar_filtros;
+            btnFiltrar.Text = CheapMarket.Recursos.StringRecursos.Filtrar;
+            lblPregunta.Text = CheapMarket.Recursos.StringRecursos.Tienes_dudas_Llamanos;
+            lblNombre.Text = CheapMarket.Recursos.StringRecursos.Nombre_dospuntitos;
+            lblPrecio.Text = CheapMarket.Recursos.StringRecursos.Precio;
+            lblCategoria.Text = CheapMarket.Recursos.StringRecursos.Categoría;
+            lblDescripcion.Text = CheapMarket.Recursos.StringRecursos.Descripción;
+            lblInformacionNutritiva.Text = CheapMarket.Recursos.StringRecursos.Información_nutritiva;
+            btnVolver.Text = CheapMarket.Recursos.StringRecursos.Volver;
+            btnSalir.Text = CheapMarket.Recursos.StringRecursos.Salir;
+            btnBuscar.Text = CheapMarket.Recursos.StringRecursos.Buscar;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

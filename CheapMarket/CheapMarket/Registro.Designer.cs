@@ -126,7 +126,7 @@
             this.gBoxDatos.Controls.Add(this.lblNombre);
             this.gBoxDatos.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBoxDatos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.gBoxDatos.Location = new System.Drawing.Point(293, 186);
+            this.gBoxDatos.Location = new System.Drawing.Point(292, 186);
             this.gBoxDatos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gBoxDatos.Name = "gBoxDatos";
             this.gBoxDatos.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -213,7 +213,7 @@
             // lblContraseña
             // 
             this.lblContraseña.AutoSize = true;
-            this.lblContraseña.Location = new System.Drawing.Point(9, 364);
+            this.lblContraseña.Location = new System.Drawing.Point(9, 365);
             this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(132, 31);
@@ -255,7 +255,7 @@
             this.lblVolver.AutoSize = true;
             this.lblVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVolver.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblVolver.Location = new System.Drawing.Point(649, 5);
+            this.lblVolver.Location = new System.Drawing.Point(650, 5);
             this.lblVolver.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVolver.Name = "lblVolver";
             this.lblVolver.Size = new System.Drawing.Size(214, 29);
@@ -280,7 +280,7 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Location = new System.Drawing.Point(697, 186);
+            this.groupBox1.Location = new System.Drawing.Point(698, 186);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -291,7 +291,7 @@
             // txtPuerta
             // 
             this.txtPuerta.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPuerta.Location = new System.Drawing.Point(305, 146);
+            this.txtPuerta.Location = new System.Drawing.Point(304, 146);
             this.txtPuerta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPuerta.Name = "txtPuerta";
             this.txtPuerta.Size = new System.Drawing.Size(80, 34);
@@ -300,7 +300,7 @@
             // txtPiso
             // 
             this.txtPiso.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPiso.Location = new System.Drawing.Point(175, 146);
+            this.txtPiso.Location = new System.Drawing.Point(176, 146);
             this.txtPiso.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPiso.Name = "txtPiso";
             this.txtPiso.Size = new System.Drawing.Size(80, 34);
@@ -373,7 +373,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 364);
+            this.label2.Location = new System.Drawing.Point(39, 365);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 31);
@@ -492,7 +492,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(285, 321);
+            this.panel3.Size = new System.Drawing.Size(285, 322);
             this.panel3.TabIndex = 35;
             // 
             // label7
@@ -500,7 +500,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(66, 279);
+            this.label7.Location = new System.Drawing.Point(66, 278);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(141, 21);
@@ -512,7 +512,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(49, 239);
+            this.label8.Location = new System.Drawing.Point(50, 238);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(174, 28);
@@ -522,9 +522,9 @@
             // pcbLogo
             // 
             this.pcbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogo.Image")));
-            this.pcbLogo.Location = new System.Drawing.Point(19, -28);
+            this.pcbLogo.Location = new System.Drawing.Point(20, -28);
             this.pcbLogo.Name = "pcbLogo";
-            this.pcbLogo.Size = new System.Drawing.Size(249, 264);
+            this.pcbLogo.Size = new System.Drawing.Size(249, 265);
             this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbLogo.TabIndex = 8;
             this.pcbLogo.TabStop = false;
@@ -537,18 +537,18 @@
             this.panel1.Controls.Add(this.btnInstagram);
             this.panel1.Controls.Add(this.btnVolver);
             this.panel1.Controls.Add(this.btnPagina);
-            this.panel1.Location = new System.Drawing.Point(274, -1);
+            this.panel1.Location = new System.Drawing.Point(274, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(867, 90);
+            this.panel1.Size = new System.Drawing.Size(867, 89);
             this.panel1.TabIndex = 36;
             // 
             // btnTwitter
             // 
             this.btnTwitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnTwitter.Image = ((System.Drawing.Image)(resources.GetObject("btnTwitter.Image")));
-            this.btnTwitter.Location = new System.Drawing.Point(112, 10);
+            this.btnTwitter.Location = new System.Drawing.Point(112, 9);
             this.btnTwitter.Name = "btnTwitter";
-            this.btnTwitter.Size = new System.Drawing.Size(65, 65);
+            this.btnTwitter.Size = new System.Drawing.Size(64, 65);
             this.btnTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnTwitter.TabIndex = 39;
             this.btnTwitter.TabStop = false;
@@ -558,9 +558,9 @@
             // 
             this.btnInstagram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnInstagram.Image = ((System.Drawing.Image)(resources.GetObject("btnInstagram.Image")));
-            this.btnInstagram.Location = new System.Drawing.Point(206, 10);
+            this.btnInstagram.Location = new System.Drawing.Point(206, 9);
             this.btnInstagram.Name = "btnInstagram";
-            this.btnInstagram.Size = new System.Drawing.Size(65, 65);
+            this.btnInstagram.Size = new System.Drawing.Size(64, 65);
             this.btnInstagram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnInstagram.TabIndex = 38;
             this.btnInstagram.TabStop = false;
@@ -570,9 +570,9 @@
             // 
             this.btnPagina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnPagina.Image = ((System.Drawing.Image)(resources.GetObject("btnPagina.Image")));
-            this.btnPagina.Location = new System.Drawing.Point(18, 10);
+            this.btnPagina.Location = new System.Drawing.Point(18, 9);
             this.btnPagina.Name = "btnPagina";
-            this.btnPagina.Size = new System.Drawing.Size(65, 65);
+            this.btnPagina.Size = new System.Drawing.Size(64, 65);
             this.btnPagina.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnPagina.TabIndex = 37;
             this.btnPagina.TabStop = false;
@@ -585,13 +585,14 @@
             this.comboBoxIdioma.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
             this.comboBoxIdioma.FormattingEnabled = true;
             this.comboBoxIdioma.Items.AddRange(new object[] {
-            "¡Welcome!",
+            "Welcome!",
             "¡Bienvenido!"});
-            this.comboBoxIdioma.Location = new System.Drawing.Point(947, 105);
+            this.comboBoxIdioma.Location = new System.Drawing.Point(946, 105);
             this.comboBoxIdioma.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxIdioma.Name = "comboBoxIdioma";
             this.comboBoxIdioma.Size = new System.Drawing.Size(180, 36);
             this.comboBoxIdioma.TabIndex = 40;
+            this.comboBoxIdioma.SelectedIndexChanged += new System.EventHandler(this.comboBoxIdioma_SelectedIndexChanged);
             // 
             // errorProvider1
             // 
@@ -603,7 +604,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.SeaShell;
-            this.ClientSize = new System.Drawing.Size(1140, 818);
+            this.ClientSize = new System.Drawing.Size(1140, 813);
             this.Controls.Add(this.comboBoxIdioma);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
@@ -622,6 +623,7 @@
             this.Name = "Registro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
+            this.Load += new System.EventHandler(this.Registro_Load);
             this.gBoxDatos.ResumeLayout(false);
             this.gBoxDatos.PerformLayout();
             this.groupBox1.ResumeLayout(false);

@@ -7,6 +7,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CheapMarket.Recursos;
+using System.Globalization;
+using System.Threading;
+
 using System.Windows.Forms;
 
 namespace CheapMarket
@@ -203,5 +207,30 @@ namespace CheapMarket
         {
             Process.Start("https://www.instagram.com/CheapMarket_1/");
         }
+
+        private void Categorias_Load(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(Idioma.idioma);
+            AplicarIdioma();
+        }
+        private void AplicarIdioma()
+        {
+            label3.Text = Recursos.StringRecursos.Supermercado;
+            lblPescaderia.Text = Recursos.StringRecursos.Pescadería;
+            lblFruteria.Text = Recursos.StringRecursos.Frutería;
+            lblCarniceria.Text = Recursos.StringRecursos.Carnicería;
+            lblPanaderia.Text = Recursos.StringRecursos.Panadería;
+            lblVerduleria.Text = Recursos.StringRecursos.Verdulería;
+            lblFiambres.Text = Recursos.StringRecursos.Fiambres;
+            lblHelados.Text = Recursos.StringRecursos.Helados;
+            lblBebidas.Text = Recursos.StringRecursos.Bebidas;
+            lblPreparadas.Text = Recursos.StringRecursos.Comidas_Preparadas;
+            lblPanaderia.Text = Recursos.StringRecursos.Panadería;
+            lbSnacks.Text = Recursos.StringRecursos.Snacks;
+            lblHigiene.Text = Recursos.StringRecursos.Higiene;
+            lblHogar.Text = Recursos.StringRecursos.Hogar;
+
+        }
+
     }
 }

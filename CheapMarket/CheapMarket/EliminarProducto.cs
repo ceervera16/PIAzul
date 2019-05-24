@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CheapMarket.Recursos;
+using System.Globalization;
+using System.Threading;
 
 namespace CheapMarket
 {
@@ -105,7 +108,21 @@ namespace CheapMarket
 
         private void EliminarProducto_Load(object sender, EventArgs e)
         {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(Idioma.idioma);
+            AplicarIdioma();
 
+        }
+        private void AplicarIdioma()
+        {
+            label3.Text = CheapMarket.Recursos.StringRecursos.Supermercado;
+            lblIntro.Text = CheapMarket.Recursos.StringRecursos.Eliminar_Producto;
+            btnEliminar.Text = CheapMarket.Recursos.StringRecursos.Eliminar;
+            lblPregunta.Text = CheapMarket.Recursos.StringRecursos.Tienes_dudas_Llamanos;
+            lblCodigo.Text = CheapMarket.Recursos.StringRecursos.Código;
+            lblFiltos.Text = CheapMarket.Recursos.StringRecursos.Filtros_dospuntitos;
+            btnEliminarFiltros.Text = CheapMarket.Recursos.StringRecursos.Eliminar_filtros;
+            btnFiltrar.Text = CheapMarket.Recursos.StringRecursos.Filtrar;
+            btnSalir.Text = CheapMarket.Recursos.StringRecursos.Salir;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

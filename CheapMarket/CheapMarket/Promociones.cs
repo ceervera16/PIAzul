@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CheapMarket.Recursos;
+using System.Globalization;
+using System.Threading;
 
 namespace CheapMarket
 {
@@ -109,6 +112,28 @@ namespace CheapMarket
         private void btnInstagram_Click(object sender, EventArgs e)
         {
             Process.Start("https://www.instagram.com/CheapMarket_1/");
+        }
+
+        private void Promociones_Load(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(Idioma.idioma);
+            AplicarIdioma();
+        }
+
+        private void AplicarIdioma()
+        {
+            label3.Text = CheapMarket.Recursos.StringRecursos.Supermercado;
+            label10.Text = CheapMarket.Recursos.StringRecursos.Promociones;
+            label4.Text = CheapMarket.Recursos.StringRecursos.Envío_Gratis;
+            label7.Text = CheapMarket.Recursos.StringRecursos.diezporciento_descuento;
+            label9.Text = CheapMarket.Recursos.StringRecursos.cincoeuros_descuento;
+            label5.Text = CheapMarket.Recursos.StringRecursos.cuatromil_puntos;
+            label6.Text = CheapMarket.Recursos.StringRecursos.milsetecientos_puntos;
+            label8.Text = CheapMarket.Recursos.StringRecursos.dosmilquinientos_puntos;
+            btnCanjear1.Text = CheapMarket.Recursos.StringRecursos.Canjear;
+            btnCanjear2.Text = CheapMarket.Recursos.StringRecursos.Canjear;
+            btnCanjear3.Text = CheapMarket.Recursos.StringRecursos.Canjear;
+            label11.Text = CheapMarket.Recursos.StringRecursos.Puntos;
         }
     }
 }

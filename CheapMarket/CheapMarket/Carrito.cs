@@ -10,6 +10,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CheapMarket.Recursos;
+using System.Globalization;
+using System.Threading;
 
 namespace CheapMarket
 {
@@ -32,6 +35,32 @@ namespace CheapMarket
         {
             CargarCarrito();
             ImporteTotal();
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(Idioma.idioma);
+            AplicarIdioma();
+        }
+        private void AplicarIdioma()
+        {
+            // BOTONES LATERAL IZQUIERDO
+            btnCarniceria.Text = CheapMarket.Recursos.StringRecursos.Carnicería;
+            btnPescaderia.Text = CheapMarket.Recursos.StringRecursos.Pescadería;
+            btnFruteria.Text = CheapMarket.Recursos.StringRecursos.Frutería;
+            btnVerduleria.Text = CheapMarket.Recursos.StringRecursos.Verdulería;
+            btnFiambres.Text = CheapMarket.Recursos.StringRecursos.Fiambres;
+            btnHelados.Text = CheapMarket.Recursos.StringRecursos.Helados;
+            btnComidaPrep.Text = CheapMarket.Recursos.StringRecursos.Comidas_Preparadas;
+            btnBebidas.Text = CheapMarket.Recursos.StringRecursos.Bebidas;
+            btnPanaderia.Text = CheapMarket.Recursos.StringRecursos.Panadería;
+            btnSnacks.Text = CheapMarket.Recursos.StringRecursos.Snacks;
+            btnHigiene.Text = CheapMarket.Recursos.StringRecursos.Higiene;
+            btnHogar.Text = CheapMarket.Recursos.StringRecursos.Hogar;
+            lblCantidad.Text = CheapMarket.Recursos.StringRecursos.Cantidad_a_eliminar;
+            label4.Text = CheapMarket.Recursos.StringRecursos.Supermercado;
+            lblLista.Text = CheapMarket.Recursos.StringRecursos.Lista;
+            lblEliminar.Text = CheapMarket.Recursos.StringRecursos.Doble_click_en_un_producto;
+            btnVaciar.Text = CheapMarket.Recursos.StringRecursos.VACIAR_CARRITO;
+            btnFinalizarPedido.Text = CheapMarket.Recursos.StringRecursos.FINALIZAR_COMPRA;
+            lblMetodo.Text = CheapMarket.Recursos.StringRecursos.ELIGE_METODO_DE_PAGO;
+            rdbTarjeta.Text = CheapMarket.Recursos.StringRecursos.TARJETA_DE_CREDITO;
         }
 
         //Metodos

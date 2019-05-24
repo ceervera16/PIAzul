@@ -10,6 +10,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CheapMarket.Recursos;
+using System.Globalization;
+using System.Threading;
 
 namespace Diseño
 {
@@ -331,6 +334,31 @@ namespace Diseño
         private void btnInstagram_Click(object sender, EventArgs e)
         {
             Process.Start("https://www.instagram.com/CheapMarket_1/");
+        }
+
+        private void Preparadas_Load(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(Idioma.idioma);
+            AplicarIdioma();
+        }
+        private void AplicarIdioma()
+        {
+            btnCarniceria.Text = CheapMarket.Recursos.StringRecursos.Carnicería;
+            btnPescaderia.Text = CheapMarket.Recursos.StringRecursos.Pescadería;
+            btnFruteria.Text = CheapMarket.Recursos.StringRecursos.Frutería;
+            btnVerduleria.Text = CheapMarket.Recursos.StringRecursos.Verdulería;
+            btnFiambres.Text = CheapMarket.Recursos.StringRecursos.Fiambres;
+            btnHelados.Text = CheapMarket.Recursos.StringRecursos.Helados;
+            btnComidaPrep.Text = CheapMarket.Recursos.StringRecursos.Comidas_Preparadas;
+            btnBebidas.Text = CheapMarket.Recursos.StringRecursos.Bebidas;
+            btnPanaderia.Text = CheapMarket.Recursos.StringRecursos.Panadería;
+            btnSnacks.Text = CheapMarket.Recursos.StringRecursos.Snacks;
+            btnHigiene.Text = CheapMarket.Recursos.StringRecursos.Higiene;
+            btnHogar.Text = CheapMarket.Recursos.StringRecursos.Hogar;
+            lblCantidad.Text = CheapMarket.Recursos.StringRecursos.Cantidad;
+            label3.Text = CheapMarket.Recursos.StringRecursos.Supermercado;
+            label4.Text = CheapMarket.Recursos.StringRecursos.Informacion_Nutricional;
+            btnAgregar.Text = CheapMarket.Recursos.StringRecursos.Agregar;
         }
     }
 }

@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CheapMarket.Recursos;
+using System.Globalization;
+using System.Threading;
+
 
 namespace CheapMarket
 {
@@ -19,7 +23,18 @@ namespace CheapMarket
 
         private void Administracion_Load(object sender, EventArgs e)
         {
-
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(Idioma.idioma);
+            AplicarIdioma();
+        }
+        private void AplicarIdioma()
+        {
+            btnInsertar.Text = CheapMarket.Recursos.StringRecursos.Insertar_Producto;
+            btnEditar.Text = CheapMarket.Recursos.StringRecursos.Editar_Producto;
+            btnEliminar.Text = CheapMarket.Recursos.StringRecursos.Eliminar_Producto;
+            label3.Text = CheapMarket.Recursos.StringRecursos.Supermercado;
+            lblIntro.Text = CheapMarket.Recursos.StringRecursos.Administración;
+            lblPregunta.Text = CheapMarket.Recursos.StringRecursos.Tienes_dudas_Llamanos;
+            btnSalir.Text = CheapMarket.Recursos.StringRecursos.VOLVER_A_INICIO;
         }
 
         private void btnInsertar_Click(object sender, EventArgs e)

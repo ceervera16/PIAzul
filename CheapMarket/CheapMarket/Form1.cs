@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CheapMarket.Recursos;
+using System.Globalization;
+using System.Threading;
 
 namespace CheapMarket
 {
@@ -131,6 +134,56 @@ namespace CheapMarket
             {
                 MessageBox.Show("Usuario incorrecto para acceder a esta función");
             }
+        }
+
+        private void comboBoxIdioma_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string cultura = "";
+            switch (comboBoxIdioma.Text)
+            {
+                case "¡Bienvenido!":
+                    {
+                        cultura = "ES-ES";
+                        Idioma.idioma = "ES-ES";
+                        break;
+                    }
+                case "Welcome!":
+                    {
+                        cultura = "EN-GB";
+                        Idioma.idioma = "EN-GB";
+                        break;
+                    }
+            }
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura);
+            AplicarIdioma();
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+                if (Idioma.idioma == "ES-ES")
+                {
+                    comboBoxIdioma.Text = "¡Bienvenido!";
+                }
+                else
+                {
+                    comboBoxIdioma.Text = "Welcome!";
+                }
+                AplicarIdioma();
+        }
+        private void AplicarIdioma()
+        {
+            lblPregunta.Text = Recursos.StringRecursos.Tienes_dudas_Llamanos;
+            label1.Text = Recursos.StringRecursos.Bienvenido_a_Cheap_Market;
+            label3.Text = Recursos.StringRecursos.Supermercado;
+            lblCorreo.Text = Recursos.StringRecursos.Correo_Electrónico;
+            lblContraseña.Text = Recursos.StringRecursos.Contraseña;
+            lblInvitado.Text = Recursos.StringRecursos.Entrar_como_invitado;
+            lblNuevo.Text = Recursos.StringRecursos.Eres_nuevo;
+            btnEntrar.Text = Recursos.StringRecursos.btn_Entrar;
+            btnRegistar.Text = Recursos.StringRecursos.btn_Registrate;
+            btnAdministracion.Text = Recursos.StringRecursos.btn_Admin;
+            label4.Text = Recursos.StringRecursos.Idioma;
         }
     }
 }

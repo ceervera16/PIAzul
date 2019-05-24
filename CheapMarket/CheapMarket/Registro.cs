@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CheapMarket.Recursos;
+using System.Globalization;
+using System.Threading;
 
 namespace CheapMarket
 {
@@ -253,6 +256,61 @@ namespace CheapMarket
         private void btnInstagram_Click(object sender, EventArgs e)
         {
             Process.Start("https://www.instagram.com/CheapMarket_1/");
+        }
+
+        private void Registro_Load(object sender, EventArgs e)
+        {
+            if (Idioma.idioma == "ES-ES")
+            {
+                comboBoxIdioma.Text = "¡Bienvenido!";
+            }
+            else
+            {
+                comboBoxIdioma.Text = "Welcome!";
+            }
+            AplicarIdioma();
+        }
+
+        private void comboBoxIdioma_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string cultura = "";
+            switch (comboBoxIdioma.Text)
+            {
+                case "¡Bienvenido!":
+                    {
+                        cultura = "ES-ES";
+                        break;
+                    }
+                case "Welcome!":
+                    {
+                        cultura = "EN-GB";
+                        break;
+                    }
+            }
+
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultura);
+            AplicarIdioma();
+        }
+
+        private void AplicarIdioma()
+        {
+            lblVolver.Text = Recursos.StringRecursos.Ya_tienes_cuenta;
+            label1.Text = Recursos.StringRecursos.REGISTRATE;
+            lblMensaje.Text = Recursos.StringRecursos.Y_consigue_100_puntos_gratis;
+            lblNombre.Text = Recursos.StringRecursos.Nombre;
+            lblApellidos.Text = Recursos.StringRecursos.Apellidos;
+            lblCorreo.Text = Recursos.StringRecursos.Correo_Electrónico;
+            lblContraseña.Text = Recursos.StringRecursos.Contraseña;
+            lblRepetirContraseña.Text = Recursos.StringRecursos.Repetir_Contraseña;
+            label6.Text = Recursos.StringRecursos.Direccion;
+            label5.Text = Recursos.StringRecursos.Num_Piso_Puerta;
+            label3.Text = Recursos.StringRecursos.Localidad;
+            label4.Text = Recursos.StringRecursos.Provincia;
+            label2.Text = Recursos.StringRecursos.Codigo_Postal;
+            lblTelefono.Text = Recursos.StringRecursos.Telefono;
+            chkTerminos.Text = Recursos.StringRecursos.He_leido_y_acepto_los_terminos;
+            checkBox1.Text = Recursos.StringRecursos.Quiero_que_me_envien;
+            btnRegistar.Text = Recursos.StringRecursos.btn_Registrate;
         }
     }
 }
