@@ -159,7 +159,7 @@ namespace Diseño
 
             if (ConexionBD.AbrirConexion())
             {
-                dgvCarniceria.DataSource = Utilidades.CargarProductos2(ConexionBD.Conexion, consulta);
+                dgvCarniceria.DataSource = Productos.CargarProductos2(ConexionBD.Conexion, consulta);
 
                 ConexionBD.CerrarConexion();
             }
@@ -187,7 +187,7 @@ namespace Diseño
 
             if (ConexionBD.AbrirConexion())
             {
-                txtInfo.Text = Utilidades.InfoProducto(ConexionBD.Conexion, consulta);
+                txtInfo.Text = Productos.InfoProducto(ConexionBD.Conexion, consulta);
 
                 ConexionBD.CerrarConexion();
             }
@@ -201,7 +201,7 @@ namespace Diseño
 
             if (ConexionBD.AbrirConexion())
             {
-                pcbImagen.Image = Utilidades.ImagenProducto(ConexionBD.Conexion, consulta2);
+                pcbImagen.Image = Productos.ImagenProducto(ConexionBD.Conexion, consulta2);
 
                 ConexionBD.CerrarConexion();
             }
@@ -276,7 +276,7 @@ namespace Diseño
 
                         if (ConexionBD.AbrirConexion())
                         {
-                            Utilidades.AgregarAlCarrito(ConexionBD.Conexion, consulta);
+                            CarritoTemporal.AgregarAlCarrito(ConexionBD.Conexion, consulta);
                             MessageBox.Show("Producto agregado correctamente");
                             cantidad.Value = 1;
                             ConexionBD.CerrarConexion();
@@ -301,7 +301,7 @@ namespace Diseño
         {
             if (ConexionBD.AbrirConexion())
             {          
-                dgvCarniceria.DataSource = Utilidades.FiltrarProductos(ConexionBD.Conexion, "CARNICERIA", txtBuscar.Text);
+                dgvCarniceria.DataSource = Productos.FiltrarProductos(ConexionBD.Conexion, "CARNICERIA", txtBuscar.Text);
 
                 ConexionBD.CerrarConexion();
             }

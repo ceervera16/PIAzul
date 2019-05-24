@@ -208,7 +208,7 @@ namespace CheapMarket
         {
             if (ConexionBD.AbrirConexion())
             {
-                List<string> usu = Utilidades.CargarDatos2(ConexionBD.Conexion);
+                List<string> usu = Usuario.CargarDatos2(ConexionBD.Conexion);
 
                 //Añado los valores que tiene actualmente
                 txtNombre.Text = usu[1];
@@ -252,7 +252,7 @@ namespace CheapMarket
                         ConexionBD.CerrarConexion();
                         ConexionBD.AbrirConexion();
 
-                        Utilidades.EditarUsuario(ConexionBD.Conexion, usu);
+                        Usuario.EditarUsuario(ConexionBD.Conexion, usu);
                         MessageBox.Show("Cambios realizados correctamente. Debes iniciar sesión para actualizar.");
                         ConexionBD.CerrarConexion();
 

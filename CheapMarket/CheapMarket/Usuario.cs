@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -65,6 +66,104 @@ namespace CheapMarket
         }
 
         //Metodos
+
+        public static int EditarUsuario(MySqlConnection conexion, Usuario usu)
+        {
+            int retorno;
+
+            string consulta = string.Format("UPDATE cliente SET Nombre='{1}', Apellidos='{2}', Correo='{3}', Password='{4}', Telefono={5}," +
+                "Puntos={6}, Provincia='{7}', Localidad='{8}', Calle='{9}', CodigoPostal={10}, Patio={11}, Piso={12}, Puerta={13} " +
+                "WHERE DNI='{14}'", usu.Dni, usu.Nombre, usu.Apellidos, usu.Correo, usu.Password, usu.Telefono, usu.Puntos, usu.Provincia,
+                usu.Localidad, usu.Calle, usu.CodigoPostal, usu.Portal, usu.Piso, usu.Puerta, usu.Dni);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            retorno = comando.ExecuteNonQuery();
+
+            return retorno; ;
+        }
+
+        public static int AgregarUsuario(MySqlConnection conexion, Usuario usu)
+        {
+            int retorno;
+
+            string consulta = String.Format("INSERT INTO cliente (DNI,Nombre,Apellidos,Correo,Password,Telefono,Puntos,Provincia,Localidad," +
+                "Calle,CodigoPostal,Patio,Piso,Puerta) VALUES " +
+                "('{0}','{1}','{2}','{3}','{4}',{5},{6},'{7}','{8}','{9}',{10},{11},{12},{13})", usu.Dni, usu.Nombre, usu.Apellidos,
+                usu.Correo, usu.Password, usu.Telefono, usu.Puntos, usu.Provincia, usu.Localidad, usu.Calle, usu.CodigoPostal, usu.Portal, usu.Piso, usu.Puerta);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+
+            retorno = comando.ExecuteNonQuery();
+
+            return retorno;
+        }
+
+        public static bool ExisteUsuario(MySqlConnection conexion, string correo)
+        {
+            string consulta = String.Format($"SELECT * FROM cliente WHERE correo LIKE '{correo}'");
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        public static bool ExisteUsuario2(MySqlConnection conexion, string nif)
+        {
+            string consulta = String.Format($"SELECT * FROM cliente WHERE DNI LIKE '{nif}'");
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        public static List<string> CargarDatos2(MySqlConnection conexion)
+        {
+            List<string> usu = new List<string>();
+
+            string consulta = String.Format($"SELECT * FROM cliente WHERE DNI LIKE '{Sesion.NifUsu}'");
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                usu.Add(reader.GetString(0));
+                usu.Add(reader.GetString(1));
+                usu.Add(reader.GetString(2));
+                usu.Add(reader.GetString(3));
+                usu.Add(reader.GetString(4));
+                usu.Add(reader.GetInt32(5).ToString());
+                usu.Add(reader.GetInt32(6).ToString());
+                usu.Add(reader.GetString(7));
+                usu.Add(reader.GetString(8));
+                usu.Add(reader.GetString(9));
+                usu.Add(reader.GetInt32(10).ToString());
+                usu.Add(reader.GetInt32(11).ToString());
+                usu.Add(reader.GetInt32(12).ToString());
+                usu.Add(reader.GetInt32(13).ToString());
+            }
+
+            return usu;
+        }
+
 
     }
 }

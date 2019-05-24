@@ -38,7 +38,7 @@ namespace Diseño
 
             if (ConexionBD.AbrirConexion())
             {
-                dgvPanaderia.DataSource = Utilidades.CargarProductos2(ConexionBD.Conexion, consulta);
+                dgvPanaderia.DataSource = Productos.CargarProductos2(ConexionBD.Conexion, consulta);
 
                 ConexionBD.CerrarConexion();
             }
@@ -191,7 +191,7 @@ namespace Diseño
 
             if (ConexionBD.AbrirConexion())
             {
-                txtInfo.Text = Utilidades.InfoProducto(ConexionBD.Conexion, consulta);
+                txtInfo.Text = Productos.InfoProducto(ConexionBD.Conexion, consulta);
 
                 ConexionBD.CerrarConexion();
             }
@@ -205,7 +205,7 @@ namespace Diseño
 
             if (ConexionBD.AbrirConexion())
             {
-                pcbImagen.Image = Utilidades.ImagenProducto(ConexionBD.Conexion, consulta2);
+                pcbImagen.Image = Productos.ImagenProducto(ConexionBD.Conexion, consulta2);
 
                 ConexionBD.CerrarConexion();
             }
@@ -280,7 +280,7 @@ namespace Diseño
 
                         if (ConexionBD.AbrirConexion())
                         {
-                            Utilidades.AgregarAlCarrito(ConexionBD.Conexion, consulta);
+                            CarritoTemporal.AgregarAlCarrito(ConexionBD.Conexion, consulta);
                             MessageBox.Show("Producto agregado correctamente");
                             cantidad.Value = 1;
                             ConexionBD.CerrarConexion();
@@ -305,7 +305,7 @@ namespace Diseño
         {
             if (ConexionBD.AbrirConexion())
             {
-                dgvPanaderia.DataSource = Utilidades.FiltrarProductos(ConexionBD.Conexion, "PANADERIA", txtBuscar.Text);
+                dgvPanaderia.DataSource = Productos.FiltrarProductos(ConexionBD.Conexion, "PANADERIA", txtBuscar.Text);
 
                 ConexionBD.CerrarConexion();
             }

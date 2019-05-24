@@ -187,7 +187,7 @@ namespace CheapMarket
                 {
                     ConexionBD.AbrirConexion();
 
-                    if (Utilidades.ExisteUsuario(ConexionBD.Conexion, txtCorreo.Text))
+                    if (Usuario.ExisteUsuario(ConexionBD.Conexion, txtCorreo.Text))
                     {
                         MessageBox.Show("Ya existe un usuario con ese correo.");
                         ConexionBD.CerrarConexion();
@@ -197,7 +197,7 @@ namespace CheapMarket
                         ConexionBD.CerrarConexion();
                         ConexionBD.AbrirConexion();
 
-                        if (Utilidades.ExisteUsuario2(ConexionBD.Conexion, txtDNI.Text))
+                        if (Usuario.ExisteUsuario2(ConexionBD.Conexion, txtDNI.Text))
                         {
                             MessageBox.Show("Ya existe un usuario con ese DNI.");
                             ConexionBD.CerrarConexion();
@@ -213,7 +213,7 @@ namespace CheapMarket
                             ConexionBD.CerrarConexion();
                             ConexionBD.AbrirConexion();
 
-                            Utilidades.AgregarUsuario(ConexionBD.Conexion, usu);
+                            Usuario.AgregarUsuario(ConexionBD.Conexion, usu);
                             MessageBox.Show("Usuario creado correctamente.");
                             ConexionBD.CerrarConexion();
 

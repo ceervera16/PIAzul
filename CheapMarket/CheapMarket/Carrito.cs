@@ -41,7 +41,7 @@ namespace CheapMarket
 
             if (ConexionBD.AbrirConexion())
             {
-                dtgCarrito.DataSource = Utilidades.CargarCarrito(ConexionBD.Conexion, consulta);
+                dtgCarrito.DataSource = CarritoTemporal.CargarCarrito(ConexionBD.Conexion, consulta);
 
                 ConexionBD.CerrarConexion();
             }
@@ -79,7 +79,7 @@ namespace CheapMarket
             {
                 if (ConexionBD.AbrirConexion())
                 {
-                    dtgCarrito.DataSource = Utilidades.VaciarCarrito(ConexionBD.Conexion, Sesion.NifUsu);
+                    dtgCarrito.DataSource = CarritoTemporal.VaciarCarrito(ConexionBD.Conexion, Sesion.NifUsu);
 
                     ConexionBD.CerrarConexion();
                 }
@@ -97,7 +97,7 @@ namespace CheapMarket
         {
             //Cargo el datagrid con todos los productos por si el cliente ha realizado alguna busqueda
             ConexionBD.AbrirConexion();
-            dtgCarrito.DataSource = Utilidades.FiltrarCarrito(ConexionBD.Conexion, "");
+            dtgCarrito.DataSource = CarritoTemporal.FiltrarCarrito(ConexionBD.Conexion, "");
             ConexionBD.CerrarConexion();
 
             string metodoPago = "";
@@ -120,7 +120,7 @@ namespace CheapMarket
 
             ConexionBD.AbrirConexion();
 
-            if (Utilidades.ComprobarCarrito(ConexionBD.Conexion))
+            if (CarritoTemporal.ComprobarCarrito(ConexionBD.Conexion))
             {
                 ConexionBD.CerrarConexion();
                 if (MessageBox.Show("¿Seguro que desea realizar la compra? No podrá modificarla después.", "Comprar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -133,7 +133,7 @@ namespace CheapMarket
                         int cantidadProducto = int.Parse(dtgCarrito.Rows[i].Cells[1].Value.ToString());
 
                         ConexionBD.AbrirConexion();
-                        codigoProducto = Utilidades.CodigoProducto(ConexionBD.Conexion, nombreProducto);
+                        codigoProducto = Productos.CodigoProducto(ConexionBD.Conexion, nombreProducto);
                         ConexionBD.CerrarConexion();
 
                         ConexionBD.AbrirConexion();
@@ -150,7 +150,7 @@ namespace CheapMarket
                     if (MessageBox.Show("¿Quieres vaciar el carrito?", "Vaciar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
                         ConexionBD.AbrirConexion();
-                        Utilidades.VaciarCarrito(ConexionBD.Conexion, Sesion.NifUsu);
+                        CarritoTemporal.VaciarCarrito(ConexionBD.Conexion, Sesion.NifUsu);
                         ConexionBD.CerrarConexion();
                     }
                     CargarCarrito();
@@ -290,7 +290,7 @@ namespace CheapMarket
         {
             if (ConexionBD.AbrirConexion())
             {
-                dtgCarrito.DataSource = Utilidades.FiltrarCarrito(ConexionBD.Conexion, txtBuscar.Text);
+                dtgCarrito.DataSource = CarritoTemporal.FiltrarCarrito(ConexionBD.Conexion, txtBuscar.Text);
 
                 ConexionBD.CerrarConexion();
             }
@@ -336,7 +336,7 @@ namespace CheapMarket
                 if (MessageBox.Show($"Te quedaras con {nuevaCantidad} unidad(es) en el carrito ¿Seguro que desea eliminar?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     ConexionBD.AbrirConexion();
-                    precio = Utilidades.CalcularPrecio(ConexionBD.Conexion, nombre);
+                    precio = Productos.CalcularPrecio(ConexionBD.Conexion, nombre);
                     ConexionBD.CerrarConexion();
 
                     double nuevoImporte = nuevaCantidad * precio;
