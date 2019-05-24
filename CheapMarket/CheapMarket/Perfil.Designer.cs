@@ -315,9 +315,8 @@
             this.txtPuerta.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
             this.txtPuerta.Location = new System.Drawing.Point(453, 182);
             this.txtPuerta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPuerta.Multiline = true;
             this.txtPuerta.Name = "txtPuerta";
-            this.txtPuerta.Size = new System.Drawing.Size(144, 49);
+            this.txtPuerta.Size = new System.Drawing.Size(144, 47);
             this.txtPuerta.TabIndex = 13;
             // 
             // txtPiso
@@ -325,9 +324,8 @@
             this.txtPiso.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
             this.txtPiso.Location = new System.Drawing.Point(249, 182);
             this.txtPiso.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPiso.Multiline = true;
             this.txtPiso.Name = "txtPiso";
-            this.txtPiso.Size = new System.Drawing.Size(144, 49);
+            this.txtPiso.Size = new System.Drawing.Size(144, 47);
             this.txtPiso.TabIndex = 12;
             // 
             // txtTelefono
@@ -335,9 +333,8 @@
             this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
             this.txtTelefono.Location = new System.Drawing.Point(45, 646);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtTelefono.Multiline = true;
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(553, 49);
+            this.txtTelefono.Size = new System.Drawing.Size(553, 47);
             this.txtTelefono.TabIndex = 11;
             // 
             // lblTelefono
@@ -357,9 +354,8 @@
             this.txtCodigoPostal.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
             this.txtCodigoPostal.Location = new System.Drawing.Point(45, 521);
             this.txtCodigoPostal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtCodigoPostal.Multiline = true;
             this.txtCodigoPostal.Name = "txtCodigoPostal";
-            this.txtCodigoPostal.Size = new System.Drawing.Size(553, 49);
+            this.txtCodigoPostal.Size = new System.Drawing.Size(553, 47);
             this.txtCodigoPostal.TabIndex = 9;
             // 
             // txtLocalidad
@@ -367,9 +363,8 @@
             this.txtLocalidad.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
             this.txtLocalidad.Location = new System.Drawing.Point(46, 399);
             this.txtLocalidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtLocalidad.Multiline = true;
             this.txtLocalidad.Name = "txtLocalidad";
-            this.txtLocalidad.Size = new System.Drawing.Size(553, 49);
+            this.txtLocalidad.Size = new System.Drawing.Size(553, 47);
             this.txtLocalidad.TabIndex = 8;
             // 
             // txtProvincia
@@ -377,9 +372,8 @@
             this.txtProvincia.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
             this.txtProvincia.Location = new System.Drawing.Point(46, 292);
             this.txtProvincia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtProvincia.Multiline = true;
             this.txtProvincia.Name = "txtProvincia";
-            this.txtProvincia.Size = new System.Drawing.Size(553, 49);
+            this.txtProvincia.Size = new System.Drawing.Size(553, 47);
             this.txtProvincia.TabIndex = 7;
             // 
             // txtNum
@@ -387,9 +381,8 @@
             this.txtNum.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
             this.txtNum.Location = new System.Drawing.Point(45, 182);
             this.txtNum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtNum.Multiline = true;
             this.txtNum.Name = "txtNum";
-            this.txtNum.Size = new System.Drawing.Size(144, 49);
+            this.txtNum.Size = new System.Drawing.Size(144, 47);
             this.txtNum.TabIndex = 6;
             // 
             // txtDireccion
@@ -397,9 +390,8 @@
             this.txtDireccion.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
             this.txtDireccion.Location = new System.Drawing.Point(45, 76);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(553, 49);
+            this.txtDireccion.Size = new System.Drawing.Size(553, 47);
             this.txtDireccion.TabIndex = 5;
             // 
             // label2
@@ -489,10 +481,9 @@
             this.txtPass2.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass2.Location = new System.Drawing.Point(24, 521);
             this.txtPass2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPass2.Multiline = true;
             this.txtPass2.Name = "txtPass2";
             this.txtPass2.PasswordChar = '*';
-            this.txtPass2.Size = new System.Drawing.Size(453, 49);
+            this.txtPass2.Size = new System.Drawing.Size(453, 47);
             this.txtPass2.TabIndex = 9;
             // 
             // txtPass1
@@ -500,10 +491,9 @@
             this.txtPass1.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass1.Location = new System.Drawing.Point(24, 399);
             this.txtPass1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPass1.Multiline = true;
             this.txtPass1.Name = "txtPass1";
             this.txtPass1.PasswordChar = '*';
-            this.txtPass1.Size = new System.Drawing.Size(453, 49);
+            this.txtPass1.Size = new System.Drawing.Size(453, 47);
             this.txtPass1.TabIndex = 8;
             // 
             // txtCorreo
@@ -511,10 +501,9 @@
             this.txtCorreo.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(24, 292);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtCorreo.Multiline = true;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.ReadOnly = true;
-            this.txtCorreo.Size = new System.Drawing.Size(453, 49);
+            this.txtCorreo.Size = new System.Drawing.Size(453, 47);
             this.txtCorreo.TabIndex = 7;
             // 
             // txtApellidos
@@ -522,9 +511,8 @@
             this.txtApellidos.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidos.Location = new System.Drawing.Point(24, 182);
             this.txtApellidos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtApellidos.Multiline = true;
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(453, 49);
+            this.txtApellidos.Size = new System.Drawing.Size(453, 47);
             this.txtApellidos.TabIndex = 6;
             // 
             // txtNombre
@@ -532,9 +520,8 @@
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(24, 76);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(453, 49);
+            this.txtNombre.Size = new System.Drawing.Size(453, 47);
             this.txtNombre.TabIndex = 5;
             // 
             // lblRepetirContraseña

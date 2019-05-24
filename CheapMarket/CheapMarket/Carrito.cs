@@ -61,7 +61,7 @@ namespace CheapMarket
                 {
                     total = total + double.Parse(dtgCarrito.Rows[i].Cells[2].Value.ToString());
                 }
-
+                total = Math.Round(total, 2);
                 lblTotal.Text = "Total:    " + total + "€";
             }
             else
@@ -340,7 +340,7 @@ namespace CheapMarket
                     ConexionBD.CerrarConexion();
 
                     double nuevoImporte = nuevaCantidad * precio;
-
+                    nuevoImporte = Math.Round(nuevoImporte, 2);
                     string consulta = String.Format($"UPDATE carritotemporal SET Cantidad='{nuevaCantidad}', Importe='{nuevoImporte}' WHERE DniCliente LIKE '{Sesion.NifUsu}' AND NomProducto LIKE '{nombre}'");
 
                     ConexionBD.AbrirConexion();
