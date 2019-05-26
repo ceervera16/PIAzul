@@ -61,7 +61,7 @@ namespace CheapMarket
             }
             else
             {
-                DialogResult respuesta = MessageBox.Show("Eliminar producto?, se eliminará este producto de todos los carritos", "Eliminar", MessageBoxButtons.YesNo);
+                DialogResult respuesta = MessageBox.Show("¿Eliminar producto?, se eliminará este producto de todos los carritos", "Eliminar", MessageBoxButtons.YesNo);
                 if (respuesta == DialogResult.Yes)
                 {
                     Administrador admin = new Administrador();
@@ -172,7 +172,7 @@ namespace CheapMarket
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("¿Salir del fromulario?", "Salir", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("¿Salir del formulario?", "Salir", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 this.Close();

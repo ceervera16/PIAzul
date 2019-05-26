@@ -123,6 +123,11 @@ namespace CheapMarket
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (txtInformacionNutritiva.Text.Length == 0)
+            {
+                txtInformacionNutritiva.Text = " ";
+            }
+
             Administrador admin = new Administrador();
             int res;
             DialogResult respuesta = MessageBox.Show("¿Modificar producto?", "Modificar", MessageBoxButtons.YesNo);
@@ -259,7 +264,7 @@ namespace CheapMarket
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("¿Salir del fromulario?", "Salir", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("¿Salir del formulario?", "Salir", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 this.Close();

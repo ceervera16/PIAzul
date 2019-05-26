@@ -75,26 +75,29 @@
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.ForeColor = System.Drawing.Color.Black;
-            this.lblCodigo.Location = new System.Drawing.Point(253, 91);
+            this.lblCodigo.Location = new System.Drawing.Point(380, 140);
+            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(87, 23);
+            this.lblCodigo.Size = new System.Drawing.Size(137, 37);
             this.lblCodigo.TabIndex = 81;
             this.lblCodigo.Text = "Código:";
             // 
             // txtCodigo
             // 
             this.txtCodigo.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(257, 118);
+            this.txtCodigo.Location = new System.Drawing.Point(386, 182);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(323, 37);
+            this.txtCodigo.Size = new System.Drawing.Size(482, 52);
             this.txtCodigo.TabIndex = 80;
             // 
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 20F);
-            this.btnEliminar.Location = new System.Drawing.Point(593, 380);
+            this.btnEliminar.Location = new System.Drawing.Point(890, 585);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(134, 52);
+            this.btnEliminar.Size = new System.Drawing.Size(201, 80);
             this.btnEliminar.TabIndex = 79;
             this.btnEliminar.Text = "Editar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -106,9 +109,10 @@
             this.lblIntro.AutoSize = true;
             this.lblIntro.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIntro.ForeColor = System.Drawing.Color.Black;
-            this.lblIntro.Location = new System.Drawing.Point(205, 67);
+            this.lblIntro.Location = new System.Drawing.Point(308, 103);
+            this.lblIntro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIntro.Name = "lblIntro";
-            this.lblIntro.Size = new System.Drawing.Size(163, 23);
+            this.lblIntro.Size = new System.Drawing.Size(245, 37);
             this.lblIntro.TabIndex = 78;
             this.lblIntro.Text = "Editar producto";
             // 
@@ -118,9 +122,10 @@
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.pcbLogo);
-            this.panel3.Location = new System.Drawing.Point(-1, 0);
+            this.panel3.Location = new System.Drawing.Point(-2, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(190, 209);
+            this.panel3.Size = new System.Drawing.Size(285, 322);
             this.panel3.TabIndex = 73;
             // 
             // label3
@@ -128,9 +133,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(44, 181);
+            this.label3.Location = new System.Drawing.Point(66, 278);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 17);
+            this.label3.Size = new System.Drawing.Size(141, 21);
             this.label3.TabIndex = 3;
             this.label3.Text = "Supermercado";
             // 
@@ -139,19 +145,19 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(33, 155);
+            this.label2.Location = new System.Drawing.Point(50, 238);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 19);
+            this.label2.Size = new System.Drawing.Size(174, 28);
             this.label2.TabIndex = 3;
             this.label2.Text = "CheapMarket";
             // 
             // pcbLogo
             // 
             this.pcbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogo.Image")));
-            this.pcbLogo.Location = new System.Drawing.Point(13, -18);
-            this.pcbLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.pcbLogo.Location = new System.Drawing.Point(20, -28);
             this.pcbLogo.Name = "pcbLogo";
-            this.pcbLogo.Size = new System.Drawing.Size(166, 172);
+            this.pcbLogo.Size = new System.Drawing.Size(249, 265);
             this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbLogo.TabIndex = 8;
             this.pcbLogo.TabStop = false;
@@ -161,29 +167,28 @@
             this.lblPregunta.AutoSize = true;
             this.lblPregunta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.lblPregunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPregunta.Location = new System.Drawing.Point(533, 17);
+            this.lblPregunta.Location = new System.Drawing.Point(800, 26);
+            this.lblPregunta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPregunta.Name = "lblPregunta";
-            this.lblPregunta.Size = new System.Drawing.Size(203, 20);
+            this.lblPregunta.Size = new System.Drawing.Size(306, 29);
             this.lblPregunta.TabIndex = 72;
             this.lblPregunta.Text = "¿Tienes dudas? ¡Llámanos!";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.panel1.Location = new System.Drawing.Point(182, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(273, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(560, 54);
+            this.panel1.Size = new System.Drawing.Size(840, 83);
             this.panel1.TabIndex = 77;
             // 
             // btnTwitter
             // 
             this.btnTwitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnTwitter.Image = ((System.Drawing.Image)(resources.GetObject("btnTwitter.Image")));
-            this.btnTwitter.Location = new System.Drawing.Point(257, 5);
-            this.btnTwitter.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTwitter.Location = new System.Drawing.Point(386, 8);
             this.btnTwitter.Name = "btnTwitter";
-            this.btnTwitter.Size = new System.Drawing.Size(43, 42);
+            this.btnTwitter.Size = new System.Drawing.Size(64, 65);
             this.btnTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnTwitter.TabIndex = 76;
             this.btnTwitter.TabStop = false;
@@ -192,10 +197,9 @@
             // 
             this.btnInstagram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnInstagram.Image = ((System.Drawing.Image)(resources.GetObject("btnInstagram.Image")));
-            this.btnInstagram.Location = new System.Drawing.Point(319, 5);
-            this.btnInstagram.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInstagram.Location = new System.Drawing.Point(478, 8);
             this.btnInstagram.Name = "btnInstagram";
-            this.btnInstagram.Size = new System.Drawing.Size(43, 42);
+            this.btnInstagram.Size = new System.Drawing.Size(64, 65);
             this.btnInstagram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnInstagram.TabIndex = 75;
             this.btnInstagram.TabStop = false;
@@ -204,10 +208,9 @@
             // 
             this.btnPagina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnPagina.Image = ((System.Drawing.Image)(resources.GetObject("btnPagina.Image")));
-            this.btnPagina.Location = new System.Drawing.Point(194, 5);
-            this.btnPagina.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPagina.Location = new System.Drawing.Point(291, 8);
             this.btnPagina.Name = "btnPagina";
-            this.btnPagina.Size = new System.Drawing.Size(43, 42);
+            this.btnPagina.Size = new System.Drawing.Size(64, 65);
             this.btnPagina.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnPagina.TabIndex = 74;
             this.btnPagina.TabStop = false;
@@ -216,9 +219,10 @@
             // 
             this.btnContacto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
             this.btnContacto.Image = global::CheapMarket.Properties.Resources.speech_bubble;
-            this.btnContacto.Location = new System.Drawing.Point(484, 5);
+            this.btnContacto.Location = new System.Drawing.Point(726, 8);
+            this.btnContacto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnContacto.Name = "btnContacto";
-            this.btnContacto.Size = new System.Drawing.Size(43, 42);
+            this.btnContacto.Size = new System.Drawing.Size(64, 65);
             this.btnContacto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnContacto.TabIndex = 71;
             this.btnContacto.TabStop = false;
@@ -228,9 +232,10 @@
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.ForeColor = System.Drawing.Color.Black;
-            this.lblDescripcion.Location = new System.Drawing.Point(253, 290);
+            this.lblDescripcion.Location = new System.Drawing.Point(380, 446);
+            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(128, 23);
+            this.lblDescripcion.Size = new System.Drawing.Size(197, 37);
             this.lblDescripcion.TabIndex = 91;
             this.lblDescripcion.Text = "Descripción:";
             this.lblDescripcion.Visible = false;
@@ -238,9 +243,10 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(257, 316);
+            this.txtDescripcion.Location = new System.Drawing.Point(386, 486);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(323, 37);
+            this.txtDescripcion.Size = new System.Drawing.Size(482, 52);
             this.txtDescripcion.TabIndex = 90;
             this.txtDescripcion.Visible = false;
             // 
@@ -249,9 +255,10 @@
             this.lblInformacionNutritiva.AutoSize = true;
             this.lblInformacionNutritiva.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInformacionNutritiva.ForeColor = System.Drawing.Color.Black;
-            this.lblInformacionNutritiva.Location = new System.Drawing.Point(253, 354);
+            this.lblInformacionNutritiva.Location = new System.Drawing.Point(380, 545);
+            this.lblInformacionNutritiva.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInformacionNutritiva.Name = "lblInformacionNutritiva";
-            this.lblInformacionNutritiva.Size = new System.Drawing.Size(214, 23);
+            this.lblInformacionNutritiva.Size = new System.Drawing.Size(325, 37);
             this.lblInformacionNutritiva.TabIndex = 89;
             this.lblInformacionNutritiva.Text = "Información nutritiva:";
             this.lblInformacionNutritiva.Visible = false;
@@ -259,9 +266,10 @@
             // txtInformacionNutritiva
             // 
             this.txtInformacionNutritiva.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInformacionNutritiva.Location = new System.Drawing.Point(257, 380);
+            this.txtInformacionNutritiva.Location = new System.Drawing.Point(386, 585);
+            this.txtInformacionNutritiva.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtInformacionNutritiva.Name = "txtInformacionNutritiva";
-            this.txtInformacionNutritiva.Size = new System.Drawing.Size(323, 37);
+            this.txtInformacionNutritiva.Size = new System.Drawing.Size(482, 52);
             this.txtInformacionNutritiva.TabIndex = 88;
             this.txtInformacionNutritiva.Visible = false;
             // 
@@ -270,9 +278,10 @@
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria.ForeColor = System.Drawing.Color.Black;
-            this.lblCategoria.Location = new System.Drawing.Point(253, 226);
+            this.lblCategoria.Location = new System.Drawing.Point(380, 348);
+            this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(116, 23);
+            this.lblCategoria.Size = new System.Drawing.Size(173, 37);
             this.lblCategoria.TabIndex = 87;
             this.lblCategoria.Text = "Categoría:";
             this.lblCategoria.Visible = false;
@@ -282,9 +291,10 @@
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecio.ForeColor = System.Drawing.Color.Black;
-            this.lblPrecio.Location = new System.Drawing.Point(253, 158);
+            this.lblPrecio.Location = new System.Drawing.Point(380, 243);
+            this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(75, 23);
+            this.lblPrecio.Size = new System.Drawing.Size(117, 37);
             this.lblPrecio.TabIndex = 85;
             this.lblPrecio.Text = "Precio:";
             this.lblPrecio.Visible = false;
@@ -292,9 +302,10 @@
             // txtPrecio
             // 
             this.txtPrecio.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecio.Location = new System.Drawing.Point(257, 184);
+            this.txtPrecio.Location = new System.Drawing.Point(386, 283);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(323, 37);
+            this.txtPrecio.Size = new System.Drawing.Size(482, 52);
             this.txtPrecio.TabIndex = 84;
             this.txtPrecio.Visible = false;
             // 
@@ -303,9 +314,10 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.Black;
-            this.lblNombre.Location = new System.Drawing.Point(253, 91);
+            this.lblNombre.Location = new System.Drawing.Point(380, 140);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(95, 23);
+            this.lblNombre.Size = new System.Drawing.Size(143, 37);
             this.lblNombre.TabIndex = 83;
             this.lblNombre.Text = "Nombre:";
             this.lblNombre.Visible = false;
@@ -313,18 +325,20 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(257, 118);
+            this.txtNombre.Location = new System.Drawing.Point(386, 182);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(323, 37);
+            this.txtNombre.Size = new System.Drawing.Size(482, 52);
             this.txtNombre.TabIndex = 82;
             this.txtNombre.Visible = false;
             // 
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 20F);
-            this.btnBuscar.Location = new System.Drawing.Point(593, 379);
+            this.btnBuscar.Location = new System.Drawing.Point(890, 583);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(134, 53);
+            this.btnBuscar.Size = new System.Drawing.Size(201, 82);
             this.btnBuscar.TabIndex = 92;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -333,9 +347,10 @@
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 20F);
-            this.btnVolver.Location = new System.Drawing.Point(103, 382);
+            this.btnVolver.Location = new System.Drawing.Point(154, 588);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(134, 47);
+            this.btnVolver.Size = new System.Drawing.Size(201, 72);
             this.btnVolver.TabIndex = 93;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -344,9 +359,10 @@
             // btnEliminarFiltros
             // 
             this.btnEliminarFiltros.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.btnEliminarFiltros.Location = new System.Drawing.Point(12, 277);
+            this.btnEliminarFiltros.Location = new System.Drawing.Point(18, 426);
+            this.btnEliminarFiltros.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEliminarFiltros.Name = "btnEliminarFiltros";
-            this.btnEliminarFiltros.Size = new System.Drawing.Size(87, 50);
+            this.btnEliminarFiltros.Size = new System.Drawing.Size(130, 77);
             this.btnEliminarFiltros.TabIndex = 98;
             this.btnEliminarFiltros.Text = "Eliminar filtros";
             this.btnEliminarFiltros.UseVisualStyleBackColor = true;
@@ -355,9 +371,10 @@
             // btnFiltrar
             // 
             this.btnFiltrar.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.btnFiltrar.Location = new System.Drawing.Point(102, 277);
+            this.btnFiltrar.Location = new System.Drawing.Point(153, 426);
+            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(87, 50);
+            this.btnFiltrar.Size = new System.Drawing.Size(130, 77);
             this.btnFiltrar.TabIndex = 97;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
@@ -368,9 +385,10 @@
             this.lblFiltos.AutoSize = true;
             this.lblFiltos.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltos.ForeColor = System.Drawing.Color.Black;
-            this.lblFiltos.Location = new System.Drawing.Point(5, 224);
+            this.lblFiltos.Location = new System.Drawing.Point(8, 345);
+            this.lblFiltos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFiltos.Name = "lblFiltos";
-            this.lblFiltos.Size = new System.Drawing.Size(67, 23);
+            this.lblFiltos.Size = new System.Drawing.Size(104, 37);
             this.lblFiltos.TabIndex = 96;
             this.lblFiltos.Text = "Filtros:";
             // 
@@ -390,17 +408,20 @@
             "HIGIENE",
             "SNACKS",
             "PANADERIA"});
-            this.cmbFiltrar.Location = new System.Drawing.Point(9, 250);
+            this.cmbFiltrar.Location = new System.Drawing.Point(14, 385);
+            this.cmbFiltrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbFiltrar.Name = "cmbFiltrar";
-            this.cmbFiltrar.Size = new System.Drawing.Size(180, 21);
+            this.cmbFiltrar.Size = new System.Drawing.Size(268, 28);
             this.cmbFiltrar.TabIndex = 95;
             // 
             // dtgProductos
             // 
             this.dtgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgProductos.Location = new System.Drawing.Point(209, 163);
+            this.dtgProductos.Location = new System.Drawing.Point(314, 251);
+            this.dtgProductos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtgProductos.Name = "dtgProductos";
-            this.dtgProductos.Size = new System.Drawing.Size(518, 190);
+            this.dtgProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgProductos.Size = new System.Drawing.Size(777, 292);
             this.dtgProductos.TabIndex = 94;
             // 
             // cmbCategoria
@@ -420,17 +441,19 @@
             "HIGIENE",
             "SNACKS",
             "PANADERIA"});
-            this.cmbCategoria.Location = new System.Drawing.Point(257, 250);
+            this.cmbCategoria.Location = new System.Drawing.Point(386, 385);
+            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(323, 38);
+            this.cmbCategoria.Size = new System.Drawing.Size(482, 51);
             this.cmbCategoria.TabIndex = 99;
             // 
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 20F);
-            this.btnSalir.Location = new System.Drawing.Point(12, 382);
+            this.btnSalir.Location = new System.Drawing.Point(18, 588);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(87, 47);
+            this.btnSalir.Size = new System.Drawing.Size(130, 72);
             this.btnSalir.TabIndex = 100;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -438,10 +461,10 @@
             // 
             // EditarProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(741, 438);
+            this.ClientSize = new System.Drawing.Size(1112, 674);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.cmbCategoria);
             this.Controls.Add(this.btnEliminarFiltros);
@@ -471,6 +494,7 @@
             this.Controls.Add(this.lblPregunta);
             this.Controls.Add(this.btnContacto);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "EditarProducto";
             this.Text = "EditarProducto";
             this.Load += new System.EventHandler(this.EditarProducto_Load);

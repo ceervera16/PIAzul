@@ -96,9 +96,10 @@
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.pcbLogo);
-            this.panel3.Location = new System.Drawing.Point(0, 1);
+            this.panel3.Location = new System.Drawing.Point(0, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(190, 209);
+            this.panel3.Size = new System.Drawing.Size(285, 322);
             this.panel3.TabIndex = 9;
             // 
             // label3
@@ -106,9 +107,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(44, 181);
+            this.label3.Location = new System.Drawing.Point(66, 278);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 17);
+            this.label3.Size = new System.Drawing.Size(141, 21);
             this.label3.TabIndex = 3;
             this.label3.Text = "Supermercado";
             // 
@@ -117,19 +119,20 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(33, 155);
+            this.label2.Location = new System.Drawing.Point(50, 238);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 19);
+            this.label2.Size = new System.Drawing.Size(174, 28);
             this.label2.TabIndex = 3;
             this.label2.Text = "CheapMarket";
             // 
             // pcbLogo
             // 
             this.pcbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogo.Image")));
-            this.pcbLogo.Location = new System.Drawing.Point(13, -18);
-            this.pcbLogo.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.pcbLogo.Location = new System.Drawing.Point(20, -28);
+            this.pcbLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcbLogo.Name = "pcbLogo";
-            this.pcbLogo.Size = new System.Drawing.Size(166, 172);
+            this.pcbLogo.Size = new System.Drawing.Size(249, 265);
             this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbLogo.TabIndex = 8;
             this.pcbLogo.TabStop = false;
@@ -147,18 +150,18 @@
             this.panel2.Controls.Add(this.btnPagina);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1386, 53);
+            this.panel2.Size = new System.Drawing.Size(1920, 82);
             this.panel2.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(907, 8);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(1360, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 39);
+            this.label1.Size = new System.Drawing.Size(151, 59);
             this.label1.TabIndex = 18;
             this.label1.Text = "Hola!";
             this.label1.Click += new System.EventHandler(this.btnPerfil_Click);
@@ -166,10 +169,10 @@
             // btnPerfil
             // 
             this.btnPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfil.Image")));
-            this.btnPerfil.Location = new System.Drawing.Point(859, 6);
-            this.btnPerfil.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnPerfil.Location = new System.Drawing.Point(1288, 9);
+            this.btnPerfil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(43, 42);
+            this.btnPerfil.Size = new System.Drawing.Size(64, 65);
             this.btnPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnPerfil.TabIndex = 17;
             this.btnPerfil.TabStop = false;
@@ -178,10 +181,10 @@
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(1155, 6);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(1732, 9);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(43, 42);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(64, 65);
             this.btnCerrarSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnCerrarSesion.TabIndex = 16;
             this.btnCerrarSesion.TabStop = false;
@@ -190,10 +193,10 @@
             // btnCarrito
             // 
             this.btnCarrito.Image = ((System.Drawing.Image)(resources.GetObject("btnCarrito.Image")));
-            this.btnCarrito.Location = new System.Drawing.Point(1088, 6);
-            this.btnCarrito.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnCarrito.Location = new System.Drawing.Point(1632, 9);
+            this.btnCarrito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCarrito.Name = "btnCarrito";
-            this.btnCarrito.Size = new System.Drawing.Size(43, 42);
+            this.btnCarrito.Size = new System.Drawing.Size(64, 65);
             this.btnCarrito.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnCarrito.TabIndex = 15;
             this.btnCarrito.TabStop = false;
@@ -202,10 +205,10 @@
             // btnSalir
             // 
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.Location = new System.Drawing.Point(1221, 6);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnSalir.Location = new System.Drawing.Point(1832, 9);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(43, 42);
+            this.btnSalir.Size = new System.Drawing.Size(64, 65);
             this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSalir.TabIndex = 13;
             this.btnSalir.TabStop = false;
@@ -214,10 +217,10 @@
             // btnTwitter
             // 
             this.btnTwitter.Image = ((System.Drawing.Image)(resources.GetObject("btnTwitter.Image")));
-            this.btnTwitter.Location = new System.Drawing.Point(273, 6);
-            this.btnTwitter.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnTwitter.Location = new System.Drawing.Point(410, 9);
+            this.btnTwitter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTwitter.Name = "btnTwitter";
-            this.btnTwitter.Size = new System.Drawing.Size(43, 42);
+            this.btnTwitter.Size = new System.Drawing.Size(64, 65);
             this.btnTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnTwitter.TabIndex = 12;
             this.btnTwitter.TabStop = false;
@@ -226,10 +229,10 @@
             // btnInstagram
             // 
             this.btnInstagram.Image = ((System.Drawing.Image)(resources.GetObject("btnInstagram.Image")));
-            this.btnInstagram.Location = new System.Drawing.Point(336, 6);
-            this.btnInstagram.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnInstagram.Location = new System.Drawing.Point(504, 9);
+            this.btnInstagram.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInstagram.Name = "btnInstagram";
-            this.btnInstagram.Size = new System.Drawing.Size(43, 42);
+            this.btnInstagram.Size = new System.Drawing.Size(64, 65);
             this.btnInstagram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnInstagram.TabIndex = 11;
             this.btnInstagram.TabStop = false;
@@ -238,10 +241,10 @@
             // btnPagina
             // 
             this.btnPagina.Image = ((System.Drawing.Image)(resources.GetObject("btnPagina.Image")));
-            this.btnPagina.Location = new System.Drawing.Point(211, 6);
-            this.btnPagina.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnPagina.Location = new System.Drawing.Point(316, 9);
+            this.btnPagina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPagina.Name = "btnPagina";
-            this.btnPagina.Size = new System.Drawing.Size(43, 42);
+            this.btnPagina.Size = new System.Drawing.Size(64, 65);
             this.btnPagina.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnPagina.TabIndex = 10;
             this.btnPagina.TabStop = false;
@@ -252,10 +255,9 @@
             this.lblFruteria.AutoSize = true;
             this.lblFruteria.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFruteria.ForeColor = System.Drawing.Color.White;
-            this.lblFruteria.Location = new System.Drawing.Point(750, 246);
-            this.lblFruteria.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFruteria.Location = new System.Drawing.Point(1125, 378);
             this.lblFruteria.Name = "lblFruteria";
-            this.lblFruteria.Size = new System.Drawing.Size(72, 18);
+            this.lblFruteria.Size = new System.Drawing.Size(105, 26);
             this.lblFruteria.TabIndex = 47;
             this.lblFruteria.Text = "FRUTERÍA";
             // 
@@ -264,10 +266,9 @@
             this.lblPescaderia.AutoSize = true;
             this.lblPescaderia.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPescaderia.ForeColor = System.Drawing.Color.White;
-            this.lblPescaderia.Location = new System.Drawing.Point(506, 246);
-            this.lblPescaderia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPescaderia.Location = new System.Drawing.Point(759, 378);
             this.lblPescaderia.Name = "lblPescaderia";
-            this.lblPescaderia.Size = new System.Drawing.Size(98, 18);
+            this.lblPescaderia.Size = new System.Drawing.Size(140, 26);
             this.lblPescaderia.TabIndex = 46;
             this.lblPescaderia.Text = "PESCADERÍA";
             // 
@@ -276,10 +277,9 @@
             this.lblVerduleria.AutoSize = true;
             this.lblVerduleria.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVerduleria.ForeColor = System.Drawing.Color.White;
-            this.lblVerduleria.Location = new System.Drawing.Point(967, 246);
-            this.lblVerduleria.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblVerduleria.Location = new System.Drawing.Point(1450, 378);
             this.lblVerduleria.Name = "lblVerduleria";
-            this.lblVerduleria.Size = new System.Drawing.Size(96, 18);
+            this.lblVerduleria.Size = new System.Drawing.Size(136, 26);
             this.lblVerduleria.TabIndex = 45;
             this.lblVerduleria.Text = "VERDULERÍA";
             // 
@@ -288,10 +288,9 @@
             this.lblBebidas.AutoSize = true;
             this.lblBebidas.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBebidas.ForeColor = System.Drawing.Color.White;
-            this.lblBebidas.Location = new System.Drawing.Point(753, 448);
-            this.lblBebidas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBebidas.Location = new System.Drawing.Point(1130, 689);
             this.lblBebidas.Name = "lblBebidas";
-            this.lblBebidas.Size = new System.Drawing.Size(68, 18);
+            this.lblBebidas.Size = new System.Drawing.Size(97, 26);
             this.lblBebidas.TabIndex = 44;
             this.lblBebidas.Text = "BEBIDAS";
             // 
@@ -300,10 +299,9 @@
             this.lblHelados.AutoSize = true;
             this.lblHelados.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHelados.ForeColor = System.Drawing.Color.White;
-            this.lblHelados.Location = new System.Drawing.Point(518, 448);
-            this.lblHelados.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHelados.Location = new System.Drawing.Point(777, 689);
             this.lblHelados.Name = "lblHelados";
-            this.lblHelados.Size = new System.Drawing.Size(76, 18);
+            this.lblHelados.Size = new System.Drawing.Size(108, 26);
             this.lblHelados.TabIndex = 43;
             this.lblHelados.Text = "HELADOS";
             // 
@@ -312,10 +310,9 @@
             this.lblFiambres.AutoSize = true;
             this.lblFiambres.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiambres.ForeColor = System.Drawing.Color.White;
-            this.lblFiambres.Location = new System.Drawing.Point(287, 448);
-            this.lblFiambres.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFiambres.Location = new System.Drawing.Point(430, 689);
             this.lblFiambres.Name = "lblFiambres";
-            this.lblFiambres.Size = new System.Drawing.Size(78, 18);
+            this.lblFiambres.Size = new System.Drawing.Size(113, 26);
             this.lblFiambres.TabIndex = 42;
             this.lblFiambres.Text = "FIAMBRES";
             // 
@@ -324,10 +321,9 @@
             this.lblPreparadas.AutoSize = true;
             this.lblPreparadas.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPreparadas.ForeColor = System.Drawing.Color.White;
-            this.lblPreparadas.Location = new System.Drawing.Point(925, 448);
-            this.lblPreparadas.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPreparadas.Location = new System.Drawing.Point(1388, 689);
             this.lblPreparadas.Name = "lblPreparadas";
-            this.lblPreparadas.Size = new System.Drawing.Size(179, 18);
+            this.lblPreparadas.Size = new System.Drawing.Size(256, 26);
             this.lblPreparadas.TabIndex = 41;
             this.lblPreparadas.Text = "COMIDAS PREPARADAS";
             // 
@@ -336,10 +332,9 @@
             this.lblPanaderia.AutoSize = true;
             this.lblPanaderia.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPanaderia.ForeColor = System.Drawing.Color.White;
-            this.lblPanaderia.Location = new System.Drawing.Point(278, 646);
-            this.lblPanaderia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPanaderia.Location = new System.Drawing.Point(417, 994);
             this.lblPanaderia.Name = "lblPanaderia";
-            this.lblPanaderia.Size = new System.Drawing.Size(92, 18);
+            this.lblPanaderia.Size = new System.Drawing.Size(133, 26);
             this.lblPanaderia.TabIndex = 40;
             this.lblPanaderia.Text = "PANADERÍA";
             // 
@@ -348,10 +343,9 @@
             this.lbSnacks.AutoSize = true;
             this.lbSnacks.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSnacks.ForeColor = System.Drawing.Color.White;
-            this.lbSnacks.Location = new System.Drawing.Point(524, 646);
-            this.lbSnacks.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbSnacks.Location = new System.Drawing.Point(786, 994);
             this.lbSnacks.Name = "lbSnacks";
-            this.lbSnacks.Size = new System.Drawing.Size(67, 18);
+            this.lbSnacks.Size = new System.Drawing.Size(97, 26);
             this.lbSnacks.TabIndex = 39;
             this.lbSnacks.Text = "SNACKS";
             // 
@@ -360,10 +354,9 @@
             this.lblHigiene.AutoSize = true;
             this.lblHigiene.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHigiene.ForeColor = System.Drawing.Color.White;
-            this.lblHigiene.Location = new System.Drawing.Point(754, 646);
-            this.lblHigiene.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHigiene.Location = new System.Drawing.Point(1131, 994);
             this.lblHigiene.Name = "lblHigiene";
-            this.lblHigiene.Size = new System.Drawing.Size(66, 18);
+            this.lblHigiene.Size = new System.Drawing.Size(95, 26);
             this.lblHigiene.TabIndex = 38;
             this.lblHigiene.Text = "HIGIENE";
             // 
@@ -372,10 +365,9 @@
             this.lblHogar.AutoSize = true;
             this.lblHogar.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHogar.ForeColor = System.Drawing.Color.White;
-            this.lblHogar.Location = new System.Drawing.Point(985, 646);
-            this.lblHogar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHogar.Location = new System.Drawing.Point(1478, 994);
             this.lblHogar.Name = "lblHogar";
-            this.lblHogar.Size = new System.Drawing.Size(64, 18);
+            this.lblHogar.Size = new System.Drawing.Size(92, 26);
             this.lblHogar.TabIndex = 37;
             this.lblHogar.Text = "HOGAR";
             // 
@@ -384,20 +376,19 @@
             this.lblCarniceria.AutoSize = true;
             this.lblCarniceria.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarniceria.ForeColor = System.Drawing.Color.White;
-            this.lblCarniceria.Location = new System.Drawing.Point(275, 246);
-            this.lblCarniceria.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCarniceria.Location = new System.Drawing.Point(412, 378);
             this.lblCarniceria.Name = "lblCarniceria";
-            this.lblCarniceria.Size = new System.Drawing.Size(99, 18);
+            this.lblCarniceria.Size = new System.Drawing.Size(143, 26);
             this.lblCarniceria.TabIndex = 36;
             this.lblCarniceria.Text = "CARNICERÍA";
             // 
             // ptbPescaderia
             // 
             this.ptbPescaderia.Image = ((System.Drawing.Image)(resources.GetObject("ptbPescaderia.Image")));
-            this.ptbPescaderia.Location = new System.Drawing.Point(466, 97);
-            this.ptbPescaderia.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ptbPescaderia.Location = new System.Drawing.Point(699, 149);
+            this.ptbPescaderia.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ptbPescaderia.Name = "ptbPescaderia";
-            this.ptbPescaderia.Size = new System.Drawing.Size(183, 143);
+            this.ptbPescaderia.Size = new System.Drawing.Size(274, 220);
             this.ptbPescaderia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbPescaderia.TabIndex = 35;
             this.ptbPescaderia.TabStop = false;
@@ -406,10 +397,10 @@
             // ptbFruteria
             // 
             this.ptbFruteria.Image = ((System.Drawing.Image)(resources.GetObject("ptbFruteria.Image")));
-            this.ptbFruteria.Location = new System.Drawing.Point(696, 97);
-            this.ptbFruteria.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ptbFruteria.Location = new System.Drawing.Point(1044, 149);
+            this.ptbFruteria.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ptbFruteria.Name = "ptbFruteria";
-            this.ptbFruteria.Size = new System.Drawing.Size(183, 143);
+            this.ptbFruteria.Size = new System.Drawing.Size(274, 220);
             this.ptbFruteria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbFruteria.TabIndex = 34;
             this.ptbFruteria.TabStop = false;
@@ -418,10 +409,10 @@
             // ptbVerduleria
             // 
             this.ptbVerduleria.Image = ((System.Drawing.Image)(resources.GetObject("ptbVerduleria.Image")));
-            this.ptbVerduleria.Location = new System.Drawing.Point(926, 97);
-            this.ptbVerduleria.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ptbVerduleria.Location = new System.Drawing.Point(1389, 149);
+            this.ptbVerduleria.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ptbVerduleria.Name = "ptbVerduleria";
-            this.ptbVerduleria.Size = new System.Drawing.Size(183, 143);
+            this.ptbVerduleria.Size = new System.Drawing.Size(274, 220);
             this.ptbVerduleria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbVerduleria.TabIndex = 33;
             this.ptbVerduleria.TabStop = false;
@@ -430,10 +421,10 @@
             // ptbFiambres
             // 
             this.ptbFiambres.Image = ((System.Drawing.Image)(resources.GetObject("ptbFiambres.Image")));
-            this.ptbFiambres.Location = new System.Drawing.Point(235, 294);
-            this.ptbFiambres.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ptbFiambres.Location = new System.Drawing.Point(352, 452);
+            this.ptbFiambres.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ptbFiambres.Name = "ptbFiambres";
-            this.ptbFiambres.Size = new System.Drawing.Size(183, 143);
+            this.ptbFiambres.Size = new System.Drawing.Size(274, 220);
             this.ptbFiambres.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbFiambres.TabIndex = 32;
             this.ptbFiambres.TabStop = false;
@@ -442,10 +433,10 @@
             // ptbHelados
             // 
             this.ptbHelados.Image = ((System.Drawing.Image)(resources.GetObject("ptbHelados.Image")));
-            this.ptbHelados.Location = new System.Drawing.Point(466, 294);
-            this.ptbHelados.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ptbHelados.Location = new System.Drawing.Point(699, 452);
+            this.ptbHelados.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ptbHelados.Name = "ptbHelados";
-            this.ptbHelados.Size = new System.Drawing.Size(183, 143);
+            this.ptbHelados.Size = new System.Drawing.Size(274, 220);
             this.ptbHelados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbHelados.TabIndex = 31;
             this.ptbHelados.TabStop = false;
@@ -454,10 +445,10 @@
             // ptbPreparadas
             // 
             this.ptbPreparadas.Image = ((System.Drawing.Image)(resources.GetObject("ptbPreparadas.Image")));
-            this.ptbPreparadas.Location = new System.Drawing.Point(926, 294);
-            this.ptbPreparadas.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ptbPreparadas.Location = new System.Drawing.Point(1389, 452);
+            this.ptbPreparadas.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ptbPreparadas.Name = "ptbPreparadas";
-            this.ptbPreparadas.Size = new System.Drawing.Size(183, 143);
+            this.ptbPreparadas.Size = new System.Drawing.Size(274, 220);
             this.ptbPreparadas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbPreparadas.TabIndex = 30;
             this.ptbPreparadas.TabStop = false;
@@ -466,10 +457,10 @@
             // ptbPanaderia
             // 
             this.ptbPanaderia.Image = ((System.Drawing.Image)(resources.GetObject("ptbPanaderia.Image")));
-            this.ptbPanaderia.Location = new System.Drawing.Point(235, 493);
-            this.ptbPanaderia.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ptbPanaderia.Location = new System.Drawing.Point(352, 758);
+            this.ptbPanaderia.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ptbPanaderia.Name = "ptbPanaderia";
-            this.ptbPanaderia.Size = new System.Drawing.Size(183, 143);
+            this.ptbPanaderia.Size = new System.Drawing.Size(274, 220);
             this.ptbPanaderia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbPanaderia.TabIndex = 29;
             this.ptbPanaderia.TabStop = false;
@@ -478,10 +469,10 @@
             // ptbSnacks
             // 
             this.ptbSnacks.Image = ((System.Drawing.Image)(resources.GetObject("ptbSnacks.Image")));
-            this.ptbSnacks.Location = new System.Drawing.Point(466, 493);
-            this.ptbSnacks.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ptbSnacks.Location = new System.Drawing.Point(699, 758);
+            this.ptbSnacks.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ptbSnacks.Name = "ptbSnacks";
-            this.ptbSnacks.Size = new System.Drawing.Size(183, 143);
+            this.ptbSnacks.Size = new System.Drawing.Size(274, 220);
             this.ptbSnacks.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbSnacks.TabIndex = 28;
             this.ptbSnacks.TabStop = false;
@@ -490,10 +481,10 @@
             // ptbHigiene
             // 
             this.ptbHigiene.Image = ((System.Drawing.Image)(resources.GetObject("ptbHigiene.Image")));
-            this.ptbHigiene.Location = new System.Drawing.Point(696, 493);
-            this.ptbHigiene.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ptbHigiene.Location = new System.Drawing.Point(1044, 758);
+            this.ptbHigiene.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ptbHigiene.Name = "ptbHigiene";
-            this.ptbHigiene.Size = new System.Drawing.Size(183, 143);
+            this.ptbHigiene.Size = new System.Drawing.Size(274, 220);
             this.ptbHigiene.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbHigiene.TabIndex = 27;
             this.ptbHigiene.TabStop = false;
@@ -502,10 +493,10 @@
             // ptbHogar
             // 
             this.ptbHogar.Image = ((System.Drawing.Image)(resources.GetObject("ptbHogar.Image")));
-            this.ptbHogar.Location = new System.Drawing.Point(926, 493);
-            this.ptbHogar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ptbHogar.Location = new System.Drawing.Point(1389, 758);
+            this.ptbHogar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ptbHogar.Name = "ptbHogar";
-            this.ptbHogar.Size = new System.Drawing.Size(183, 143);
+            this.ptbHogar.Size = new System.Drawing.Size(274, 220);
             this.ptbHogar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbHogar.TabIndex = 26;
             this.ptbHogar.TabStop = false;
@@ -514,10 +505,10 @@
             // ptbBebidas
             // 
             this.ptbBebidas.Image = ((System.Drawing.Image)(resources.GetObject("ptbBebidas.Image")));
-            this.ptbBebidas.Location = new System.Drawing.Point(696, 294);
-            this.ptbBebidas.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ptbBebidas.Location = new System.Drawing.Point(1044, 452);
+            this.ptbBebidas.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ptbBebidas.Name = "ptbBebidas";
-            this.ptbBebidas.Size = new System.Drawing.Size(183, 143);
+            this.ptbBebidas.Size = new System.Drawing.Size(274, 220);
             this.ptbBebidas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbBebidas.TabIndex = 25;
             this.ptbBebidas.TabStop = false;
@@ -526,10 +517,10 @@
             // ptbCarniceria
             // 
             this.ptbCarniceria.Image = ((System.Drawing.Image)(resources.GetObject("ptbCarniceria.Image")));
-            this.ptbCarniceria.Location = new System.Drawing.Point(235, 97);
-            this.ptbCarniceria.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ptbCarniceria.Location = new System.Drawing.Point(352, 149);
+            this.ptbCarniceria.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ptbCarniceria.Name = "ptbCarniceria";
-            this.ptbCarniceria.Size = new System.Drawing.Size(183, 143);
+            this.ptbCarniceria.Size = new System.Drawing.Size(274, 220);
             this.ptbCarniceria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbCarniceria.TabIndex = 24;
             this.ptbCarniceria.TabStop = false;
@@ -537,10 +528,10 @@
             // 
             // Categorias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.lblFruteria);
             this.Controls.Add(this.lblPescaderia);
             this.Controls.Add(this.lblVerduleria);
@@ -568,7 +559,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Categorias";
             this.Text = "Categorias";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

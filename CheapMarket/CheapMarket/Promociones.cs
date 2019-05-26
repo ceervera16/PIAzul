@@ -95,7 +95,7 @@ namespace CheapMarket
             if (MessageBox.Show("¿Seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 Close();
-                Dispose();
+                Application.ExitThread();
             }
         }
 

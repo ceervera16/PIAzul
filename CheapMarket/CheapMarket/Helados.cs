@@ -56,6 +56,7 @@ namespace Diseño
             if (MessageBox.Show("¿Seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 this.Close();
+                Application.ExitThread();
             }
         }
 

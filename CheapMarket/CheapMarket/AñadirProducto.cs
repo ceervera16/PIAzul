@@ -157,7 +157,7 @@ namespace CheapMarket
                                 txtNombre.Clear();
                                 cmbCategoria.Text = "";
                                 txtDescripcion.Clear();
-                                txtDescripcion.Clear();
+                                txtInformacionNutritiva.Clear();
                                 txtPrecio.Clear();
                                 pctFoto.Image = pcbLogo.Image;
                             }
@@ -197,7 +197,7 @@ namespace CheapMarket
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("¿Salir del fromulario?", "Salir", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("¿Salir del formulario?", "Salir", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 this.Close();
